@@ -1,0 +1,55 @@
+Data UTC: 2026-10-26T11:44:39.675764+00:00
+$ git -C /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-pages commit -m 'docs(lliurament): [usuari1] publicar PDF DOCX i evidències verificades'
+[gh-pages 9fe2a19] docs(lliurament): [usuari1] publicar PDF DOCX i evidències verificades
+ 46 files changed, 2611 insertions(+), 13 deletions(-)
+ create mode 100644 entrega/ENLACES.txt
+ create mode 100644 entrega/Practica1_GitFlow_LucaMZM.docx
+ create mode 100644 entrega/Practica1_GitFlow_LucaMZM.pdf
+ create mode 100644 evidencias/aplicacion/26-app-publicada.png
+ create mode 100644 evidencias/aplicacion/26-contingut-publicat.png
+ create mode 100644 evidencias/aplicacion/26-mobil.png
+ create mode 100644 evidencias/aplicacion/qa-final.json
+ create mode 100644 evidencias/aplicacion/qa-publicada.json
+ create mode 100644 evidencias/git/13-historial-registrat.png
+ create mode 100644 evidencias/git/audit.json
+ create mode 100644 evidencias/git/historial.html
+ create mode 100644 evidencias/github/20-branques.png
+ create mode 100644 evidencias/github/21-project-final.png
+ create mode 100644 evidencias/github/21-project-final.txt
+ create mode 100644 evidencias/github/21-project-vinculat.png
+ create mode 100644 evidencias/github/22-acces-professor-vista-inicial.png
+ create mode 100644 evidencias/pages/24-configuracio.png
+ create mode 100644 evidencias/pages/25-documentacio.png
+ create mode 100644 evidencias/pages/document-check.json
+ create mode 100644 evidencias/pages/local-links.json
+ create mode 100644 evidencias/pages/verification-python-ssl.json
+ create mode 100644 evidencias/pages/verification.json
+ create mode 100644 evidencias/terminal/074-pages-stage.txt
+ create mode 100644 evidencias/terminal/075-pages-commit.txt
+ create mode 100644 evidencias/terminal/076-push-pages.txt
+ create mode 100644 evidencias/terminal/077-pages-config.txt
+ create mode 100644 evidencias/terminal/078-pages-settings.txt
+ create mode 100644 evidencias/terminal/079-graph-final.txt
+ create mode 100644 evidencias/terminal/080-pages-build.txt
+ create mode 100644 evidencias/terminal/081-remote-branches.txt
+ create mode 100644 evidencias/terminal/082-http-verification.txt
+ create mode 100644 evidencias/terminal/083-http-curl-verification.txt
+ create mode 100644 evidencias/terminal/084-pages-built.txt
+ create mode 100644 evidencias/terminal/085-environment.txt
+ create mode 100644 evidencias/terminal/086-repository-public.txt
+ create mode 100644 evidencias/terminal/087-close-pages.txt
+ create mode 100644 evidencias/terminal/088-close-docs.txt
+ create mode 100644 evidencias/terminal/089-issues-final.txt
+ create mode 100644 evidencias/terminal/090-delivery-commit-stage.txt
+ create mode 100644 evidencias/terminal/091-upload-release.txt
+ create mode 100644 evidencias/terminal/092-develop-delivery.txt
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/091-upload-release.txt
+?? evidencias/terminal/092-develop-delivery.txt
+?? evidencias/terminal/093-pages-delivery-stage.txt
+
+HEAD: af28332143600bb59f16f5aa9802a69c38f29687
