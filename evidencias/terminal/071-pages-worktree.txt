@@ -1,0 +1,9 @@
+Data UTC: 2026-10-26T11:32:45.315128+00:00
+$ git worktree add --orphan -b gh-pages /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-pages
+Preparing worktree (new branch 'gh-pages')
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5

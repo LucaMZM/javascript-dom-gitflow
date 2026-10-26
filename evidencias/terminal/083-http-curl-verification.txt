@@ -1,0 +1,50 @@
+Data UTC: 2026-10-26T11:36:22.101557+00:00
+$ python3 /Users/lucamazmi/Desktop/ming/verify_http.py
+{
+  "dateUTC": "2026-10-26T11:36:22.061001+00:00",
+  "links": [
+    {
+      "url": "https://github.com/LucaMZM/javascript-dom-gitflow",
+      "returncode": 0,
+      "response": "200\thttps://github.com/LucaMZM/javascript-dom-gitflow",
+      "error": ""
+    },
+    {
+      "url": "https://lucamzm.github.io/javascript-dom-gitflow/",
+      "returncode": 0,
+      "response": "200\thttps://lucamzm.github.io/javascript-dom-gitflow/",
+      "error": ""
+    },
+    {
+      "url": "https://lucamzm.github.io/javascript-dom-gitflow/app/",
+      "returncode": 0,
+      "response": "200\thttps://lucamzm.github.io/javascript-dom-gitflow/app/",
+      "error": ""
+    }
+  ]
+}
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/github/21-project-proces.png
+ M evidencias/registre.jsonl
+?? evidencias/git/13-historial-registrat.png
+?? evidencias/git/historial.html
+?? evidencias/github/16-release-v1.png
+?? evidencias/github/20-branques.png
+?? evidencias/pages/
+?? evidencias/terminal/071-pages-worktree.txt
+?? evidencias/terminal/072-develop-worktree.txt
+?? evidencias/terminal/073-sync-docs-correct.txt
+?? evidencias/terminal/074-pages-stage.txt
+?? evidencias/terminal/075-pages-commit.txt
+?? evidencias/terminal/076-push-pages.txt
+?? evidencias/terminal/077-pages-config.txt
+?? evidencias/terminal/078-pages-settings.txt
+?? evidencias/terminal/079-graph-final.txt
+?? evidencias/terminal/080-pages-build.txt
+?? evidencias/terminal/081-remote-branches.txt
+?? evidencias/terminal/082-http-verification.txt
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5

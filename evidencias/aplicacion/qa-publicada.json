@@ -1,0 +1,13 @@
+{
+  "dateUTC": "2026-10-26T11:36:48.961Z",
+  "result": {
+    "color": "rgb(156, 35, 72)",
+    "count": "0 caràcters aplicats",
+    "disabled": false,
+    "highlight": true,
+    "text": "Este text canviarà.",
+    "title": "Consulta la guia de JavaScript",
+    "url": "https://lucamzm.github.io/javascript-dom-gitflow/app/"
+  },
+  "consoleErrors": []
+}

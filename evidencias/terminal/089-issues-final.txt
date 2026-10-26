@@ -1,0 +1,50 @@
+Data UTC: 2026-10-26T11:43:35.360270+00:00
+$ gh issue list --repo LucaMZM/javascript-dom-gitflow --state all --json number,title,state,url
+[{"number":8,"state":"CLOSED","title":"Publicació GitHub Pages","url":"https://github.com/LucaMZM/javascript-dom-gitflow/issues/8"},{"number":7,"state":"CLOSED","title":"Documentació acadèmica","url":"https://github.com/LucaMZM/javascript-dom-gitflow/issues/7"},{"number":6,"state":"CLOSED","title":"Hotfix de contingut","url":"https://github.com/LucaMZM/javascript-dom-gitflow/issues/6"},{"number":5,"state":"CLOSED","title":"Release v1.0","url":"https://github.com/LucaMZM/javascript-dom-gitflow/issues/5"},{"number":4,"state":"CLOSED","title":"Feature d estils CSS","url":"https://github.com/LucaMZM/javascript-dom-gitflow/issues/4"},{"number":3,"state":"CLOSED","title":"Feature d atributs HTML","url":"https://github.com/LucaMZM/javascript-dom-gitflow/issues/3"},{"number":2,"state":"CLOSED","title":"Feature de contingut HTML","url":"https://github.com/LucaMZM/javascript-dom-gitflow/issues/2"},{"number":1,"state":"CLOSED","title":"Estructura inicial","url":"https://github.com/LucaMZM/javascript-dom-gitflow/issues/1"}]
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M .gitignore
+ M evidencias/github/21-project-proces.png
+ M evidencias/github/22-acces-professor.png
+ M evidencias/registre.jsonl
+ M tests/dom.cjs
+?? docs/
+?? entrega/
+?? evidencias/aplicacion/26-app-publicada.png
+?? evidencias/aplicacion/26-contingut-publicat.png
+?? evidencias/aplicacion/26-mobil.png
+?? evidencias/aplicacion/qa-final.json
+?? evidencias/aplicacion/qa-publicada.json
+?? evidencias/git/13-historial-registrat.png
+?? evidencias/git/audit.json
+?? evidencias/git/historial.html
+?? evidencias/github/16-release-v1.png
+?? evidencias/github/20-branques.png
+?? evidencias/github/21-project-vinculat.png
+?? evidencias/github/22-acces-professor-vista-inicial.png
+?? evidencias/pages/
+?? evidencias/terminal/071-pages-worktree.txt
+?? evidencias/terminal/072-develop-worktree.txt
+?? evidencias/terminal/073-sync-docs-correct.txt
+?? evidencias/terminal/074-pages-stage.txt
+?? evidencias/terminal/075-pages-commit.txt
+?? evidencias/terminal/076-push-pages.txt
+?? evidencias/terminal/077-pages-config.txt
+?? evidencias/terminal/078-pages-settings.txt
+?? evidencias/terminal/079-graph-final.txt
+?? evidencias/terminal/080-pages-build.txt
+?? evidencias/terminal/081-remote-branches.txt
+?? evidencias/terminal/082-http-verification.txt
+?? evidencias/terminal/083-http-curl-verification.txt
+?? evidencias/terminal/084-pages-built.txt
+?? evidencias/terminal/085-environment.txt
+?? evidencias/terminal/086-repository-public.txt
+?? evidencias/terminal/087-close-pages.txt
+?? evidencias/terminal/088-close-docs.txt
+?? scripts/build_pages.py
+?? scripts/build_report.py
+?? tests/gitflow.py
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5

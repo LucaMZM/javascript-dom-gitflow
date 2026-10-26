@@ -1,0 +1,337 @@
+{
+  "pages": [
+    {
+      "title": "1 Introducció",
+      "paragraphs": [
+        "Esta memòria documenta la Pràctica 1 de Sistemes de control de versions de Luca Mazmishvili. El projecte és un laboratori educatiu de JavaScript aplicat al DOM: contingut HTML, atributs i estils CSS.",
+        "El treball combina desenvolupament progressiu, branques Git Flow, proves funcionals, organització de tasques i publicació. Les operacions es poden contrastar amb els registres cronològics d’evidencias/terminal i les captures reals del navegador.",
+        "Els tres usuaris de la pràctica s’han simulat en els missatges de commit. No s’han substituït les identitats reals dels autors. El responsable simulat de cada tasca és una dada didàctica.",
+        "El PDF original es va localitzar i revisar després de començar el desenvolupament. La interfície conserva l’esquema general demanat: capçalera visual, nom del curs, navegació, seccions educatives i peu. La desviació relativa al paper de la release es declara en l’apartat 6.",
+        "Cada fase presenta l’acció, els comandaments i resultats registrats, una evidència visual quan està disponible i una explicació. Els blocs de terminal són transcripcions autèntiques, no imatges de terminal ni comandaments suggerits."
+      ],
+      "logs": [],
+      "images": [],
+      "links": []
+    },
+    {
+      "title": "2 Conceptes teòrics",
+      "paragraphs": [
+        "Git és un sistema distribuït de control de versions. Cada commit conserva una instantània del projecte i la relaciona amb els commits anteriors. Les branques permeten separar canvis i les fusions integren els historials. GitHub allotja el repositori remot i aporta issues, releases i Projects.",
+        "Git Flow és una convenció d’organització. main representa versions estables; develop integra el treball. Cada feature naix de develop i hi torna en completar-se. La branca release prepara una versió i s’integra en main i develop. Un hotfix naix de main i també s’integra en les dos branques principals.",
+        "Les etiquetes v1.0 i v1.0.1 identifiquen punts concrets de l’historial. Una GitHub Release associa una presentació pública a l’etiqueta. La branca gh-pages té una funció diferent: publicar la documentació i una còpia de l’aplicació.",
+        "Utilitzem este flux per fer visible l’origen de cada funcionalitat i practicar la coordinació. Les fusions amb --no-ff conserven un commit d’integració encara que siga possible avançar la referència directament. En un projecte menut, la utilitat principal és didàctica; no significa que Git Flow siga sempre el flux més senzill."
+      ],
+      "logs": [],
+      "images": [],
+      "links": []
+    },
+    {
+      "title": "3 Creació del repositori",
+      "paragraphs": [
+        "Es va iniciar un repositori nou amb git init -b main i es va crear en GitHub com a públic mitjançant gh repo create. La resposta real va retornar l’enllaç del repositori i codi de retorn 0.",
+        "La comprovació de Git va informar de la versió 2.52.0. El primer commit és 5a3c16a, amb README.md i .gitignore. Abans d’eixe commit, la consulta de HEAD va retornar l’error normal d’un repositori sense historial; el registre conserva també eixa resposta.",
+        "La captura mostra el repositori real en GitHub. No s’ha reutilitzat ni modificat un repositori anterior."
+      ],
+      "logs": [
+        "001",
+        "003"
+      ],
+      "images": [
+        {
+          "path": "evidencias/github/01-repositori.png",
+          "caption": "Figura 1. Repositori públic creat en GitHub."
+        }
+      ],
+      "links": [
+        {
+          "label": "Repositori públic",
+          "url": "https://github.com/LucaMZM/javascript-dom-gitflow"
+        }
+      ]
+    },
+    {
+      "title": "4 Preparació de les branques",
+      "paragraphs": [
+        "main es va crear en la inicialització. Des del commit 5a3c16a es va executar git switch -c develop. La primera pujada va publicar main i develop en el remot origin.",
+        "En develop es va construir la Home, amb capçalera, navegació, presentació, objectius i peu. El commit 3c786f4 incorpora l’estructura HTML, els estils, el JavaScript inicial i package.json.",
+        "Es va utilitzar HTML5 Boilerplate i es conserva la llicència en LICENSE-H5BP.txt. L’aplicació és estàtica, sense serveis de pagament ni dependències de producció. El disseny adapta els exemples i el codi a diferents amplàries."
+      ],
+      "logs": [
+        "006",
+        "010",
+        "012"
+      ],
+      "images": [
+        {
+          "path": "evidencias/aplicacion/03-home.png",
+          "caption": "Figura 2. Estructura inicial de la Home."
+        }
+      ],
+      "links": []
+    },
+    {
+      "title": "5 Desenvolupament de les features — Contingut HTML",
+      "paragraphs": [
+        "La branca feature/contingutHTML va nàixer de develop en 3c786f4. El paper usuari2 es va registrar en el missatge del commit 3fd18e5.",
+        "L’exemple textContent mostra literalment l’entrada, incloses les etiquetes HTML. L’exemple innerHTML interpreta una plantilla fixa amb strong. No s’insereix l’entrada de l’usuari amb innerHTML.",
+        "npm run check va executar node --check app.js amb resultat 0. Després de revisar l’estat anterior a la fusió, es va tornar a develop i integrar la branca amb --no-ff. El commit d’integració és 70ce7aa.",
+        "La captura correspon a la funcionalitat disponible abans del hotfix. Els registres 011, 015, 016 i 018 conserven la creació, el commit, la situació prèvia i la fusió."
+      ],
+      "logs": [
+        "011",
+        "015",
+        "018"
+      ],
+      "images": [
+        {
+          "path": "evidencias/aplicacion/05-contingut.png",
+          "caption": "Figura 3. Exemples de textContent i innerHTML en la feature."
+        }
+      ],
+      "links": []
+    },
+    {
+      "title": "5 Desenvolupament de les features — Atributs HTML",
+      "paragraphs": [
+        "La branca feature/atributsHTML va nàixer de develop després de la primera fusió, en 70ce7aa. El commit 22bf601, etiquetat amb usuari2 en el missatge, incorpora els controls d’atributs.",
+        "setAttribute canvia title en un enllaç i getAttribute permet consultar el valor actual. Un altre control alterna la propietat booleana disabled d’un botó. Les respostes visibles i aria-live faciliten entendre el canvi.",
+        "La comprovació sintàctica va finalitzar amb codi 0. La fusió amb --no-ff va crear d4b7b6f en develop. Els registres 019, 022, 023 i 025 conserven les etapes i l’estat abans d’integrar."
+      ],
+      "logs": [
+        "019",
+        "022",
+        "025"
+      ],
+      "images": [
+        {
+          "path": "evidencias/aplicacion/08-atributs.png",
+          "caption": "Figura 4. Canvi i lectura de title i control de disabled."
+        }
+      ],
+      "links": []
+    },
+    {
+      "title": "5 Desenvolupament de les features — Estils CSS",
+      "paragraphs": [
+        "La branca feature/estilsCSS va nàixer de develop en d4b7b6f. El commit 5238368 identifica usuari3 i incorpora els canvis de presentació.",
+        "Els controls modifiquen color i fontSize, alternen una classe CSS amb classList i restablixen els estils inicials. El botó de classe actualitza aria-pressed i el selector de mida mostra el valor en píxels.",
+        "npm run check va retornar 0. La fusió --no-ff en develop va crear 8201996. La primera revisió funcional independent va aprovar 13 comprovacions, incloses amplàries de 390, 768 i 1280 píxels."
+      ],
+      "logs": [
+        "026",
+        "029",
+        "032"
+      ],
+      "images": [
+        {
+          "path": "evidencias/aplicacion/11-estils.png",
+          "caption": "Figura 5. Controls de color, mida i ressaltat CSS."
+        }
+      ],
+      "links": []
+    },
+    {
+      "title": "6 Release v1.0",
+      "paragraphs": [
+        "release/v1.0 va nàixer de develop en 8201996. Es va preparar package.json per a la versió 1.0.0 i afegir un favicon local. La comprovació sintàctica va retornar 0; el commit de preparació és 20f32a0.",
+        "La release es va fusionar amb --no-ff en main, creant 3c277c4, i en develop, creant 6d9b2ba. Es va crear l’etiqueta anotada v1.0 i publicar la GitHub Release corresponent.",
+        "Desviació declarada: el PDF original assigna esta fase a usuari3, però la release ja s’havia preparat amb el paper usuari1 abans de localitzar-lo. L’historial conserva el missatge real i no s’ha reescrit per aparentar una autoria simulada diferent."
+      ],
+      "logs": [
+        "033",
+        "036",
+        "040",
+        "058"
+      ],
+      "images": [],
+      "links": [
+        {
+          "label": "GitHub Release v1.0",
+          "url": "https://github.com/LucaMZM/javascript-dom-gitflow/releases/tag/v1.0"
+        }
+      ]
+    },
+    {
+      "title": "7 Hotfix",
+      "paragraphs": [
+        "La millora detectada era poder repetir els exemples de contingut sense recarregar la pàgina i mostrar la quantitat de text aplicada. hotfix/milloresV_1_0 va nàixer de main en la versió v1.0.",
+        "El commit 51485c8 afegix Restableix contingut i un recompte basat en Array.from(text).length. El restabliment recupera l’entrada inicial, el text, l’exemple sense format i el comptador zero.",
+        "La fusió en main va crear d0c5a2c i la fusió en develop va crear 80e5ffb. Es va conservar v1.0 i afegir v1.0.1, amb una segona GitHub Release. Les proves posteriors verifiquen també text buit i un emoji."
+      ],
+      "logs": [
+        "044",
+        "047",
+        "051",
+        "059"
+      ],
+      "images": [
+        {
+          "path": "evidencias/aplicacion/18-hotfix.png",
+          "caption": "Figura 6. Millora real del contingut HTML després del hotfix."
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub Release v1.0.1",
+          "url": "https://github.com/LucaMZM/javascript-dom-gitflow/releases/tag/v1.0.1"
+        }
+      ]
+    },
+    {
+      "title": "8 Historial de Git",
+      "paragraphs": [
+        "El gràfic registrat després del hotfix mostra les tres features, la release i la correcció, amb les branques conservades. Les línies de fusió permeten seguir el camí fins a develop i main.",
+        "Integracions de features en develop: contingut 70ce7aa, atributs d4b7b6f i CSS 8201996. Integracions de release: main 3c277c4 i develop 6d9b2ba. Integracions de hotfix: main d0c5a2c i develop 80e5ffb.",
+        "git push origin --all va publicar main, develop, les tres feature, release/v1.0 i hotfix/milloresV_1_0. Les etiquetes es van pujar separadament. El gràfic següent és una eixida real de terminal capturada en eixe moment; els commits documentals posteriors no alteren les integracions funcionals."
+      ],
+      "logs": [
+        "054",
+        "056"
+      ],
+      "images": [],
+      "links": []
+    },
+    {
+      "title": "9 GitHub Project",
+      "paragraphs": [
+        "Es va crear el Project Pràctica 1 — Git Flow en la interfície web de GitHub i s’hi van importar les huit issues del repositori. Cada tasca inclou una descripció, el responsable simulat i, quan existeix, la branca i el hash corresponents.",
+        "El tauler utilitza Todo, In Progress i Done. La captura de procés conserva sis tasques Done, la documentació In Progress i GitHub Pages Todo. És una fotografia d’eixe moment, no una afirmació sobre l’estat final.",
+        "Les issues 1 a 6 corresponen a estructura, contingut, atributs, CSS, release i hotfix. Les issues 7 i 8 corresponen a documentació i publicació. La creació via CLI requeria ampliar l’abast project; l’usuari va rebutjar eixa ampliació i es va completar l’operació mitjançant la web."
+      ],
+      "logs": [],
+      "images": [
+        {
+          "path": "evidencias/github/21-project-proces.png",
+          "caption": "Figura 7. Project amb les huit tasques i els estats del procés."
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub Project",
+          "url": "https://github.com/users/LucaMZM/projects/1"
+        },
+        {
+          "label": "Issues del repositori",
+          "url": "https://github.com/LucaMZM/javascript-dom-gitflow/issues"
+        }
+      ]
+    },
+    {
+      "title": "9 GitHub Project — Accés del professor",
+      "paragraphs": [
+        "El professor configurat és enminqui2. En Manage access, GitHub el mostra com a membre del Project amb rol Read. El permís permet revisar el projecte sense concedir capacitat d’edició.",
+        "Estat acreditat: Accés Read concedit; acceptació no confirmada. La interfície consultada no mostra un estat separat d’acceptació. Per això no es declara que el professor haja acceptat una invitació.",
+        "No es va enviar una invitació al repositori. El repositori és públic i el requisit de col·laboració s’ha atés en el Project. La captura i la transcripció 22-acces-professor.txt conserven l’estat real mostrat per GitHub."
+      ],
+      "logs": [],
+      "images": [
+        {
+          "path": "evidencias/github/22-acces-professor.png",
+          "caption": "Figura 8. Manage access mostra enminqui2 amb rol Read."
+        }
+      ],
+      "links": [
+        {
+          "label": "Project per a revisió del professor",
+          "url": "https://github.com/users/LucaMZM/projects/1"
+        }
+      ]
+    },
+    {
+      "title": "10 GitHub Pages",
+      "paragraphs": [
+        "Es va crear gh-pages com una branca òrfena en un worktree independent. Això permet preparar la documentació sense canviar les branques funcionals ni mesclar els fitxers de publicació amb la release.",
+        "La publicació ha de servir la documentació des de l’arrel de gh-pages. El registre 071 conserva el comandament executat per crear el worktree. Els registres de configuració i verificació de Pages es documenten amb les respostes reals de GitHub.",
+        "Estat de publicació verificat: {{PAGES_STATUS}}",
+        "La primera prova HTTP de QA, anterior a la publicació, va obtindre 404 en l’adreça de Pages. Es conserva com a evidència cronològica; l’estat actual ha de llegir-se en la verificació final de publicació."
+      ],
+      "logs": [
+        "071"
+      ],
+      "images": [],
+      "links": [
+        {
+          "label": "Documentació de la pràctica",
+          "url": "https://lucamzm.github.io/javascript-dom-gitflow/"
+        }
+      ]
+    },
+    {
+      "title": "11 Resultat de l’aplicació",
+      "paragraphs": [
+        "La Home presenta el curs i els objectius. La navegació conduïx als tres apartats interactius, cadascun amb controls, un resultat visible i codi comentat. El peu enllaça el repositori i la documentació.",
+        "El contingut permet comparar text literal i una plantilla HTML coneguda. Els atributs permeten inspeccionar title i alternar disabled. Els estils permeten observar color, mida i classes, i recuperar l’estat inicial.",
+        "Les captures de funcionalitat es van recollir durant les etapes respectives. El hotfix afegix un restabliment independent del contingut, verificat després de completar la versió 1.0."
+      ],
+      "logs": [],
+      "images": [
+        {
+          "path": "evidencias/aplicacion/03-home.png",
+          "caption": "Figura 9. Resultat de la Home del laboratori DOM."
+        },
+        {
+          "path": "evidencias/aplicacion/18-hotfix.png",
+          "caption": "Figura 10. Resultat dels exemples amb el hotfix incorporat."
+        }
+      ],
+      "links": []
+    },
+    {
+      "title": "11 Resultat de l’aplicació — Verificació",
+      "paragraphs": [
+        "El registre qa.json, generat amb Playwright i Chrome sobre http://localhost:8080, conté 15 comprovacions locals aprovades. No es van detectar pageerror ni errors de consola en el recorregut provat.",
+        "Es va comprovar que textContent conserva una entrada amb etiquetes i un atribut onerror com a text, sense crear elements ni executar-la. També es van verificar innerHTML fix, lectura i escriptura de title, disabled en els dos sentits i canvis de color, mida, classe i restabliment.",
+        "Les amplàries 390, 768 i 1280 píxels no van presentar desbordament horitzontal. Els ancoratges interns disposen de destinació. El hotfix va superar el recompte exacte de 19 caràcters, 6 punts de codi en Hola amb emoji, l’entrada buida i el restabliment complet.",
+        "Les respostes HTTP registrades van ser 200 per al repositori i 200 per a MDN, que redirigix a la versió en anglés. Pages va retornar 404 abans de publicar. Per això qa.json distingix localTestsPassed true d’externalLinksPassed false; no s’ha convertit el primer resultat en una publicació fictícia.",
+        "El script reutilitzable tests/dom.cjs utilitza Playwright i permet indicar CHROME_PATH i QA_URL. Les proves acrediten els casos descrits; no equivalen a una auditoria exhaustiva de tots els navegadors o de tota l’accessibilitat."
+      ],
+      "logs": [],
+      "images": [],
+      "links": []
+    },
+    {
+      "title": "12 Conclusions",
+      "paragraphs": [
+        "La pràctica relaciona cada funcionalitat del DOM amb una branca de treball i una integració explícita. L’historial permet seguir la preparació, les tres features, la release i el hotfix sense reconstruir branques després d’acabar.",
+        "El recompte i el restabliment del contingut mostren una millora concreta posterior a v1.0. La versió corregida queda identificada per v1.0.1 i es manté l’etiqueta original, cosa que permet comparar les dos entregues.",
+        "Els registres i les captures permeten diferenciar el treball completat, els estats intermedis i les comprovacions finals. El Project inclou les tasques i l’accés Read del professor està acreditat, amb l’acceptació sense confirmar.",
+        "La desviació del paper simulat en la release s’ha fet explícita. La publicació i els documents finals s’han de valorar amb les evidències finals corresponents, mantenint també el 404 inicial com a resultat històric real."
+      ],
+      "logs": [],
+      "images": [],
+      "links": []
+    },
+    {
+      "title": "13 Enllaços de lliurament",
+      "paragraphs": [
+        "Alumne: Luca Mazmishvili. Compte de GitHub: LucaMZM. Professor amb accés al Project: enminqui2.",
+        "El repositori conté l’aplicació, les branques, les etiquetes, les proves i les evidències del procés. GitHub Pages conté la documentació publicada des de gh-pages. El Project facilita la revisió de les huit tasques.",
+        "Documents de lliurament: Practica1_GitFlow_LucaMZM.pdf i Practica1_GitFlow_LucaMZM.docx, amb contingut equivalent. ENLACES.txt reunix els dos enllaços principals. Les releases permeten consultar les versions v1.0 i v1.0.1."
+      ],
+      "logs": [],
+      "images": [],
+      "links": [
+        {
+          "label": "Repositori GitHub",
+          "url": "https://github.com/LucaMZM/javascript-dom-gitflow"
+        },
+        {
+          "label": "GitHub Pages",
+          "url": "https://lucamzm.github.io/javascript-dom-gitflow/"
+        },
+        {
+          "label": "GitHub Project",
+          "url": "https://github.com/users/LucaMZM/projects/1"
+        },
+        {
+          "label": "Release v1.0",
+          "url": "https://github.com/LucaMZM/javascript-dom-gitflow/releases/tag/v1.0"
+        },
+        {
+          "label": "Release v1.0.1",
+          "url": "https://github.com/LucaMZM/javascript-dom-gitflow/releases/tag/v1.0.1"
+        }
+      ]
+    }
+  ]
+}

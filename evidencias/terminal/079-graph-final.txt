@@ -1,0 +1,55 @@
+Data UTC: 2026-10-26T11:34:53.090837+00:00
+$ git log --graph --all --decorate --oneline
+* d89aa29 (origin/gh-pages, gh-pages) docs(pages): [usuari1] publicar memòria completa del procés Git Flow
+*   55248ab (develop) merge(docs): [usuari1] sincronitzar proves i evidències
+|\  
+| * 40d3cd6 (HEAD -> main) docs(registre): [usuari1] registrar publicació i incidència de canvi de branca
+| * 215e0fd docs(evidencies): [usuari1] conservar registres reals i proves del DOM
+| *   d0c5a2c (tag: v1.0.1, origin/main) merge(hotfix): [usuari1] integrar millores de contingut en main
+| |\  
+* | \   80e5ffb (origin/develop) merge(hotfix): [usuari1] integrar millores en develop
+|\ \ \  
+| | |/  
+| |/|   
+| * | 51485c8 (origin/hotfix/milloresV_1_0, hotfix/milloresV_1_0) fix(html): [usuari1] restablir contingut i comptar caràcters
+| |/  
+| *   3c277c4 (tag: v1.0) merge(release): [usuari1] publicar versió 1.0
+| |\  
+* | \   6d9b2ba merge(release): [usuari1] retornar v1.0 a develop
+|\ \ \  
+| | |/  
+| |/|   
+| * | 20f32a0 (origin/release/v1.0, release/v1.0) chore(release): [usuari1] preparar v1.0 i afegir favicon local
+|/ /  
+* |   8201996 merge(css): [usuari3] integrar estils CSS
+|\ \  
+| * | 5238368 (origin/feature/estilsCSS, feature/estilsCSS) feat(css): [usuari3] implementar canvis d estil
+|/ /  
+* |   d4b7b6f merge(attributes): [usuari2] integrar atributs HTML
+|\ \  
+| * | 22bf601 (origin/feature/atributsHTML, feature/atributsHTML) feat(attributes): [usuari2] implementar atributs HTML
+|/ /  
+* |   70ce7aa merge(html): [usuari2] integrar contingut HTML
+|\ \  
+| * | 3fd18e5 (origin/feature/contingutHTML, feature/contingutHTML) feat(html): [usuari2] afegir exemples de contingut
+|/ /  
+* / 3c786f4 feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate
+|/  
+* 5a3c16a chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/github/21-project-proces.png
+ M evidencias/registre.jsonl
+?? evidencias/github/16-release-v1.png
+?? evidencias/terminal/071-pages-worktree.txt
+?? evidencias/terminal/072-develop-worktree.txt
+?? evidencias/terminal/073-sync-docs-correct.txt
+?? evidencias/terminal/074-pages-stage.txt
+?? evidencias/terminal/075-pages-commit.txt
+?? evidencias/terminal/076-push-pages.txt
+?? evidencias/terminal/077-pages-config.txt
+?? evidencias/terminal/078-pages-settings.txt
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5

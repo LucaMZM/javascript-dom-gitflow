@@ -1,0 +1,18 @@
+Data UTC: 2026-10-26T11:34:34.980209+00:00
+$ gh api --method POST repos/LucaMZM/javascript-dom-gitflow/pages --input /tmp/gitflow-pages-config.json
+{"message":"GitHub Pages is already enabled.","documentation_url":"https://docs.github.com/rest/pages/pages#create-a-apiname-pages-site","status":"409"}gh: GitHub Pages is already enabled. (HTTP 409)
+
+Codi de retorn: 1
+$ git status --short --branch
+## main
+ M evidencias/github/21-project-proces.png
+ M evidencias/registre.jsonl
+?? evidencias/github/16-release-v1.png
+?? evidencias/terminal/071-pages-worktree.txt
+?? evidencias/terminal/072-develop-worktree.txt
+?? evidencias/terminal/073-sync-docs-correct.txt
+?? evidencias/terminal/074-pages-stage.txt
+?? evidencias/terminal/075-pages-commit.txt
+?? evidencias/terminal/076-push-pages.txt
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5

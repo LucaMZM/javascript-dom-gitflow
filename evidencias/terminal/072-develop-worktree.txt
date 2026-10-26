@@ -1,0 +1,12 @@
+Data UTC: 2026-10-26T11:32:45.383648+00:00
+$ git worktree add /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-develop develop
+Preparing worktree (checking out 'develop')
+HEAD is now at 80e5ffb merge(hotfix): [usuari1] integrar millores en develop
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/071-pages-worktree.txt
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5
