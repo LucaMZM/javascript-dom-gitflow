@@ -1,0 +1,11 @@
+Data UTC: 2026-10-26T11:44:39.613677+00:00
+$ git -C /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-pages add .
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/091-upload-release.txt
+?? evidencias/terminal/092-develop-delivery.txt
+
+HEAD: af28332143600bb59f16f5aa9802a69c38f29687

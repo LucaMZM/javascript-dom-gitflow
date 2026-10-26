@@ -1,0 +1,17 @@
+Data UTC: 2026-10-26T11:45:19.783310+00:00
+$ gh api repos/LucaMZM/javascript-dom-gitflow/pages/builds/latest --jq '{status,commit,error}'
+{"commit":"9fe2a190b4a52a138dec03b7ceeb35e3e0cfce9e","error":{"message":null},"status":"built"}
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/pages/delivery-integrity.json
+?? evidencias/terminal/091-upload-release.txt
+?? evidencias/terminal/092-develop-delivery.txt
+?? evidencias/terminal/093-pages-delivery-stage.txt
+?? evidencias/terminal/094-pages-delivery-commit.txt
+?? evidencias/terminal/095-push-delivery.txt
+?? evidencias/terminal/096-release-assets.txt
+
+HEAD: af28332143600bb59f16f5aa9802a69c38f29687

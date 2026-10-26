@@ -1,0 +1,15 @@
+Data UTC: 2026-10-26T11:44:46.429362+00:00
+$ gh release view v1.0.1 --repo LucaMZM/javascript-dom-gitflow --json url,tagName,assets
+{"assets":[{"apiUrl":"https://api.github.com/repos/LucaMZM/javascript-dom-gitflow/releases/assets/677997154","contentType":"text/plain; charset=utf-8","createdAt":"2026-10-26T11:44:18Z","digest":"sha256:99edc9b8ebc3537da4031ca5aeab91db83efd868fde3c7e95d2bac64cac1abfb","downloadCount":0,"id":"RA_kwDOVX1qbM4oaWpi","label":"","name":"ENLACES.txt","size":134,"state":"uploaded","updatedAt":"2026-10-26T11:44:19Z","url":"https://github.com/LucaMZM/javascript-dom-gitflow/releases/download/v1.0.1/ENLACES.txt"},{"apiUrl":"https://api.github.com/repos/LucaMZM/javascript-dom-gitflow/releases/assets/677997156","contentType":"application/vnd.openxmlformats-officedocument.wordprocessingml.document","createdAt":"2026-10-26T11:44:18Z","digest":"sha256:ffd92a3313c14ffcef381e16b3cd8df94e2f333dbfbcfabfa466eacfd1ea2cd0","downloadCount":0,"id":"RA_kwDOVX1qbM4oaWpk","label":"","name":"Practica1_GitFlow_LucaMZM.docx","size":990577,"state":"uploaded","updatedAt":"2026-10-26T11:44:19Z","url":"https://github.com/LucaMZM/javascript-dom-gitflow/releases/download/v1.0.1/Practica1_GitFlow_LucaMZM.docx"},{"apiUrl":"https://api.github.com/repos/LucaMZM/javascript-dom-gitflow/releases/assets/677997148","contentType":"application/pdf","createdAt":"2026-10-26T11:44:18Z","digest":"sha256:b14419bc04c6a387567cc9d02ed9133136bfa790d7b2a497fefafd565e2af354","downloadCount":0,"id":"RA_kwDOVX1qbM4oaWpc","label":"","name":"Practica1_GitFlow_LucaMZM.pdf","size":1316382,"state":"uploaded","updatedAt":"2026-10-26T11:44:19Z","url":"https://github.com/LucaMZM/javascript-dom-gitflow/releases/download/v1.0.1/Practica1_GitFlow_LucaMZM.pdf"}],"tagName":"v1.0.1","url":"https://github.com/LucaMZM/javascript-dom-gitflow/releases/tag/v1.0.1"}
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/091-upload-release.txt
+?? evidencias/terminal/092-develop-delivery.txt
+?? evidencias/terminal/093-pages-delivery-stage.txt
+?? evidencias/terminal/094-pages-delivery-commit.txt
+?? evidencias/terminal/095-push-delivery.txt
+
+HEAD: af28332143600bb59f16f5aa9802a69c38f29687

@@ -1,0 +1,119 @@
+Data UTC: 2026-10-26T11:44:39.442036+00:00
+$ git -C /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-develop merge --no-ff main -m 'merge(entrega): [usuari1] sincronitzar memòria i proves finals'
+Merge made by the 'ort' strategy.
+ .gitignore                                         |    2 +
+ docs/page_numbers.json                             |   21 +
+ docs/report_final_model.json                       |  359 +++++++
+ docs/report_model.json                             |  337 +++++++
+ docs/theory.json                                   |    7 +
+ entrega/ENLACES.txt                                |    2 +
+ entrega/Practica1_GitFlow_LucaMZM.docx             |  Bin 0 -> 990577 bytes
+ entrega/Practica1_GitFlow_LucaMZM.pdf              |  Bin 0 -> 1316382 bytes
+ evidencias/aplicacion/26-app-publicada.png         |  Bin 0 -> 71188 bytes
+ evidencias/aplicacion/26-contingut-publicat.png    |  Bin 0 -> 56800 bytes
+ evidencias/aplicacion/26-mobil.png                 |  Bin 0 -> 33219 bytes
+ evidencias/aplicacion/qa-final.json                |   90 ++
+ evidencias/aplicacion/qa-publicada.json            |   13 +
+ evidencias/git/13-historial-registrat.png          |  Bin 0 -> 119848 bytes
+ evidencias/git/audit.json                          |  256 +++++
+ evidencias/git/historial.html                      |   42 +
+ evidencias/github/16-release-v1.png                |  Bin 0 -> 82212 bytes
+ evidencias/github/20-branques.png                  |  Bin 0 -> 85029 bytes
+ evidencias/github/21-project-final.png             |  Bin 0 -> 84110 bytes
+ evidencias/github/21-project-final.txt             |  165 ++++
+ evidencias/github/21-project-proces.png            |  Bin 92740 -> 93268 bytes
+ evidencias/github/21-project-vinculat.png          |  Bin 0 -> 68968 bytes
+ .../github/22-acces-professor-vista-inicial.png    |  Bin 0 -> 82612 bytes
+ evidencias/github/22-acces-professor.png           |  Bin 82612 -> 80121 bytes
+ evidencias/github/issues.json                      |    4 +-
+ evidencias/github/project.json                     |   19 +-
+ evidencias/pages/24-configuracio.png               |  Bin 0 -> 104274 bytes
+ evidencias/pages/25-documentacio.png               |  Bin 0 -> 81349 bytes
+ evidencias/pages/document-check.json               |   27 +
+ evidencias/pages/local-links.json                  | 1001 ++++++++++++++++++++
+ evidencias/pages/verification-python-ssl.json      |   17 +
+ evidencias/pages/verification.json                 |   23 +
+ evidencias/registre.jsonl                          |   20 +
+ evidencias/terminal/071-pages-worktree.txt         |    9 +
+ evidencias/terminal/072-develop-worktree.txt       |   12 +
+ evidencias/terminal/073-sync-docs-correct.txt      |  204 ++++
+ evidencias/terminal/074-pages-stage.txt            |   14 +
+ evidencias/terminal/075-pages-commit.txt           |  123 +++
+ evidencias/terminal/076-push-pages.txt             |   22 +
+ evidencias/terminal/077-pages-config.txt           |   18 +
+ evidencias/terminal/078-pages-settings.txt         |   18 +
+ evidencias/terminal/079-graph-final.txt            |   55 ++
+ evidencias/terminal/080-pages-build.txt            |   21 +
+ evidencias/terminal/081-remote-branches.txt        |   30 +
+ evidencias/terminal/082-http-verification.txt      |   43 +
+ evidencias/terminal/083-http-curl-verification.txt |   50 +
+ evidencias/terminal/084-pages-built.txt            |   40 +
+ evidencias/terminal/085-environment.txt            |   45 +
+ evidencias/terminal/086-repository-public.txt      |   42 +
+ evidencias/terminal/087-close-pages.txt            |   47 +
+ evidencias/terminal/088-close-docs.txt             |   49 +
+ evidencias/terminal/089-issues-final.txt           |   50 +
+ evidencias/terminal/090-delivery-commit-stage.txt  |   64 ++
+ scripts/build_pages.py                             |   56 ++
+ scripts/build_report.py                            |  135 +++
+ tests/dom.cjs                                      |    2 +-
+ tests/gitflow.py                                   |   42 +
+ 57 files changed, 3592 insertions(+), 4 deletions(-)
+ create mode 100644 docs/page_numbers.json
+ create mode 100644 docs/report_final_model.json
+ create mode 100644 docs/report_model.json
+ create mode 100644 docs/theory.json
+ create mode 100644 entrega/ENLACES.txt
+ create mode 100644 entrega/Practica1_GitFlow_LucaMZM.docx
+ create mode 100644 entrega/Practica1_GitFlow_LucaMZM.pdf
+ create mode 100644 evidencias/aplicacion/26-app-publicada.png
+ create mode 100644 evidencias/aplicacion/26-contingut-publicat.png
+ create mode 100644 evidencias/aplicacion/26-mobil.png
+ create mode 100644 evidencias/aplicacion/qa-final.json
+ create mode 100644 evidencias/aplicacion/qa-publicada.json
+ create mode 100644 evidencias/git/13-historial-registrat.png
+ create mode 100644 evidencias/git/audit.json
+ create mode 100644 evidencias/git/historial.html
+ create mode 100644 evidencias/github/16-release-v1.png
+ create mode 100644 evidencias/github/20-branques.png
+ create mode 100644 evidencias/github/21-project-final.png
+ create mode 100644 evidencias/github/21-project-final.txt
+ create mode 100644 evidencias/github/21-project-vinculat.png
+ create mode 100644 evidencias/github/22-acces-professor-vista-inicial.png
+ create mode 100644 evidencias/pages/24-configuracio.png
+ create mode 100644 evidencias/pages/25-documentacio.png
+ create mode 100644 evidencias/pages/document-check.json
+ create mode 100644 evidencias/pages/local-links.json
+ create mode 100644 evidencias/pages/verification-python-ssl.json
+ create mode 100644 evidencias/pages/verification.json
+ create mode 100644 evidencias/terminal/071-pages-worktree.txt
+ create mode 100644 evidencias/terminal/072-develop-worktree.txt
+ create mode 100644 evidencias/terminal/073-sync-docs-correct.txt
+ create mode 100644 evidencias/terminal/074-pages-stage.txt
+ create mode 100644 evidencias/terminal/075-pages-commit.txt
+ create mode 100644 evidencias/terminal/076-push-pages.txt
+ create mode 100644 evidencias/terminal/077-pages-config.txt
+ create mode 100644 evidencias/terminal/078-pages-settings.txt
+ create mode 100644 evidencias/terminal/079-graph-final.txt
+ create mode 100644 evidencias/terminal/080-pages-build.txt
+ create mode 100644 evidencias/terminal/081-remote-branches.txt
+ create mode 100644 evidencias/terminal/082-http-verification.txt
+ create mode 100644 evidencias/terminal/083-http-curl-verification.txt
+ create mode 100644 evidencias/terminal/084-pages-built.txt
+ create mode 100644 evidencias/terminal/085-environment.txt
+ create mode 100644 evidencias/terminal/086-repository-public.txt
+ create mode 100644 evidencias/terminal/087-close-pages.txt
+ create mode 100644 evidencias/terminal/088-close-docs.txt
+ create mode 100644 evidencias/terminal/089-issues-final.txt
+ create mode 100644 evidencias/terminal/090-delivery-commit-stage.txt
+ create mode 100644 scripts/build_pages.py
+ create mode 100644 scripts/build_report.py
+ create mode 100644 tests/gitflow.py
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/091-upload-release.txt
+
+HEAD: af28332143600bb59f16f5aa9802a69c38f29687
