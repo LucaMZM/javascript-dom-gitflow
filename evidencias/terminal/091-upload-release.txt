@@ -1,0 +1,8 @@
+Data UTC: 2026-10-26T11:44:19.567025+00:00
+$ gh release upload v1.0.1 entrega/Practica1_GitFlow_LucaMZM.pdf entrega/Practica1_GitFlow_LucaMZM.docx entrega/ENLACES.txt --repo LucaMZM/javascript-dom-gitflow
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+
+HEAD: af28332143600bb59f16f5aa9802a69c38f29687

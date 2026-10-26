@@ -1,0 +1,18 @@
+Data UTC: 2026-10-26T11:45:20.482438+00:00
+$ curl --fail -L -sS -o /dev/null -w '%{http_code} %{url_effective}\n' https://lucamzm.github.io/javascript-dom-gitflow/entrega/Practica1_GitFlow_LucaMZM.pdf
+200 https://lucamzm.github.io/javascript-dom-gitflow/entrega/Practica1_GitFlow_LucaMZM.pdf
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/pages/delivery-integrity.json
+?? evidencias/terminal/091-upload-release.txt
+?? evidencias/terminal/092-develop-delivery.txt
+?? evidencias/terminal/093-pages-delivery-stage.txt
+?? evidencias/terminal/094-pages-delivery-commit.txt
+?? evidencias/terminal/095-push-delivery.txt
+?? evidencias/terminal/096-release-assets.txt
+?? evidencias/terminal/097-final-pages-build.txt
+
+HEAD: af28332143600bb59f16f5aa9802a69c38f29687
