@@ -1,0 +1,18 @@
+Data UTC: 2026-10-26T11:27:26.155439+00:00
+$ git push origin --all
+To https://github.com/LucaMZM/javascript-dom-gitflow.git
+   3c786f4..80e5ffb  develop -> develop
+   5a3c16a..d0c5a2c  main -> main
+ * [new branch]      feature/atributsHTML -> feature/atributsHTML
+ * [new branch]      feature/contingutHTML -> feature/contingutHTML
+ * [new branch]      feature/estilsCSS -> feature/estilsCSS
+ * [new branch]      hotfix/milloresV_1_0 -> hotfix/milloresV_1_0
+ * [new branch]      release/v1.0 -> release/v1.0
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+?? tests/
+
+HEAD: d0c5a2c057e82b03b7e5cec169aab86a4c0eb839

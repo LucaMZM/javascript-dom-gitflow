@@ -1,0 +1,16 @@
+Data UTC: 2026-10-26T11:24:54.364231+00:00
+$ git log --graph --all --decorate --oneline
+* 22bf601 (HEAD -> feature/atributsHTML) feat(attributes): [usuari2] implementar atributs HTML
+*   70ce7aa (develop) merge(html): [usuari2] integrar contingut HTML
+|\  
+| * 3fd18e5 (feature/contingutHTML) feat(html): [usuari2] afegir exemples de contingut
+|/  
+* 3c786f4 (origin/develop) feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate
+* 5a3c16a (origin/main, main) chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/atributsHTML
+?? evidencias/
+
+HEAD: 22bf60102f9590b736c69a30648cb65f84e17c10

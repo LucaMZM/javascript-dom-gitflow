@@ -1,0 +1,13 @@
+Data UTC: 2026-10-26T11:23:02.191707+00:00
+$ gh repo create LucaMZM/javascript-dom-gitflow --public --description 'Pràctica 1 de Luca Mazmishvili: JavaScript DOM i Git Flow' --source . --remote origin
+https://github.com/LucaMZM/javascript-dom-gitflow
+
+Codi de retorn: 0
+$ git status --short --branch
+## No commits yet on main
+?? evidencias/
+
+HEAD: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+HEAD

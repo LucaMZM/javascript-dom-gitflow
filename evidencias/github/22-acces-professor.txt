@@ -1,0 +1,116 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "LucaMZM":
+        - /url: /LucaMZM
+        - generic: LucaMZM
+      - link "Projects":
+        - /url: /users/LucaMZM/projects
+        - generic: Projects
+      - link "@LucaMZM's untitled project":
+        - /url: /users/LucaMZM/projects/1
+        - generic: "@LucaMZM's untitled project"
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues (g then i)":
+    - /url: /issues
+  - link "All pull requests (g then p)":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "User avatar"
+- button "Dismiss this message":
+- button "Enable 2FA"
+- paragraph:
+  - text: GitHub users are
+  - link "now required":
+    - /url: https://github.blog/2023-03-09-raising-the-bar-for-software-security-github-2fa-begins-march-13/
+  - text: to enable two-factor authentication as an additional security measure. Your activity on GitHub includes you in this requirement. You will need to enable two-factor authentication on your account before December 01, 2026, or be restricted from account actions.
+- navigation "Project":
+  - link "Return to project view":
+    - /url: /users/LucaMZM/projects/1/views/1
+  - heading "Settings" [level=1]
+  - link "Insights":
+    - /url: /users/LucaMZM/projects/1/insights
+    - generic: Insights
+  - link "Workflows (7 enabled)":
+    - /url: /users/LucaMZM/projects/1/workflows
+    - generic: Workflows
+    - generic: "7"
+    - generic: (7)
+  - button "View more options":
+- heading "Project settings menu" [level=2]
+- navigation "Project settings menu":
+  - list:
+    - link "Project settings":
+      - /url: /users/LucaMZM/projects/1/settings
+      - generic: Project settings
+    - link "Manage access":
+      - /url: /users/LucaMZM/projects/1/settings/access
+      - generic: Manage access
+    - heading "Custom fields New field Custom field options" [level=3]:
+      - generic: Custom fields
+      - button "New field":
+      - button "Custom field options":
+    - list "Custom fields":
+      - link "Status":
+        - /url: /users/LucaMZM/projects/1/settings/fields/Status
+        - generic: Status
+      - link "Sub-issues progress":
+        - /url: /users/LucaMZM/projects/1/settings/fields/Sub-issues%20progress
+        - generic: Sub-issues progress
+- main:
+  - heading "Who has access" [level=2]
+  - heading "Private project" [level=2]
+  - text: Only those with access to this project can view it.
+  - link "Manage":
+    - /url: /users/LucaMZM/projects/1/settings
+    - generic: Manage
+  - generic: Add collaborators
+  - heading "Invite collaborators" [level=3]
+  - combobox "Search by username"
+  - 'button "Role: Read"':
+    - generic: "Role: Read"
+  - button "Invite" [active]:
+    - generic: Invite
+  - heading "Manage access" [level=3]
+  - checkbox "Select all collaborators. 2 members"
+  - generic: Select all collaborators.
+  - status: 2 members
+  - button "Type":
+    - generic: Type
+  - button "Role":
+    - generic: Role
+  - textbox "Find a collaborator"
+  - checkbox "Select LucaMZM"
+  - img "LucaMZM"
+  - link "LucaMZM":
+    - /url: /LucaMZM
+  - generic: LucaMZM
+  - 'button "Role: Admin"':
+    - generic: "Role: Admin"
+  - button "Remove":
+    - generic: Remove
+  - checkbox "Select enminqui2"
+  - img "enminqui2"
+  - link "enminqui":
+    - /url: /enminqui2
+  - generic: enminqui2
+  - 'button "Role: Read"':
+    - generic: "Role: Read"
+  - button "Remove":
+    - generic: Remove

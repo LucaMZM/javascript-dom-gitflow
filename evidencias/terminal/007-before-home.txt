@@ -1,0 +1,10 @@
+Data UTC: 2026-10-26T11:23:22.953303+00:00
+$ git log --graph --all --decorate --oneline
+* 5a3c16a (HEAD -> develop, main) chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 5a3c16a128bdec2581d556847d29563295eeb698

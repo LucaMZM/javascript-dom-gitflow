@@ -1,0 +1,10 @@
+$ gh issue create --repo LucaMZM/javascript-dom-gitflow --title 'Feature d atributs HTML' --body-file /tmp/gitflow-issue.md --assignee LucaMZM
+https://github.com/LucaMZM/javascript-dom-gitflow/issues/3
+
+Lectura i escriptura de title, i propietat disabled.
+
+Responsable simulat: `usuari2` (autoria real LucaMZM).
+Branca: `feature/atributsHTML`.
+Commit: https://github.com/LucaMZM/javascript-dom-gitflow/commit/22bf601
+
+Criteri d acceptació: verificar funcionalitat, evidència i documentació de la fase.

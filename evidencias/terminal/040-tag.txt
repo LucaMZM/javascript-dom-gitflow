@@ -1,0 +1,9 @@
+Data UTC: 2026-10-26T11:25:48.945892+00:00
+$ git tag -a v1.0 -m 'Versió 1.0 del laboratori DOM'
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+
+HEAD: 3c277c4ae97dc6fa146a7110fd2501794b6852c0

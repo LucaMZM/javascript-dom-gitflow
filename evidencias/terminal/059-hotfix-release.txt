@@ -1,0 +1,11 @@
+Data UTC: 2026-10-26T11:27:31.702971+00:00
+$ gh release create v1.0.1 --repo LucaMZM/javascript-dom-gitflow --title 'v1.0.1 — Millores del contingut HTML' --notes 'Hotfix real des de main: restabliment dels exemples de contingut i recompte Unicode del text aplicat. Integrat en main i develop; es conserva v1.0.'
+https://github.com/LucaMZM/javascript-dom-gitflow/releases/tag/v1.0.1
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+?? tests/
+
+HEAD: d0c5a2c057e82b03b7e5cec169aab86a4c0eb839

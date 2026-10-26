@@ -1,0 +1,15 @@
+Data UTC: 2026-10-26T11:25:49.089372+00:00
+$ git merge --no-ff release/v1.0 -m 'merge(release): [usuari1] retornar v1.0 a develop'
+Merge made by the 'ort' strategy.
+ favicon.svg  |  1 +
+ index.html   |  2 +-
+ package.json | 10 +++++++++-
+ 3 files changed, 11 insertions(+), 2 deletions(-)
+ create mode 100644 favicon.svg
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 6d9b2baec876e4c0e72a0d969baa88811e7d9fde
