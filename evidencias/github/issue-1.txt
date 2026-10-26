@@ -1,0 +1,10 @@
+$ gh issue create --repo LucaMZM/javascript-dom-gitflow --title 'Estructura inicial' --body-file /tmp/gitflow-issue.md --assignee LucaMZM
+https://github.com/LucaMZM/javascript-dom-gitflow/issues/1
+
+Home responsive, capçalera, navegació i base HTML5 Boilerplate.
+
+Responsable simulat: `usuari1` (autoria real LucaMZM).
+Branca: `develop`.
+Commit: https://github.com/LucaMZM/javascript-dom-gitflow/commit/3c786f4
+
+Criteri d acceptació: verificar funcionalitat, evidència i documentació de la fase.

@@ -1,0 +1,13 @@
+Data UTC: 2026-10-26T11:23:22.856866+00:00
+$ git commit -m 'chore(repo): [usuari1] iniciar pràctica i registrar criteris'
+[main (root-commit) 5a3c16a] chore(repo): [usuari1] iniciar pràctica i registrar criteris
+ 2 files changed, 23 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+
+HEAD: 5a3c16a128bdec2581d556847d29563295eeb698

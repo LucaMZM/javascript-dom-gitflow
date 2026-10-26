@@ -1,0 +1,12 @@
+Data UTC: 2026-10-26T11:25:38.151094+00:00
+$ git commit -m 'chore(release): [usuari1] preparar v1.0 i afegir favicon local'
+[release/v1.0 20f32a0] chore(release): [usuari1] preparar v1.0 i afegir favicon local
+ 3 files changed, 11 insertions(+), 2 deletions(-)
+ create mode 100644 favicon.svg
+
+Codi de retorn: 0
+$ git status --short --branch
+## release/v1.0
+?? evidencias/
+
+HEAD: 20f32a051dc3ecdbb946a789f3cfc75dd6e73259

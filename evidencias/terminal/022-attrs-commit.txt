@@ -1,0 +1,11 @@
+Data UTC: 2026-10-26T11:24:54.318800+00:00
+$ git commit -m 'feat(attributes): [usuari2] implementar atributs HTML'
+[feature/atributsHTML 22bf601] feat(attributes): [usuari2] implementar atributs HTML
+ 2 files changed, 18 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/atributsHTML
+?? evidencias/
+
+HEAD: 22bf60102f9590b736c69a30648cb65f84e17c10

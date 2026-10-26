@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Estructura inicial",
+    "url": "https://github.com/LucaMZM/javascript-dom-gitflow/issues/1",
+    "role": "usuari1",
+    "branch": "develop",
+    "sha": "3c786f4",
+    "complete": true
+  },
+  {
+    "title": "Feature de contingut HTML",
+    "url": "https://github.com/LucaMZM/javascript-dom-gitflow/issues/2",
+    "role": "usuari2",
+    "branch": "feature/contingutHTML",
+    "sha": "3fd18e5",
+    "complete": true
+  },
+  {
+    "title": "Feature d atributs HTML",
+    "url": "https://github.com/LucaMZM/javascript-dom-gitflow/issues/3",
+    "role": "usuari2",
+    "branch": "feature/atributsHTML",
+    "sha": "22bf601",
+    "complete": true
+  },
+  {
+    "title": "Feature d estils CSS",
+    "url": "https://github.com/LucaMZM/javascript-dom-gitflow/issues/4",
+    "role": "usuari3",
+    "branch": "feature/estilsCSS",
+    "sha": "5238368",
+    "complete": true
+  },
+  {
+    "title": "Release v1.0",
+    "url": "https://github.com/LucaMZM/javascript-dom-gitflow/issues/5",
+    "role": "usuari1",
+    "branch": "release/v1.0",
+    "sha": "20f32a0",
+    "complete": true
+  },
+  {
+    "title": "Hotfix de contingut",
+    "url": "https://github.com/LucaMZM/javascript-dom-gitflow/issues/6",
+    "role": "usuari1",
+    "branch": "hotfix/milloresV_1_0",
+    "sha": "51485c8",
+    "complete": true
+  },
+  {
+    "title": "Documentació acadèmica",
+    "url": "https://github.com/LucaMZM/javascript-dom-gitflow/issues/7",
+    "role": "usuari1",
+    "branch": "gh-pages",
+    "sha": null,
+    "complete": false
+  },
+  {
+    "title": "Publicació GitHub Pages",
+    "url": "https://github.com/LucaMZM/javascript-dom-gitflow/issues/8",
+    "role": "usuari1",
+    "branch": "gh-pages",
+    "sha": null,
+    "complete": false
+  }
+]

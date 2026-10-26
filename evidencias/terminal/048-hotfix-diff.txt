@@ -1,0 +1,65 @@
+Data UTC: 2026-10-26T11:26:01.689241+00:00
+$ git diff v1.0 HEAD -- app.js index.html package.json
+diff --git a/app.js b/app.js
+index a89b40c..1f6a700 100644
+--- a/app.js
++++ b/app.js
+@@ -4,7 +4,9 @@
+ const select = (selector) => document.querySelector(selector);
+ select('#apply-text').addEventListener('click', () => {
+   // textContent evita interpretar HTML escrit per l'usuari.
+-  select('#text-result').textContent = select('#new-text').value;
++  const text = select('#new-text').value;
++  select('#text-result').textContent = text;
++  select('#text-count').textContent = Array.from(text).length + ' caràcters aplicats';
+ });
+ select('#apply-html').addEventListener('click', () => {
+   // Només s'interpreta una plantilla fixa de confiança.
+@@ -44,3 +46,11 @@ select('#reset-style').addEventListener('click', () => {
+   select('#size-result').textContent = '20 px';
+   select('#class-change').setAttribute('aria-pressed', 'false');
+ });
++
++// Hotfix: repetir l'experiment sense recarregar la pàgina.
++select('#reset-content').addEventListener('click', () => {
++  select('#new-text').value = 'Hola, JavaScript!';
++  select('#text-result').textContent = 'Este text canviarà.';
++  select('#html-result').textContent = 'Encara no hi ha format.';
++  select('#text-count').textContent = '0 caràcters aplicats';
++});
+diff --git a/index.html b/index.html
+index 69b8a55..4cd95e0 100644
+--- a/index.html
++++ b/index.html
+@@ -5,9 +5,10 @@
+ <header><div class="brand"><span class="js-mark" aria-hidden="true">JS</span><span>Laboratori DOM<small>JavaScript aplicat a HTML</small></span></div><nav aria-label="Navegació principal"><a href="#home">Home</a><a href="#contingut">Contingut HTML</a><a href="#atributs">Atributs HTML</a><a href="#estils">Estils CSS</a></nav></header>
+ <main id="principal"><section class="hero" id="home"><div><p>Curs de desenvolupament web</p><h1>Canvia el codi.<br>Observa el resultat.</h1><p>Explora com JavaScript transforma una pàgina. Escriu, prova i entén cada canvi en el DOM.</p><a class="button" href="#contingut">Comença amb el contingut</a></div><div class="dom-visual" aria-label="Esquema del DOM"><span>document</span><i>↓</i><span>&lt;html&gt;</span><i>↓</i><div><span>&lt;head&gt;</span><span>&lt;body&gt;</span></div><p>Un arbre d'elements.<br>Moltes possibilitats.</p></div></section>
+ <section class="intro"><h2>Un laboratori per a aprendre fent</h2><p>L'objectiu és seleccionar elements del document, modificar-ne el contingut i els atributs, i controlar-ne la presentació. Cada exemple inclou controls, codi i un resultat visible.</p><p>Pràctica 1 de Luca Mazmishvili · Sistemes de control de versions</p></section>
+-<section class="lesson" id="contingut"><h2>Modificar contingut HTML</h2><p>Canvia el text d'un element o interpreta una estructura HTML coneguda.</p><article class="example"><div><h3>textContent: text literal</h3><label for="new-text">Què vols mostrar?</label><input id="new-text" value="Hola, JavaScript!" maxlength="160"><div class="controls"><button id="apply-text">Aplica el text</button></div><p class="output" id="text-result" aria-live="polite">Este text canviarà.</p></div><div><pre><code>// El contingut s'insereix com a text.
++<section class="lesson" id="contingut"><h2>Modificar contingut HTML</h2><p>Canvia el text d'un element o interpreta una estructura HTML coneguda.</p><article class="example"><div><h3>textContent: text literal</h3><label for="new-text">Què vols mostrar?</label><input id="new-text" value="Hola, JavaScript!" maxlength="160"><div class="controls"><button id="apply-text">Aplica el text</button><button id="reset-content" class="secondary">Restableix contingut</button></div><p class="output" id="text-result" aria-live="polite">Este text canviarà.</p><output id="text-count" aria-live="polite">0 caràcters aplicats</output></div><div><pre><code>// El contingut s'insereix com a text.
+ const resultat = document.querySelector('#text-result');
+-resultat.textContent = entrada.value;</code></pre><p class="note">Si escrius &lt;strong&gt;hola&lt;/strong&gt;, veuràs les etiquetes com a text.</p></div></article><article class="example"><div><h3>innerHTML: estructura HTML</h3><div class="controls"><button id="apply-html">Mostra HTML</button></div><div class="output" id="html-result" aria-live="polite">Encara no hi ha format.</div></div><div><pre><code>// Plantilla fixa i controlada.
++resultat.textContent = entrada.value;
++// El botó Restableix recupera els dos exemples.</code></pre><p class="note">Si escrius &lt;strong&gt;hola&lt;/strong&gt;, veuràs les etiquetes com a text.</p></div></article><article class="example"><div><h3>innerHTML: estructura HTML</h3><div class="controls"><button id="apply-html">Mostra HTML</button></div><div class="output" id="html-result" aria-live="polite">Encara no hi ha format.</div></div><div><pre><code>// Plantilla fixa i controlada.
+ resultat.innerHTML =
+   '&lt;strong&gt;Hola, DOM!&lt;/strong&gt; Ara amb format.';</code></pre><p class="note">innerHTML interpreta etiquetes. No l'utilitzem amb entrades de l'usuari perquè podrien inserir contingut insegur.</p></div></article></section>
+ <section class="lesson" id="atributs"><h2>Modificar atributs HTML</h2><p>Els atributs descriuen el comportament i les propietats d'un element.</p><article class="example"><div><h3>setAttribute i getAttribute</h3><label for="attribute-text">Nou títol de l'enllaç</label><input id="attribute-text" value="Consulta la guia de JavaScript" maxlength="120"><div class="controls"><button id="set-attr">Canvia title</button><button id="read-attr" class="secondary">Llig title</button></div><div class="output"><a id="demo-link" href="https://developer.mozilla.org/ca/docs/Web/JavaScript" title="Guia JavaScript">Guia de JavaScript de MDN</a><output id="attr-result" aria-live="polite">Llig l'atribut per veure'n el valor.</output></div></div><div><pre><code>// Escriure i llegir un atribut.
+diff --git a/package.json b/package.json
+index ab93e0c..228df21 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "javascript-dom-gitflow",
+-  "version": "1.0.0",
++  "version": "1.0.1",
+   "private": true,
+   "scripts": {
+     "start": "python3 -m http.server 8080",
+
+Codi de retorn: 0
+$ git status --short --branch
+## hotfix/milloresV_1_0
+?? evidencias/
+
+HEAD: 51485c8df1d333f2d9be474d88403067acdfd8f4

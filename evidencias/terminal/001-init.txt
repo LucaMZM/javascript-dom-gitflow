@@ -1,0 +1,12 @@
+Data UTC: 2026-10-26T11:22:43.348679+00:00
+$ git init -b main
+Initialized empty Git repository in /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow/.git/
+
+Codi de retorn: 0
+$ git status --short --branch
+## No commits yet on main
+
+HEAD: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+HEAD

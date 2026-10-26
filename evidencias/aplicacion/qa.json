@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-26T11:26:35.767Z",
+  "url": "http://localhost:8080",
+  "checks": [
+    {
+      "name": "textContent conserva HTML com a text sense executar-lo",
+      "pass": true
+    },
+    {
+      "name": "innerHTML interpreta la plantilla fixa",
+      "pass": true
+    },
+    {
+      "name": "setAttribute i getAttribute title",
+      "pass": true
+    },
+    {
+      "name": "disabled alterna en els dos sentits",
+      "pass": true
+    },
+    {
+      "name": "color CSS visible",
+      "pass": true
+    },
+    {
+      "name": "mida CSS i indicador",
+      "pass": true
+    },
+    {
+      "name": "classe CSS i aria-pressed",
+      "pass": true
+    },
+    {
+      "name": "restabliment complet dels estils",
+      "pass": true
+    },
+    {
+      "name": "tots els ancoratges interns tenen destinació",
+      "pass": true
+    },
+    {
+      "name": "responsive 390px sense desbordament horitzontal",
+      "pass": true
+    },
+    {
+      "name": "responsive 768px sense desbordament horitzontal",
+      "pass": true
+    },
+    {
+      "name": "responsive 1280px sense desbordament horitzontal",
+      "pass": true
+    },
+    {
+      "name": "hotfix compta punts de codi Unicode i text buit",
+      "pass": true
+    },
+    {
+      "name": "hotfix restablix contingut i comptador",
+      "pass": true
+    },
+    {
+      "name": "cap error JavaScript ni error de consola",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "externalLinks": [
+    {
+      "url": "https://developer.mozilla.org/ca/docs/Web/JavaScript",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/LucaMZM/javascript-dom-gitflow",
+      "status": 200,
+      "finalUrl": "https://github.com/LucaMZM/javascript-dom-gitflow",
+      "ok": true
+    },
+    {
+      "url": "https://lucamzm.github.io/javascript-dom-gitflow/",
+      "status": 404,
+      "finalUrl": "https://lucamzm.github.io/javascript-dom-gitflow/",
+      "ok": false
+    }
+  ],
+  "passed": false,
+  "localTestsPassed": true,
+  "externalLinksPassed": false
+}

@@ -1,0 +1,11 @@
+Data UTC: 2026-10-26T11:27:30.779524+00:00
+$ gh release create v1.0 --repo LucaMZM/javascript-dom-gitflow --title 'v1.0 — Laboratori JavaScript DOM' --notes 'Primera versió estable: Home, contingut HTML, atributs HTML i estils CSS. Features desenvolupades en branques pròpies i fusionades en develop; release integrada en main i develop.'
+https://github.com/LucaMZM/javascript-dom-gitflow/releases/tag/v1.0
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+?? tests/
+
+HEAD: d0c5a2c057e82b03b7e5cec169aab86a4c0eb839

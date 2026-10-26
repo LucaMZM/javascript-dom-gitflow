@@ -1,0 +1,14 @@
+Data UTC: 2026-10-26T11:23:22.788694+00:00
+$ git add README.md .gitignore
+
+Codi de retorn: 0
+$ git status --short --branch
+## No commits yet on main
+A  .gitignore
+A  README.md
+?? evidencias/
+
+HEAD: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+HEAD

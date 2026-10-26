@@ -1,0 +1,13 @@
+Data UTC: 2026-10-26T11:25:18.061714+00:00
+$ git merge --no-ff feature/atributsHTML -m 'merge(attributes): [usuari2] integrar atributs HTML'
+Merge made by the 'ort' strategy.
+ app.js     | 13 +++++++++++++
+ index.html |  6 +++++-
+ 2 files changed, 18 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: d4b7b6ffbd94a84ef15f2d2629d0fdb0c0baacd5

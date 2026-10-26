@@ -1,0 +1,9 @@
+$ gh issue create --repo LucaMZM/javascript-dom-gitflow --title 'Publicació GitHub Pages' --body-file /tmp/gitflow-issue.md --assignee LucaMZM
+https://github.com/LucaMZM/javascript-dom-gitflow/issues/8
+
+Documentació a l arrel i aplicació en /app/. Comprovació HTTP i navegador.
+
+Responsable simulat: `usuari1` (autoria real LucaMZM).
+Branca: `gh-pages`.
+
+Criteri d acceptació: verificar funcionalitat, evidència i documentació de la fase.

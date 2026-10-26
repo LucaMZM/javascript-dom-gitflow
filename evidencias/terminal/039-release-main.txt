@@ -1,0 +1,25 @@
+Data UTC: 2026-10-26T11:25:48.894701+00:00
+$ git merge --no-ff release/v1.0 -m 'merge(release): [usuari1] publicar versió 1.0'
+Merge made by the 'ort' strategy.
+ LICENSE-H5BP.txt |  19 +++++
+ app.js           |  46 +++++++++++
+ boilerplate.css  | 247 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ favicon.svg      |   1 +
+ index.html       |  23 ++++++
+ package.json     |   9 ++
+ style.css        |   1 +
+ 7 files changed, 346 insertions(+)
+ create mode 100644 LICENSE-H5BP.txt
+ create mode 100644 app.js
+ create mode 100644 boilerplate.css
+ create mode 100644 favicon.svg
+ create mode 100644 index.html
+ create mode 100644 package.json
+ create mode 100644 style.css
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+
+HEAD: 3c277c4ae97dc6fa146a7110fd2501794b6852c0
