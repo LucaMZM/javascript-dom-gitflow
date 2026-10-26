@@ -10,3 +10,16 @@ select('#apply-html').addEventListener('click', () => {
   // Només s'interpreta una plantilla fixa de confiança.
   select('#html-result').innerHTML = '<strong>Hola, DOM!</strong> Ara amb format.';
 });
+
+select('#set-attr').addEventListener('click', () => {
+  select('#demo-link').setAttribute('title', select('#attribute-text').value);
+  select('#attr-result').textContent = 'Atribut title actualitzat.';
+});
+select('#read-attr').addEventListener('click', () => {
+  select('#attr-result').textContent = select('#demo-link').getAttribute('title');
+});
+select('#toggle-disabled').addEventListener('click', () => {
+  const button = select('#target-button');
+  button.disabled = !button.disabled;
+  select('#prop-result').textContent = 'disabled = ' + button.disabled;
+});
