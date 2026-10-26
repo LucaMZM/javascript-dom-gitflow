@@ -23,3 +23,24 @@ select('#toggle-disabled').addEventListener('click', () => {
   button.disabled = !button.disabled;
   select('#prop-result').textContent = 'disabled = ' + button.disabled;
 });
+
+select('#color-change').addEventListener('click', () => {
+  select('#style-result').style.color = '#9c2348';
+});
+select('#size-change').addEventListener('input', (event) => {
+  select('#style-result').style.fontSize = event.target.value + 'px';
+  select('#size-result').textContent = event.target.value + ' px';
+});
+select('#class-change').addEventListener('click', (event) => {
+  const active = select('#style-result').classList.toggle('highlight');
+  event.currentTarget.setAttribute('aria-pressed', String(active));
+});
+select('#reset-style').addEventListener('click', () => {
+  const result = select('#style-result');
+  result.style.color = '';
+  result.style.fontSize = '20px';
+  result.classList.remove('highlight');
+  select('#size-change').value = '20';
+  select('#size-result').textContent = '20 px';
+  select('#class-change').setAttribute('aria-pressed', 'false');
+});
