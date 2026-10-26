@@ -1,0 +1,73 @@
+{"id": "001-init", "command": ["git", "init", "-b", "main"], "returncode": 0, "file": "evidencias/terminal/001-init.txt"}
+{"id": "002-tools", "command": ["git", "--version"], "returncode": 0, "file": "evidencias/terminal/002-tools.txt"}
+{"id": "003-create-repository", "command": ["gh", "repo", "create", "LucaMZM/javascript-dom-gitflow", "--public", "--description", "Pr\u00e0ctica 1 de Luca Mazmishvili: JavaScript DOM i Git Flow", "--source", ".", "--remote", "origin"], "returncode": 0, "file": "evidencias/terminal/003-create-repository.txt"}
+{"id": "004-bootstrap-commit", "command": ["git", "add", "README.md", ".gitignore"], "returncode": 0, "file": "evidencias/terminal/004-bootstrap-commit.txt"}
+{"id": "005-main-commit", "command": ["git", "commit", "-m", "chore(repo): [usuari1] iniciar pr\u00e0ctica i registrar criteris"], "returncode": 0, "file": "evidencias/terminal/005-main-commit.txt"}
+{"id": "006-develop", "command": ["git", "switch", "-c", "develop"], "returncode": 0, "file": "evidencias/terminal/006-develop.txt"}
+{"id": "007-before-home", "command": ["git", "log", "--graph", "--all", "--decorate", "--oneline"], "returncode": 0, "file": "evidencias/terminal/007-before-home.txt"}
+{"id": "008-home-files", "command": ["git", "status", "--short"], "returncode": 0, "file": "evidencias/terminal/008-home-files.txt"}
+{"id": "009-home-stage", "command": ["git", "add", "index.html", "style.css", "app.js", "package.json", "boilerplate.css", "LICENSE-H5BP.txt"], "returncode": 0, "file": "evidencias/terminal/009-home-stage.txt"}
+{"id": "010-home-commit", "command": ["git", "commit", "-m", "feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate"], "returncode": 0, "file": "evidencias/terminal/010-home-commit.txt"}
+{"id": "011-content-branch", "command": ["git", "switch", "-c", "feature/contingutHTML"], "returncode": 0, "file": "evidencias/terminal/011-content-branch.txt"}
+{"id": "012-first-push", "command": ["git", "push", "origin", "main", "develop"], "returncode": 0, "file": "evidencias/terminal/012-first-push.txt"}
+{"id": "013-content-check", "command": ["npm", "run", "check"], "returncode": 0, "file": "evidencias/terminal/013-content-check.txt"}
+{"id": "014-content-stage", "command": ["git", "add", "index.html", "app.js"], "returncode": 0, "file": "evidencias/terminal/014-content-stage.txt"}
+{"id": "015-content-commit", "command": ["git", "commit", "-m", "feat(html): [usuari2] afegir exemples de contingut"], "returncode": 0, "file": "evidencias/terminal/015-content-commit.txt"}
+{"id": "016-before-content-merge", "command": ["git", "log", "--graph", "--all", "--decorate", "--oneline"], "returncode": 0, "file": "evidencias/terminal/016-before-content-merge.txt"}
+{"id": "017-content-switch", "command": ["git", "switch", "develop"], "returncode": 0, "file": "evidencias/terminal/017-content-switch.txt"}
+{"id": "018-content-merge", "command": ["git", "merge", "--no-ff", "feature/contingutHTML", "-m", "merge(html): [usuari2] integrar contingut HTML"], "returncode": 0, "file": "evidencias/terminal/018-content-merge.txt"}
+{"id": "019-attrs-branch", "command": ["git", "switch", "-c", "feature/atributsHTML"], "returncode": 0, "file": "evidencias/terminal/019-attrs-branch.txt"}
+{"id": "020-attrs-check", "command": ["npm", "run", "check"], "returncode": 0, "file": "evidencias/terminal/020-attrs-check.txt"}
+{"id": "021-attrs-stage", "command": ["git", "add", "index.html", "app.js"], "returncode": 0, "file": "evidencias/terminal/021-attrs-stage.txt"}
+{"id": "022-attrs-commit", "command": ["git", "commit", "-m", "feat(attributes): [usuari2] implementar atributs HTML"], "returncode": 0, "file": "evidencias/terminal/022-attrs-commit.txt"}
+{"id": "023-before-attrs-merge", "command": ["git", "log", "--graph", "--all", "--decorate", "--oneline"], "returncode": 0, "file": "evidencias/terminal/023-before-attrs-merge.txt"}
+{"id": "024-attrs-switch", "command": ["git", "switch", "develop"], "returncode": 0, "file": "evidencias/terminal/024-attrs-switch.txt"}
+{"id": "025-attrs-merge", "command": ["git", "merge", "--no-ff", "feature/atributsHTML", "-m", "merge(attributes): [usuari2] integrar atributs HTML"], "returncode": 0, "file": "evidencias/terminal/025-attrs-merge.txt"}
+{"id": "026-css-branch", "command": ["git", "switch", "-c", "feature/estilsCSS"], "returncode": 0, "file": "evidencias/terminal/026-css-branch.txt"}
+{"id": "027-css-check", "command": ["npm", "run", "check"], "returncode": 0, "file": "evidencias/terminal/027-css-check.txt"}
+{"id": "028-css-stage", "command": ["git", "add", "index.html", "app.js"], "returncode": 0, "file": "evidencias/terminal/028-css-stage.txt"}
+{"id": "029-css-commit", "command": ["git", "commit", "-m", "feat(css): [usuari3] implementar canvis d estil"], "returncode": 0, "file": "evidencias/terminal/029-css-commit.txt"}
+{"id": "030-before-css-merge", "command": ["git", "log", "--graph", "--all", "--decorate", "--oneline"], "returncode": 0, "file": "evidencias/terminal/030-before-css-merge.txt"}
+{"id": "031-css-switch", "command": ["git", "switch", "develop"], "returncode": 0, "file": "evidencias/terminal/031-css-switch.txt"}
+{"id": "032-css-merge", "command": ["git", "merge", "--no-ff", "feature/estilsCSS", "-m", "merge(css): [usuari3] integrar estils CSS"], "returncode": 0, "file": "evidencias/terminal/032-css-merge.txt"}
+{"id": "033-release-branch", "command": ["git", "switch", "-c", "release/v1.0"], "returncode": 0, "file": "evidencias/terminal/033-release-branch.txt"}
+{"id": "034-release-check", "command": ["npm", "run", "check"], "returncode": 0, "file": "evidencias/terminal/034-release-check.txt"}
+{"id": "035-release-stage", "command": ["git", "add", "package.json", "index.html", "favicon.svg"], "returncode": 0, "file": "evidencias/terminal/035-release-stage.txt"}
+{"id": "036-release-commit", "command": ["git", "commit", "-m", "chore(release): [usuari1] preparar v1.0 i afegir favicon local"], "returncode": 0, "file": "evidencias/terminal/036-release-commit.txt"}
+{"id": "037-release-graph", "command": ["git", "log", "--graph", "--all", "--decorate", "--oneline"], "returncode": 0, "file": "evidencias/terminal/037-release-graph.txt"}
+{"id": "038-main-switch", "command": ["git", "switch", "main"], "returncode": 0, "file": "evidencias/terminal/038-main-switch.txt"}
+{"id": "039-release-main", "command": ["git", "merge", "--no-ff", "release/v1.0", "-m", "merge(release): [usuari1] publicar versi\u00f3 1.0"], "returncode": 0, "file": "evidencias/terminal/039-release-main.txt"}
+{"id": "040-tag", "command": ["git", "tag", "-a", "v1.0", "-m", "Versi\u00f3 1.0 del laboratori DOM"], "returncode": 0, "file": "evidencias/terminal/040-tag.txt"}
+{"id": "041-develop-switch", "command": ["git", "switch", "develop"], "returncode": 0, "file": "evidencias/terminal/041-develop-switch.txt"}
+{"id": "042-release-develop", "command": ["git", "merge", "--no-ff", "release/v1.0", "-m", "merge(release): [usuari1] retornar v1.0 a develop"], "returncode": 0, "file": "evidencias/terminal/042-release-develop.txt"}
+{"id": "043-hotfix-main", "command": ["git", "switch", "main"], "returncode": 0, "file": "evidencias/terminal/043-hotfix-main.txt"}
+{"id": "044-hotfix-branch", "command": ["git", "switch", "-c", "hotfix/milloresV_1_0"], "returncode": 0, "file": "evidencias/terminal/044-hotfix-branch.txt"}
+{"id": "045-hotfix-check", "command": ["npm", "run", "check"], "returncode": 0, "file": "evidencias/terminal/045-hotfix-check.txt"}
+{"id": "046-hotfix-stage", "command": ["git", "add", "index.html", "app.js", "package.json"], "returncode": 0, "file": "evidencias/terminal/046-hotfix-stage.txt"}
+{"id": "047-hotfix-commit", "command": ["git", "commit", "-m", "fix(html): [usuari1] restablir contingut i comptar car\u00e0cters"], "returncode": 0, "file": "evidencias/terminal/047-hotfix-commit.txt"}
+{"id": "048-hotfix-diff", "command": ["git", "diff", "v1.0", "HEAD", "--", "app.js", "index.html", "package.json"], "returncode": 0, "file": "evidencias/terminal/048-hotfix-diff.txt"}
+{"id": "049-hotfix-switch", "command": ["git", "switch", "main"], "returncode": 0, "file": "evidencias/terminal/049-hotfix-switch.txt"}
+{"id": "050-hotfix-main", "command": ["git", "merge", "--no-ff", "hotfix/milloresV_1_0", "-m", "merge(hotfix): [usuari1] integrar millores de contingut en main"], "returncode": 0, "file": "evidencias/terminal/050-hotfix-main.txt"}
+{"id": "051-hotfix-tag", "command": ["git", "tag", "-a", "v1.0.1", "-m", "Hotfix: restabliment de contingut i recompte Unicode"], "returncode": 0, "file": "evidencias/terminal/051-hotfix-tag.txt"}
+{"id": "052-hotfix-develop-switch", "command": ["git", "switch", "develop"], "returncode": 0, "file": "evidencias/terminal/052-hotfix-develop-switch.txt"}
+{"id": "053-hotfix-develop", "command": ["git", "merge", "--no-ff", "hotfix/milloresV_1_0", "-m", "merge(hotfix): [usuari1] integrar millores en develop"], "returncode": 0, "file": "evidencias/terminal/053-hotfix-develop.txt"}
+{"id": "054-final-graph", "command": ["git", "log", "--graph", "--all", "--decorate", "--oneline"], "returncode": 0, "file": "evidencias/terminal/054-final-graph.txt"}
+{"id": "055-main-final", "command": ["git", "switch", "main"], "returncode": 0, "file": "evidencias/terminal/055-main-final.txt"}
+{"id": "056-push-flow", "command": ["git", "push", "origin", "--all"], "returncode": 0, "file": "evidencias/terminal/056-push-flow.txt"}
+{"id": "057-push-tags", "command": ["git", "push", "origin", "--tags"], "returncode": 0, "file": "evidencias/terminal/057-push-tags.txt"}
+{"id": "058-release-github", "command": ["gh", "release", "create", "v1.0", "--repo", "LucaMZM/javascript-dom-gitflow", "--title", "v1.0 \u2014 Laboratori JavaScript DOM", "--notes", "Primera versi\u00f3 estable: Home, contingut HTML, atributs HTML i estils CSS. Features desenvolupades en branques pr\u00f2pies i fusionades en develop; release integrada en main i develop."], "returncode": 0, "file": "evidencias/terminal/058-release-github.txt"}
+{"id": "059-hotfix-release", "command": ["gh", "release", "create", "v1.0.1", "--repo", "LucaMZM/javascript-dom-gitflow", "--title", "v1.0.1 \u2014 Millores del contingut HTML", "--notes", "Hotfix real des de main: restabliment dels exemples de contingut i recompte Unicode del text aplicat. Integrat en main i develop; es conserva v1.0."], "returncode": 0, "file": "evidencias/terminal/059-hotfix-release.txt"}
+{"id": "060-close-structure", "command": ["gh", "issue", "close", "1", "--repo", "LucaMZM/javascript-dom-gitflow", "--reason", "completed"], "returncode": 0, "file": "evidencias/terminal/060-close-structure.txt"}
+{"id": "061-close-content", "command": ["gh", "issue", "close", "2", "--repo", "LucaMZM/javascript-dom-gitflow", "--reason", "completed"], "returncode": 0, "file": "evidencias/terminal/061-close-content.txt"}
+{"id": "062-close-attributes", "command": ["gh", "issue", "close", "3", "--repo", "LucaMZM/javascript-dom-gitflow", "--reason", "completed"], "returncode": 0, "file": "evidencias/terminal/062-close-attributes.txt"}
+{"id": "063-close-css", "command": ["gh", "issue", "close", "4", "--repo", "LucaMZM/javascript-dom-gitflow", "--reason", "completed"], "returncode": 0, "file": "evidencias/terminal/063-close-css.txt"}
+{"id": "064-close-release", "command": ["gh", "issue", "close", "5", "--repo", "LucaMZM/javascript-dom-gitflow", "--reason", "completed"], "returncode": 0, "file": "evidencias/terminal/064-close-release.txt"}
+{"id": "065-close-hotfix", "command": ["gh", "issue", "close", "6", "--repo", "LucaMZM/javascript-dom-gitflow", "--reason", "completed"], "returncode": 0, "file": "evidencias/terminal/065-close-hotfix.txt"}
+{"id": "066-evidence-stage", "command": ["git", "add", "README.md", "tests", "scripts", "evidencias"], "returncode": 0, "file": "evidencias/terminal/066-evidence-stage.txt"}
+{"id": "067-evidence-commit", "command": ["git", "commit", "-m", "docs(evidencies): [usuari1] conservar registres reals i proves del DOM"], "returncode": 0, "file": "evidencias/terminal/067-evidence-commit.txt"}
+{"id": "068-develop-docs", "command": ["git", "switch", "develop"], "returncode": 1, "file": "evidencias/terminal/068-develop-docs.txt"}
+{"id": "069-sync-docs", "command": ["git", "merge", "--no-ff", "main", "-m", "merge(docs): [usuari1] sincronitzar proves i evid\u00e8ncies"], "returncode": 0, "file": "evidencias/terminal/069-sync-docs.txt"}
+{"id": "070-return-main", "command": ["git", "switch", "main"], "returncode": 0, "file": "evidencias/terminal/070-return-main.txt"}
+{"id": "071-pages-worktree", "command": ["git", "worktree", "add", "--orphan", "-b", "gh-pages", "/Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-pages"], "returncode": 0, "file": "evidencias/terminal/071-pages-worktree.txt"}
+{"id": "072-develop-worktree", "command": ["git", "worktree", "add", "/Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-develop", "develop"], "returncode": 0, "file": "evidencias/terminal/072-develop-worktree.txt"}
+{"id": "073-sync-docs-correct", "command": ["git", "-C", "/Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-develop", "merge", "--no-ff", "main", "-m", "merge(docs): [usuari1] sincronitzar proves i evid\u00e8ncies"], "returncode": 0, "file": "evidencias/terminal/073-sync-docs-correct.txt"}

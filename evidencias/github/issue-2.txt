@@ -1,0 +1,10 @@
+$ gh issue create --repo LucaMZM/javascript-dom-gitflow --title 'Feature de contingut HTML' --body-file /tmp/gitflow-issue.md --assignee LucaMZM
+https://github.com/LucaMZM/javascript-dom-gitflow/issues/2
+
+Exemples de textContent i innerHTML amb controls funcionals.
+
+Responsable simulat: `usuari2` (autoria real LucaMZM).
+Branca: `feature/contingutHTML`.
+Commit: https://github.com/LucaMZM/javascript-dom-gitflow/commit/3fd18e5
+
+Criteri d acceptació: verificar funcionalitat, evidència i documentació de la fase.

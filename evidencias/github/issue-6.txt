@@ -1,0 +1,10 @@
+$ gh issue create --repo LucaMZM/javascript-dom-gitflow --title 'Hotfix de contingut' --body-file /tmp/gitflow-issue.md --assignee LucaMZM
+https://github.com/LucaMZM/javascript-dom-gitflow/issues/6
+
+Restabliment dels exemples i recompte Unicode. Integració doble i v1.0.1.
+
+Responsable simulat: `usuari1` (autoria real LucaMZM).
+Branca: `hotfix/milloresV_1_0`.
+Commit: https://github.com/LucaMZM/javascript-dom-gitflow/commit/51485c8
+
+Criteri d acceptació: verificar funcionalitat, evidència i documentació de la fase.

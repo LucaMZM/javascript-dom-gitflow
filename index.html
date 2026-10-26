@@ -1,0 +1,939 @@
+<!doctype html><html lang="ca-valencia"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Memòria completa de la pràctica Git Flow de Luca Mazmishvili amb evidències reals."><title>Pràctica 1 · Git Flow · LucaMZM</title><link rel="stylesheet" href="docs.css"><link rel="icon" href="app/favicon.svg"></head><body><header><a class="skip" href="#memoria">Ves a la memòria</a><h1>Pràctica 1<br>Sistemes de control de versions</h1><p>Luca Mazmishvili · LucaMZM · 26 d octubre de 2026</p><p>Memòria del desenvolupament d un laboratori JavaScript DOM amb Git Flow, evidències autèntiques i publicació en GitHub.</p><a href="app/">Obri el laboratori JavaScript</a></header><div class="layout"><nav aria-label="Índex de la memòria"><a href="#s1">1. Introducció</a><a href="#s2">2. Què és Git</a><a href="#s3">3. Què és Git Flow</a><a href="#s4">4. Per què utilitzem Git Flow</a><a href="#s5">5. Creació del repositori</a><a href="#s6">6. Creació de main i develop</a><a href="#s7">7. Desenvolupament inicial</a><a href="#s8">8. Feature de contingut HTML</a><a href="#s9">9. Feature d atributs HTML</a><a href="#s10">10. Feature d estils CSS</a><a href="#s11">11. Fusió de les funcionalitats</a><a href="#s12">12. Release v1.0</a><a href="#s13">13. Hotfix</a><a href="#s14">14. GitHub Project</a><a href="#s15">15. Accés del professor al projecte</a><a href="#s16">16. Captures del procés</a><a href="#s17">17. Resultat de l aplicació</a><a href="#s18">18. Conclusions i enllaços</a></nav><main id="memoria"><section id="s1"><h2>1. Introducció</h2><p>Esta pràctica estudia el control de versions mitjançant una aplicació educativa de JavaScript aplicada al DOM. L&#x27;objectiu és relacionar cada funcionalitat amb una branca, uns commits i una integració verificables. Els papers d&#x27;usuari 1, usuari 2 i usuari 3 es representen en els missatges de commit, mantenint l&#x27;autoria real de Git. La memòria ha de permetre comprovar què s&#x27;ha executat, quin resultat s&#x27;ha obtingut i quines incidències continuen pendents.</p></section><section id="s2"><h2>2. Què és Git</h2><p>Git és un sistema distribuït de control de versions. Cada commit conserva una instantània del projecte i la relaciona amb els commits anteriors. Les branques permeten desenvolupar canvis de manera separada i les fusions integren els historials. El repositori local conté l&#x27;historial; GitHub allotja una còpia remota i aporta eines de revisió, incidències i organització. Abans d&#x27;integrar un canvi, convé revisar l&#x27;estat de treball, el diff i les proves corresponents.</p></section><section id="s3"><h2>3. Què és Git Flow</h2><p>Git Flow és una convenció per organitzar les branques i les publicacions. En esta pràctica, main representa les versions estables i develop concentra el desenvolupament integrat. Les branques feature naixen de develop i hi tornen després de completar una funcionalitat. La branca release/v1.0 permet verificar i preparar la versió, que s&#x27;integra en main i develop. Un hotfix naix de main per corregir una versió publicada i també s&#x27;incorpora a les dos branques principals. Les etiquetes v1.0 i, quan corresponga, v1.0.1 identifiquen punts concrets de l&#x27;historial.</p></section><section id="s4"><h2>4. Per què utilitzem Git Flow</h2><p>Utilitzem Git Flow per separar les funcionalitats en curs de les versions preparades per publicar, fer visibles les fases del treball i facilitar la revisió de cada integració. Els commits descriptius expliquen la finalitat dels canvis i les fusions amb historial conservat mostren d&#x27;on prové cada funcionalitat. En un projecte docent menut, esta estructura servix sobretot per practicar la coordinació i la traçabilitat; no implica que siga el flux més senzill per a qualsevol projecte.</p></section><section id="s5"><h2>5. Creació del repositori</h2><p>Repositori públic creat amb GitHub CLI, autenticat com LucaMZM. Git, gh, Node.js i npm disponibles. HTML5 Boilerplate v9.0.1 descarregat des del repositori oficial, amb llicència conservada.</p><figure><a href="evidencias/github/01-repositori.png"><img src="evidencias/github/01-repositori.png" alt="Captura real: Creació del repositori" loading="lazy"></a><figcaption>Captura de navegador real. Creació del repositori.</figcaption></figure><details><summary>Ordre i eixida registrada 001-init</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:22:43.348679+00:00
+$ git init -b main
+Initialized empty Git repository in /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow/.git/
+
+Codi de retorn: 0
+$ git status --short --branch
+## No commits yet on main
+
+HEAD: fatal: ambiguous argument &#x27;HEAD&#x27;: unknown revision or path not in the working tree.
+Use &#x27;--&#x27; to separate paths from revisions, like this:
+&#x27;git &lt;command&gt; [&lt;revision&gt;...] -- [&lt;file&gt;...]&#x27;
+HEAD
+</pre><a href="evidencias/terminal/001-init.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 002-tools</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:22:43.399969+00:00
+$ git --version
+git version 2.52.0
+
+Codi de retorn: 0
+$ git status --short --branch
+## No commits yet on main
+?? evidencias/
+
+HEAD: fatal: ambiguous argument &#x27;HEAD&#x27;: unknown revision or path not in the working tree.
+Use &#x27;--&#x27; to separate paths from revisions, like this:
+&#x27;git &lt;command&gt; [&lt;revision&gt;...] -- [&lt;file&gt;...]&#x27;
+HEAD
+</pre><a href="evidencias/terminal/002-tools.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 003-create-repository</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:23:02.191707+00:00
+$ gh repo create LucaMZM/javascript-dom-gitflow --public --description &#x27;Pràctica 1 de Luca Mazmishvili: JavaScript DOM i Git Flow&#x27; --source . --remote origin
+https://github.com/LucaMZM/javascript-dom-gitflow
+
+Codi de retorn: 0
+$ git status --short --branch
+## No commits yet on main
+?? evidencias/
+
+HEAD: fatal: ambiguous argument &#x27;HEAD&#x27;: unknown revision or path not in the working tree.
+Use &#x27;--&#x27; to separate paths from revisions, like this:
+&#x27;git &lt;command&gt; [&lt;revision&gt;...] -- [&lt;file&gt;...]&#x27;
+HEAD
+</pre><a href="evidencias/terminal/003-create-repository.txt">Obri el registre complet</a></details></section><section id="s6"><h2>6. Creació de main i develop</h2><p>main naix amb el commit 5a3c16a. develop es crea abans de desenvolupar la interfície. La simulació dels tres usuaris es limita als missatges de commit; no es falsifiquen identitats.</p><details><summary>Ordre i eixida registrada 005-main-commit</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:23:22.856866+00:00
+$ git commit -m &#x27;chore(repo): [usuari1] iniciar pràctica i registrar criteris&#x27;
+[main (root-commit) 5a3c16a] chore(repo): [usuari1] iniciar pràctica i registrar criteris
+ 2 files changed, 23 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+
+HEAD: 5a3c16a128bdec2581d556847d29563295eeb698
+</pre><a href="evidencias/terminal/005-main-commit.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 006-develop</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:23:22.907247+00:00
+$ git switch -c develop
+Switched to a new branch &#x27;develop&#x27;
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 5a3c16a128bdec2581d556847d29563295eeb698
+</pre><a href="evidencias/terminal/006-develop.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 007-before-home</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:23:22.953303+00:00
+$ git log --graph --all --decorate --oneline
+* 5a3c16a (HEAD -&gt; develop, main) chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 5a3c16a128bdec2581d556847d29563295eeb698
+</pre><a href="evidencias/terminal/007-before-home.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 012-first-push</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:04.270059+00:00
+$ git push origin main develop
+To https://github.com/LucaMZM/javascript-dom-gitflow.git
+ * [new branch]      main -&gt; main
+ * [new branch]      develop -&gt; develop
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/contingutHTML
+?? evidencias/
+
+HEAD: 3c786f42665e6cff7769dff05ccbd953dc4d0e2c
+</pre><a href="evidencias/terminal/012-first-push.txt">Obri el registre complet</a></details></section><section id="s7"><h2>7. Desenvolupament inicial</h2><p>Home implementat en develop amb HTML5 Boilerplate adaptat, cabecera visual, navegació, presentació, objectius i footer. Commit 3c786f4. L enunciat original es localitza durant el procés i es contrasta el seu esquema general.</p><figure><a href="evidencias/aplicacion/03-home.png"><img src="evidencias/aplicacion/03-home.png" alt="Captura real: Desenvolupament inicial" loading="lazy"></a><figcaption>Captura de navegador real. Desenvolupament inicial.</figcaption></figure><details><summary>Ordre i eixida registrada 008-home-files</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:00.266826+00:00
+$ git status --short
+?? LICENSE-H5BP.txt
+?? app.js
+?? boilerplate.css
+?? evidencias/
+?? index.html
+?? package.json
+?? style.css
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? LICENSE-H5BP.txt
+?? app.js
+?? boilerplate.css
+?? evidencias/
+?? index.html
+?? package.json
+?? style.css
+
+HEAD: 5a3c16a128bdec2581d556847d29563295eeb698
+</pre><a href="evidencias/terminal/008-home-files.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 010-home-commit</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:00.437228+00:00
+$ git commit -m &#x27;feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate&#x27;
+[develop 3c786f4] feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate
+ 6 files changed, 281 insertions(+)
+ create mode 100644 LICENSE-H5BP.txt
+ create mode 100644 app.js
+ create mode 100644 boilerplate.css
+ create mode 100644 index.html
+ create mode 100644 package.json
+ create mode 100644 style.css
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 3c786f42665e6cff7769dff05ccbd953dc4d0e2c
+</pre><a href="evidencias/terminal/010-home-commit.txt">Obri el registre complet</a></details></section><section id="s8"><h2>8. Feature de contingut HTML</h2><p>Branca creada des de develop abans de programar. textContent insereix text literal i innerHTML interpreta només una plantilla fixa de confiança. Commit 3fd18e5. No s interpreta cap entrada lliure de l usuari com a HTML.</p><figure><a href="evidencias/aplicacion/05-contingut.png"><img src="evidencias/aplicacion/05-contingut.png" alt="Captura real: Feature de contingut HTML" loading="lazy"></a><figcaption>Captura de navegador real. Feature de contingut HTML.</figcaption></figure><details><summary>Ordre i eixida registrada 011-content-branch</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:00.494772+00:00
+$ git switch -c feature/contingutHTML
+Switched to a new branch &#x27;feature/contingutHTML&#x27;
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/contingutHTML
+?? evidencias/
+
+HEAD: 3c786f42665e6cff7769dff05ccbd953dc4d0e2c
+</pre><a href="evidencias/terminal/011-content-branch.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 013-content-check</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:20.815369+00:00
+$ npm run check
+
+&gt; javascript-dom-gitflow@0.1.0 check
+&gt; node --check app.js
+
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/contingutHTML
+ M app.js
+ M index.html
+?? evidencias/
+
+HEAD: 3c786f42665e6cff7769dff05ccbd953dc4d0e2c
+</pre><a href="evidencias/terminal/013-content-check.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 015-content-commit</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:20.929881+00:00
+$ git commit -m &#x27;feat(html): [usuari2] afegir exemples de contingut&#x27;
+[feature/contingutHTML 3fd18e5] feat(html): [usuari2] afegir exemples de contingut
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/contingutHTML
+?? evidencias/
+
+HEAD: 3fd18e5092d54ca47487cc9a40b53fa459125ca3
+</pre><a href="evidencias/terminal/015-content-commit.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 016-before-content-merge</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:20.978922+00:00
+$ git log --graph --all --decorate --oneline
+* 3fd18e5 (HEAD -&gt; feature/contingutHTML) feat(html): [usuari2] afegir exemples de contingut
+* 3c786f4 (origin/develop, develop) feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate
+* 5a3c16a (origin/main, main) chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/contingutHTML
+?? evidencias/
+
+HEAD: 3fd18e5092d54ca47487cc9a40b53fa459125ca3
+</pre><a href="evidencias/terminal/016-before-content-merge.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 018-content-merge</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:53.709026+00:00
+$ git merge --no-ff feature/contingutHTML -m &#x27;merge(html): [usuari2] integrar contingut HTML&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ app.js     | 10 ++++++++++
+ index.html |  6 +++++-
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 70ce7aac4da5f88ea0b487b09522b443587ed5ee
+</pre><a href="evidencias/terminal/018-content-merge.txt">Obri el registre complet</a></details></section><section id="s9"><h2>9. Feature d atributs HTML</h2><p>setAttribute actualitza title, getAttribute en llig el valor i disabled alterna una propietat booleana. Commit 22bf601. La fusió conserva un commit amb dos pares.</p><figure><a href="evidencias/aplicacion/08-atributs.png"><img src="evidencias/aplicacion/08-atributs.png" alt="Captura real: Feature d atributs HTML" loading="lazy"></a><figcaption>Captura de navegador real. Feature d atributs HTML.</figcaption></figure><details><summary>Ordre i eixida registrada 019-attrs-branch</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:53.759559+00:00
+$ git switch -c feature/atributsHTML
+Switched to a new branch &#x27;feature/atributsHTML&#x27;
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/atributsHTML
+?? evidencias/
+
+HEAD: 70ce7aac4da5f88ea0b487b09522b443587ed5ee
+</pre><a href="evidencias/terminal/019-attrs-branch.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 020-attrs-check</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:54.218035+00:00
+$ npm run check
+
+&gt; javascript-dom-gitflow@0.1.0 check
+&gt; node --check app.js
+
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/atributsHTML
+ M app.js
+ M index.html
+?? evidencias/
+
+HEAD: 70ce7aac4da5f88ea0b487b09522b443587ed5ee
+</pre><a href="evidencias/terminal/020-attrs-check.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 022-attrs-commit</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:54.318800+00:00
+$ git commit -m &#x27;feat(attributes): [usuari2] implementar atributs HTML&#x27;
+[feature/atributsHTML 22bf601] feat(attributes): [usuari2] implementar atributs HTML
+ 2 files changed, 18 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/atributsHTML
+?? evidencias/
+
+HEAD: 22bf60102f9590b736c69a30648cb65f84e17c10
+</pre><a href="evidencias/terminal/022-attrs-commit.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 023-before-attrs-merge</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:54.364231+00:00
+$ git log --graph --all --decorate --oneline
+* 22bf601 (HEAD -&gt; feature/atributsHTML) feat(attributes): [usuari2] implementar atributs HTML
+*   70ce7aa (develop) merge(html): [usuari2] integrar contingut HTML
+|\  
+| * 3fd18e5 (feature/contingutHTML) feat(html): [usuari2] afegir exemples de contingut
+|/  
+* 3c786f4 (origin/develop) feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate
+* 5a3c16a (origin/main, main) chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/atributsHTML
+?? evidencias/
+
+HEAD: 22bf60102f9590b736c69a30648cb65f84e17c10
+</pre><a href="evidencias/terminal/023-before-attrs-merge.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 025-attrs-merge</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:18.061714+00:00
+$ git merge --no-ff feature/atributsHTML -m &#x27;merge(attributes): [usuari2] integrar atributs HTML&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ app.js     | 13 +++++++++++++
+ index.html |  6 +++++-
+ 2 files changed, 18 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: d4b7b6ffbd94a84ef15f2d2629d0fdb0c0baacd5
+</pre><a href="evidencias/terminal/025-attrs-merge.txt">Obri el registre complet</a></details></section><section id="s10"><h2>10. Feature d estils CSS</h2><p>Color i fontSize es modifiquen amb style; classList alterna el ressaltat. El botó de restabliment recupera l estat inicial i aria-pressed reflecteix l estat. Commit 5238368.</p><figure><a href="evidencias/aplicacion/11-estils.png"><img src="evidencias/aplicacion/11-estils.png" alt="Captura real: Feature d estils CSS" loading="lazy"></a><figcaption>Captura de navegador real. Feature d estils CSS.</figcaption></figure><details><summary>Ordre i eixida registrada 026-css-branch</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:18.110358+00:00
+$ git switch -c feature/estilsCSS
+Switched to a new branch &#x27;feature/estilsCSS&#x27;
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/estilsCSS
+?? evidencias/
+
+HEAD: d4b7b6ffbd94a84ef15f2d2629d0fdb0c0baacd5
+</pre><a href="evidencias/terminal/026-css-branch.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 027-css-check</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:18.359696+00:00
+$ npm run check
+
+&gt; javascript-dom-gitflow@0.1.0 check
+&gt; node --check app.js
+
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/estilsCSS
+ M app.js
+ M index.html
+?? evidencias/
+
+HEAD: d4b7b6ffbd94a84ef15f2d2629d0fdb0c0baacd5
+</pre><a href="evidencias/terminal/027-css-check.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 029-css-commit</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:18.473881+00:00
+$ git commit -m &#x27;feat(css): [usuari3] implementar canvis d estil&#x27;
+[feature/estilsCSS 5238368] feat(css): [usuari3] implementar canvis d estil
+ 2 files changed, 26 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/estilsCSS
+?? evidencias/
+
+HEAD: 5238368ff49e33ef20c94e8d7b3271e2e557124e
+</pre><a href="evidencias/terminal/029-css-commit.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 030-before-css-merge</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:18.524616+00:00
+$ git log --graph --all --decorate --oneline
+* 5238368 (HEAD -&gt; feature/estilsCSS) feat(css): [usuari3] implementar canvis d estil
+*   d4b7b6f (develop) merge(attributes): [usuari2] integrar atributs HTML
+|\  
+| * 22bf601 (feature/atributsHTML) feat(attributes): [usuari2] implementar atributs HTML
+|/  
+*   70ce7aa merge(html): [usuari2] integrar contingut HTML
+|\  
+| * 3fd18e5 (feature/contingutHTML) feat(html): [usuari2] afegir exemples de contingut
+|/  
+* 3c786f4 (origin/develop) feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate
+* 5a3c16a (origin/main, main) chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/estilsCSS
+?? evidencias/
+
+HEAD: 5238368ff49e33ef20c94e8d7b3271e2e557124e
+</pre><a href="evidencias/terminal/030-before-css-merge.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 032-css-merge</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:37.714240+00:00
+$ git merge --no-ff feature/estilsCSS -m &#x27;merge(css): [usuari3] integrar estils CSS&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ app.js     | 21 +++++++++++++++++++++
+ index.html |  6 +++++-
+ 2 files changed, 26 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 8201996d3e4fac123ca35981c22f6a85cbddc805
+</pre><a href="evidencias/terminal/032-css-merge.txt">Obri el registre complet</a></details></section><section id="s11"><h2>11. Fusió de les funcionalitats</h2><p>Les tres features s integren amb --no-ff: 70ce7aa, d4b7b6f i 8201996. Les branques es mantenen publicades perquè el professor puga inspeccionar-les.</p><details><summary>Ordre i eixida registrada 018-content-merge</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:24:53.709026+00:00
+$ git merge --no-ff feature/contingutHTML -m &#x27;merge(html): [usuari2] integrar contingut HTML&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ app.js     | 10 ++++++++++
+ index.html |  6 +++++-
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 70ce7aac4da5f88ea0b487b09522b443587ed5ee
+</pre><a href="evidencias/terminal/018-content-merge.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 025-attrs-merge</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:18.061714+00:00
+$ git merge --no-ff feature/atributsHTML -m &#x27;merge(attributes): [usuari2] integrar atributs HTML&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ app.js     | 13 +++++++++++++
+ index.html |  6 +++++-
+ 2 files changed, 18 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: d4b7b6ffbd94a84ef15f2d2629d0fdb0c0baacd5
+</pre><a href="evidencias/terminal/025-attrs-merge.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 032-css-merge</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:37.714240+00:00
+$ git merge --no-ff feature/estilsCSS -m &#x27;merge(css): [usuari3] integrar estils CSS&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ app.js     | 21 +++++++++++++++++++++
+ index.html |  6 +++++-
+ 2 files changed, 26 insertions(+), 1 deletion(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 8201996d3e4fac123ca35981c22f6a85cbddc805
+</pre><a href="evidencias/terminal/032-css-merge.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 054-final-graph</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:27:21.685228+00:00
+$ git log --graph --all --decorate --oneline
+*   80e5ffb (HEAD -&gt; develop) merge(hotfix): [usuari1] integrar millores en develop
+|\  
+* \   6d9b2ba merge(release): [usuari1] retornar v1.0 a develop
+|\ \  
+| | | *   d0c5a2c (tag: v1.0.1, main) merge(hotfix): [usuari1] integrar millores de contingut en main
+| | | |\  
+| | | |/  
+| | |/|   
+| | * | 51485c8 (hotfix/milloresV_1_0) fix(html): [usuari1] restablir contingut i comptar caràcters
+| | |/  
+| | *   3c277c4 (tag: v1.0) merge(release): [usuari1] publicar versió 1.0
+| | |\  
+| | |/  
+| |/|   
+| * | 20f32a0 (release/v1.0) chore(release): [usuari1] preparar v1.0 i afegir favicon local
+|/ /  
+* |   8201996 merge(css): [usuari3] integrar estils CSS
+|\ \  
+| * | 5238368 (feature/estilsCSS) feat(css): [usuari3] implementar canvis d estil
+|/ /  
+* |   d4b7b6f merge(attributes): [usuari2] integrar atributs HTML
+|\ \  
+| * | 22bf601 (feature/atributsHTML) feat(attributes): [usuari2] implementar atributs HTML
+|/ /  
+* |   70ce7aa merge(html): [usuari2] integrar contingut HTML
+|\ \  
+| * | 3fd18e5 (feature/contingutHTML) feat(html): [usuari2] afegir exemples de contingut
+|/ /  
+* / 3c786f4 (origin/develop) feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate
+|/  
+* 5a3c16a (origin/main) chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+?? tests/
+
+HEAD: 80e5ffbe85a85d8612009378d650d01953c2d733
+</pre><a href="evidencias/terminal/054-final-graph.txt">Obri el registre complet</a></details></section><section id="s12"><h2>12. Release v1.0</h2><p>release/v1.0 prepara package.json i el favicon local. Integració en main (3c277c4) i develop (6d9b2ba), etiqueta anotada v1.0 i GitHub Release publicada. La preparació s ha identificat com usuari1; l enunciat original assignava aquesta fase a usuari3. Es conserva el registre real sense reescriure autoria ni historial.</p><figure><a href="evidencias/github/16-release-v1.png"><img src="evidencias/github/16-release-v1.png" alt="Captura real: Release v1.0" loading="lazy"></a><figcaption>Captura de navegador real. Release v1.0.</figcaption></figure><details><summary>Ordre i eixida registrada 033-release-branch</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:37.767771+00:00
+$ git switch -c release/v1.0
+Switched to a new branch &#x27;release/v1.0&#x27;
+
+Codi de retorn: 0
+$ git status --short --branch
+## release/v1.0
+?? evidencias/
+
+HEAD: 8201996d3e4fac123ca35981c22f6a85cbddc805
+</pre><a href="evidencias/terminal/033-release-branch.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 034-release-check</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:38.046409+00:00
+$ npm run check
+
+&gt; javascript-dom-gitflow@1.0.0 check
+&gt; node --check app.js
+
+
+Codi de retorn: 0
+$ git status --short --branch
+## release/v1.0
+ M index.html
+ M package.json
+?? evidencias/
+?? favicon.svg
+
+HEAD: 8201996d3e4fac123ca35981c22f6a85cbddc805
+</pre><a href="evidencias/terminal/034-release-check.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 036-release-commit</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:38.151094+00:00
+$ git commit -m &#x27;chore(release): [usuari1] preparar v1.0 i afegir favicon local&#x27;
+[release/v1.0 20f32a0] chore(release): [usuari1] preparar v1.0 i afegir favicon local
+ 3 files changed, 11 insertions(+), 2 deletions(-)
+ create mode 100644 favicon.svg
+
+Codi de retorn: 0
+$ git status --short --branch
+## release/v1.0
+?? evidencias/
+
+HEAD: 20f32a051dc3ecdbb946a789f3cfc75dd6e73259
+</pre><a href="evidencias/terminal/036-release-commit.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 039-release-main</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:48.894701+00:00
+$ git merge --no-ff release/v1.0 -m &#x27;merge(release): [usuari1] publicar versió 1.0&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ LICENSE-H5BP.txt |  19 +++++
+ app.js           |  46 +++++++++++
+ boilerplate.css  | 247 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ favicon.svg      |   1 +
+ index.html       |  23 ++++++
+ package.json     |   9 ++
+ style.css        |   1 +
+ 7 files changed, 346 insertions(+)
+ create mode 100644 LICENSE-H5BP.txt
+ create mode 100644 app.js
+ create mode 100644 boilerplate.css
+ create mode 100644 favicon.svg
+ create mode 100644 index.html
+ create mode 100644 package.json
+ create mode 100644 style.css
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+
+HEAD: 3c277c4ae97dc6fa146a7110fd2501794b6852c0
+</pre><a href="evidencias/terminal/039-release-main.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 040-tag</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:48.945892+00:00
+$ git tag -a v1.0 -m &#x27;Versió 1.0 del laboratori DOM&#x27;
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+
+HEAD: 3c277c4ae97dc6fa146a7110fd2501794b6852c0
+</pre><a href="evidencias/terminal/040-tag.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 042-release-develop</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:49.089372+00:00
+$ git merge --no-ff release/v1.0 -m &#x27;merge(release): [usuari1] retornar v1.0 a develop&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ favicon.svg  |  1 +
+ index.html   |  2 +-
+ package.json | 10 +++++++++-
+ 3 files changed, 11 insertions(+), 2 deletions(-)
+ create mode 100644 favicon.svg
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 6d9b2baec876e4c0e72a0d969baa88811e7d9fde
+</pre><a href="evidencias/terminal/042-release-develop.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 058-release-github</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:27:30.779524+00:00
+$ gh release create v1.0 --repo LucaMZM/javascript-dom-gitflow --title &#x27;v1.0 — Laboratori JavaScript DOM&#x27; --notes &#x27;Primera versió estable: Home, contingut HTML, atributs HTML i estils CSS. Features desenvolupades en branques pròpies i fusionades en develop; release integrada en main i develop.&#x27;
+https://github.com/LucaMZM/javascript-dom-gitflow/releases/tag/v1.0
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+?? tests/
+
+HEAD: d0c5a2c057e82b03b7e5cec169aab86a4c0eb839
+</pre><a href="evidencias/terminal/058-release-github.txt">Obri el registre complet</a></details></section><section id="s13"><h2>13. Hotfix</h2><p>hotfix/milloresV_1_0 es crea des de main. La millora real incorpora Restableix contingut i comptador Unicode. Commit 51485c8. Fusió doble en main (d0c5a2c) i develop (80e5ffb), etiqueta v1.0.1; es conserva v1.0.</p><figure><a href="evidencias/aplicacion/18-hotfix.png"><img src="evidencias/aplicacion/18-hotfix.png" alt="Captura real: Hotfix" loading="lazy"></a><figcaption>Captura de navegador real. Hotfix.</figcaption></figure><details><summary>Ordre i eixida registrada 044-hotfix-branch</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:25:49.212615+00:00
+$ git switch -c hotfix/milloresV_1_0
+Switched to a new branch &#x27;hotfix/milloresV_1_0&#x27;
+
+Codi de retorn: 0
+$ git status --short --branch
+## hotfix/milloresV_1_0
+?? evidencias/
+
+HEAD: 3c277c4ae97dc6fa146a7110fd2501794b6852c0
+</pre><a href="evidencias/terminal/044-hotfix-branch.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 045-hotfix-check</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:26:01.524434+00:00
+$ npm run check
+
+&gt; javascript-dom-gitflow@1.0.1 check
+&gt; node --check app.js
+
+
+Codi de retorn: 0
+$ git status --short --branch
+## hotfix/milloresV_1_0
+ M app.js
+ M index.html
+ M package.json
+?? evidencias/
+
+HEAD: 3c277c4ae97dc6fa146a7110fd2501794b6852c0
+</pre><a href="evidencias/terminal/045-hotfix-check.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 047-hotfix-commit</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:26:01.642686+00:00
+$ git commit -m &#x27;fix(html): [usuari1] restablir contingut i comptar caràcters&#x27;
+[hotfix/milloresV_1_0 51485c8] fix(html): [usuari1] restablir contingut i comptar caràcters
+ 3 files changed, 15 insertions(+), 4 deletions(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## hotfix/milloresV_1_0
+?? evidencias/
+
+HEAD: 51485c8df1d333f2d9be474d88403067acdfd8f4
+</pre><a href="evidencias/terminal/047-hotfix-commit.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 048-hotfix-diff</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:26:01.689241+00:00
+$ git diff v1.0 HEAD -- app.js index.html package.json
+diff --git a/app.js b/app.js
+index a89b40c..1f6a700 100644
+--- a/app.js
++++ b/app.js
+@@ -4,7 +4,9 @@
+ const select = (selector) =&gt; document.querySelector(selector);
+ select(&#x27;#apply-text&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+   // textContent evita interpretar HTML escrit per l&#x27;usuari.
+-  select(&#x27;#text-result&#x27;).textContent = select(&#x27;#new-text&#x27;).value;
++  const text = select(&#x27;#new-text&#x27;).value;
++  select(&#x27;#text-result&#x27;).textContent = text;
++  select(&#x27;#text-count&#x27;).textContent = Array.from(text).length + &#x27; caràcters aplicats&#x27;;
+ });
+ select(&#x27;#apply-html&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+   // Només s&#x27;interpreta una plantilla fixa de confiança.
+@@ -44,3 +46,11 @@ select(&#x27;#reset-style&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+   select(&#x27;#size-result&#x27;).textContent = &#x27;20 px&#x27;;
+   select(&#x27;#class-change&#x27;).setAttribute(&#x27;aria-pressed&#x27;, &#x27;false&#x27;);
+ });
++
++// Hotfix: repetir l&#x27;experiment sense recarregar la pàgina.
++select(&#x27;#reset-content&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
++  select(&#x27;#new-text&#x27;).value = &#x27;Hola, JavaScript!&#x27;;
++  select(&#x27;#text-result&#x27;).textContent = &#x27;Este text canviarà.&#x27;;
++  select(&#x27;#html-result&#x27;).textContent = &#x27;Encara no hi ha format.&#x27;;
++  select(&#x27;#text-count&#x27;).textContent = &#x27;0 caràcters aplicats&#x27;;
++});
+diff --git a/index.html b/index.html
+index 69b8a55..4cd95e0 100644
+--- a/index.html
++++ b/index.html
+@@ -5,9 +5,10 @@
+ &lt;header&gt;&lt;div class=&quot;brand&quot;&gt;&lt;span class=&quot;js-mark&quot; aria-hidden=&quot;true&quot;&gt;JS&lt;/span&gt;&lt;span&gt;Laboratori DOM&lt;small&gt;JavaScript aplicat a HTML&lt;/small&gt;&lt;/span&gt;&lt;/div&gt;&lt;nav aria-label=&quot;Navegació principal&quot;&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;#contingut&quot;&gt;Contingut HTML&lt;/a&gt;&lt;a href=&quot;#atributs&quot;&gt;Atributs HTML&lt;/a&gt;&lt;a href=&quot;#estils&quot;&gt;Estils CSS&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;
+ &lt;main id=&quot;principal&quot;&gt;&lt;section class=&quot;hero&quot; id=&quot;home&quot;&gt;&lt;div&gt;&lt;p&gt;Curs de desenvolupament web&lt;/p&gt;&lt;h1&gt;Canvia el codi.&lt;br&gt;Observa el resultat.&lt;/h1&gt;&lt;p&gt;Explora com JavaScript transforma una pàgina. Escriu, prova i entén cada canvi en el DOM.&lt;/p&gt;&lt;a class=&quot;button&quot; href=&quot;#contingut&quot;&gt;Comença amb el contingut&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;dom-visual&quot; aria-label=&quot;Esquema del DOM&quot;&gt;&lt;span&gt;document&lt;/span&gt;&lt;i&gt;↓&lt;/i&gt;&lt;span&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;i&gt;↓&lt;/i&gt;&lt;div&gt;&lt;span&gt;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;span&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;p&gt;Un arbre d&#x27;elements.&lt;br&gt;Moltes possibilitats.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
+ &lt;section class=&quot;intro&quot;&gt;&lt;h2&gt;Un laboratori per a aprendre fent&lt;/h2&gt;&lt;p&gt;L&#x27;objectiu és seleccionar elements del document, modificar-ne el contingut i els atributs, i controlar-ne la presentació. Cada exemple inclou controls, codi i un resultat visible.&lt;/p&gt;&lt;p&gt;Pràctica 1 de Luca Mazmishvili · Sistemes de control de versions&lt;/p&gt;&lt;/section&gt;
+-&lt;section class=&quot;lesson&quot; id=&quot;contingut&quot;&gt;&lt;h2&gt;Modificar contingut HTML&lt;/h2&gt;&lt;p&gt;Canvia el text d&#x27;un element o interpreta una estructura HTML coneguda.&lt;/p&gt;&lt;article class=&quot;example&quot;&gt;&lt;div&gt;&lt;h3&gt;textContent: text literal&lt;/h3&gt;&lt;label for=&quot;new-text&quot;&gt;Què vols mostrar?&lt;/label&gt;&lt;input id=&quot;new-text&quot; value=&quot;Hola, JavaScript!&quot; maxlength=&quot;160&quot;&gt;&lt;div class=&quot;controls&quot;&gt;&lt;button id=&quot;apply-text&quot;&gt;Aplica el text&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;output&quot; id=&quot;text-result&quot; aria-live=&quot;polite&quot;&gt;Este text canviarà.&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;pre&gt;&lt;code&gt;// El contingut s&#x27;insereix com a text.
++&lt;section class=&quot;lesson&quot; id=&quot;contingut&quot;&gt;&lt;h2&gt;Modificar contingut HTML&lt;/h2&gt;&lt;p&gt;Canvia el text d&#x27;un element o interpreta una estructura HTML coneguda.&lt;/p&gt;&lt;article class=&quot;example&quot;&gt;&lt;div&gt;&lt;h3&gt;textContent: text literal&lt;/h3&gt;&lt;label for=&quot;new-text&quot;&gt;Què vols mostrar?&lt;/label&gt;&lt;input id=&quot;new-text&quot; value=&quot;Hola, JavaScript!&quot; maxlength=&quot;160&quot;&gt;&lt;div class=&quot;controls&quot;&gt;&lt;button id=&quot;apply-text&quot;&gt;Aplica el text&lt;/button&gt;&lt;button id=&quot;reset-content&quot; class=&quot;secondary&quot;&gt;Restableix contingut&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;output&quot; id=&quot;text-result&quot; aria-live=&quot;polite&quot;&gt;Este text canviarà.&lt;/p&gt;&lt;output id=&quot;text-count&quot; aria-live=&quot;polite&quot;&gt;0 caràcters aplicats&lt;/output&gt;&lt;/div&gt;&lt;div&gt;&lt;pre&gt;&lt;code&gt;// El contingut s&#x27;insereix com a text.
+ const resultat = document.querySelector(&#x27;#text-result&#x27;);
+-resultat.textContent = entrada.value;&lt;/code&gt;&lt;/pre&gt;&lt;p class=&quot;note&quot;&gt;Si escrius &amp;lt;strong&amp;gt;hola&amp;lt;/strong&amp;gt;, veuràs les etiquetes com a text.&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;&lt;article class=&quot;example&quot;&gt;&lt;div&gt;&lt;h3&gt;innerHTML: estructura HTML&lt;/h3&gt;&lt;div class=&quot;controls&quot;&gt;&lt;button id=&quot;apply-html&quot;&gt;Mostra HTML&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;output&quot; id=&quot;html-result&quot; aria-live=&quot;polite&quot;&gt;Encara no hi ha format.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;pre&gt;&lt;code&gt;// Plantilla fixa i controlada.
++resultat.textContent = entrada.value;
++// El botó Restableix recupera els dos exemples.&lt;/code&gt;&lt;/pre&gt;&lt;p class=&quot;note&quot;&gt;Si escrius &amp;lt;strong&amp;gt;hola&amp;lt;/strong&amp;gt;, veuràs les etiquetes com a text.&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;&lt;article class=&quot;example&quot;&gt;&lt;div&gt;&lt;h3&gt;innerHTML: estructura HTML&lt;/h3&gt;&lt;div class=&quot;controls&quot;&gt;&lt;button id=&quot;apply-html&quot;&gt;Mostra HTML&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;output&quot; id=&quot;html-result&quot; aria-live=&quot;polite&quot;&gt;Encara no hi ha format.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;pre&gt;&lt;code&gt;// Plantilla fixa i controlada.
+ resultat.innerHTML =
+   &#x27;&amp;lt;strong&amp;gt;Hola, DOM!&amp;lt;/strong&amp;gt; Ara amb format.&#x27;;&lt;/code&gt;&lt;/pre&gt;&lt;p class=&quot;note&quot;&gt;innerHTML interpreta etiquetes. No l&#x27;utilitzem amb entrades de l&#x27;usuari perquè podrien inserir contingut insegur.&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;&lt;/section&gt;
+ &lt;section class=&quot;lesson&quot; id=&quot;atributs&quot;&gt;&lt;h2&gt;Modificar atributs HTML&lt;/h2&gt;&lt;p&gt;Els atributs descriuen el comportament i les propietats d&#x27;un element.&lt;/p&gt;&lt;article class=&quot;example&quot;&gt;&lt;div&gt;&lt;h3&gt;setAttribute i getAttribute&lt;/h3&gt;&lt;label for=&quot;attribute-text&quot;&gt;Nou títol de l&#x27;enllaç&lt;/label&gt;&lt;input id=&quot;attribute-text&quot; value=&quot;Consulta la guia de JavaScript&quot; maxlength=&quot;120&quot;&gt;&lt;div class=&quot;controls&quot;&gt;&lt;button id=&quot;set-attr&quot;&gt;Canvia title&lt;/button&gt;&lt;button id=&quot;read-attr&quot; class=&quot;secondary&quot;&gt;Llig title&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;output&quot;&gt;&lt;a id=&quot;demo-link&quot; href=&quot;https://developer.mozilla.org/ca/docs/Web/JavaScript&quot; title=&quot;Guia JavaScript&quot;&gt;Guia de JavaScript de MDN&lt;/a&gt;&lt;output id=&quot;attr-result&quot; aria-live=&quot;polite&quot;&gt;Llig l&#x27;atribut per veure&#x27;n el valor.&lt;/output&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;pre&gt;&lt;code&gt;// Escriure i llegir un atribut.
+diff --git a/package.json b/package.json
+index ab93e0c..228df21 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   &quot;name&quot;: &quot;javascript-dom-gitflow&quot;,
+-  &quot;version&quot;: &quot;1.0.0&quot;,
++  &quot;version&quot;: &quot;1.0.1&quot;,
+   &quot;private&quot;: true,
+   &quot;scripts&quot;: {
+     &quot;start&quot;: &quot;python3 -m http.server 8080&quot;,
+
+Codi de retorn: 0
+$ git status --short --branch
+## hotfix/milloresV_1_0
+?? evidencias/
+
+HEAD: 51485c8df1d333f2d9be474d88403067acdfd8f4
+</pre><a href="evidencias/terminal/048-hotfix-diff.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 050-hotfix-main</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:27:21.487630+00:00
+$ git merge --no-ff hotfix/milloresV_1_0 -m &#x27;merge(hotfix): [usuari1] integrar millores de contingut en main&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ app.js       | 12 +++++++++++-
+ index.html   |  5 +++--
+ package.json |  2 +-
+ 3 files changed, 15 insertions(+), 4 deletions(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+?? tests/
+
+HEAD: d0c5a2c057e82b03b7e5cec169aab86a4c0eb839
+</pre><a href="evidencias/terminal/050-hotfix-main.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 051-hotfix-tag</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:27:21.531652+00:00
+$ git tag -a v1.0.1 -m &#x27;Hotfix: restabliment de contingut i recompte Unicode&#x27;
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+?? tests/
+
+HEAD: d0c5a2c057e82b03b7e5cec169aab86a4c0eb839
+</pre><a href="evidencias/terminal/051-hotfix-tag.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 053-hotfix-develop</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:27:21.637505+00:00
+$ git merge --no-ff hotfix/milloresV_1_0 -m &#x27;merge(hotfix): [usuari1] integrar millores en develop&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ app.js       | 12 +++++++++++-
+ index.html   |  5 +++--
+ package.json |  2 +-
+ 3 files changed, 15 insertions(+), 4 deletions(-)
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+?? tests/
+
+HEAD: 80e5ffbe85a85d8612009378d650d01953c2d733
+</pre><a href="evidencias/terminal/053-hotfix-develop.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 059-hotfix-release</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:27:31.702971+00:00
+$ gh release create v1.0.1 --repo LucaMZM/javascript-dom-gitflow --title &#x27;v1.0.1 — Millores del contingut HTML&#x27; --notes &#x27;Hotfix real des de main: restabliment dels exemples de contingut i recompte Unicode del text aplicat. Integrat en main i develop; es conserva v1.0.&#x27;
+https://github.com/LucaMZM/javascript-dom-gitflow/releases/tag/v1.0.1
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+?? evidencias/
+?? tests/
+
+HEAD: d0c5a2c057e82b03b7e5cec169aab86a4c0eb839
+</pre><a href="evidencias/terminal/059-hotfix-release.txt">Obri el registre complet</a></details></section><section id="s14"><h2>14. GitHub Project</h2><p>Project creat des de GitHub web després de descartar l ampliació del permís project de la CLI. Les huit issues s importen des del repositori. Estats Todo, In Progress i Done. Cada issue inclou responsable simulat, descripció, branca i, quan existeix, commit. Project: https://github.com/users/LucaMZM/projects/1.</p><figure><a href="evidencias/github/21-project-proces.png"><img src="evidencias/github/21-project-proces.png" alt="Captura real: GitHub Project" loading="lazy"></a><figcaption>Captura de navegador real. GitHub Project.</figcaption></figure></section><section id="s15"><h2>15. Accés del professor al projecte</h2><p>enminqui2 apareix en Manage access amb rol Read. La captura mostra dos membres. Accés de lectura concedit mitjançant Invite; la interfície no mostra una acceptació separada, per tant no s afirma que s haja acceptat. No s ha ampliat l accés al repositori.</p><figure><a href="evidencias/github/22-acces-professor.png"><img src="evidencias/github/22-acces-professor.png" alt="Captura real: Accés del professor al projecte" loading="lazy"></a><figcaption>Captura de navegador real. Accés del professor al projecte.</figcaption></figure></section><section id="s16"><h2>16. Captures del procés</h2><p>Les imatges són captures reals de navegador. Les operacions de terminal es mostren com a eixida registrada autèntica, no com a captures de terminal. Cada registre inclou data UTC, ordre exacta, codi de retorn, estat Git i HEAD. Els registres anteriors a la primera confirmació mostren correctament que HEAD encara no existeix. El canvi de branca del registre 068 va fallar per un registre modificat; es va recuperar amb worktrees, tal com mostra 073.</p><details><summary>Ordre i eixida registrada 054-final-graph</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:27:21.685228+00:00
+$ git log --graph --all --decorate --oneline
+*   80e5ffb (HEAD -&gt; develop) merge(hotfix): [usuari1] integrar millores en develop
+|\  
+* \   6d9b2ba merge(release): [usuari1] retornar v1.0 a develop
+|\ \  
+| | | *   d0c5a2c (tag: v1.0.1, main) merge(hotfix): [usuari1] integrar millores de contingut en main
+| | | |\  
+| | | |/  
+| | |/|   
+| | * | 51485c8 (hotfix/milloresV_1_0) fix(html): [usuari1] restablir contingut i comptar caràcters
+| | |/  
+| | *   3c277c4 (tag: v1.0) merge(release): [usuari1] publicar versió 1.0
+| | |\  
+| | |/  
+| |/|   
+| * | 20f32a0 (release/v1.0) chore(release): [usuari1] preparar v1.0 i afegir favicon local
+|/ /  
+* |   8201996 merge(css): [usuari3] integrar estils CSS
+|\ \  
+| * | 5238368 (feature/estilsCSS) feat(css): [usuari3] implementar canvis d estil
+|/ /  
+* |   d4b7b6f merge(attributes): [usuari2] integrar atributs HTML
+|\ \  
+| * | 22bf601 (feature/atributsHTML) feat(attributes): [usuari2] implementar atributs HTML
+|/ /  
+* |   70ce7aa merge(html): [usuari2] integrar contingut HTML
+|\ \  
+| * | 3fd18e5 (feature/contingutHTML) feat(html): [usuari2] afegir exemples de contingut
+|/ /  
+* / 3c786f4 (origin/develop) feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate
+|/  
+* 5a3c16a (origin/main) chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+?? tests/
+
+HEAD: 80e5ffbe85a85d8612009378d650d01953c2d733
+</pre><a href="evidencias/terminal/054-final-graph.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 068-develop-docs</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:32:21.223329+00:00
+$ git switch develop
+error: Your local changes to the following files would be overwritten by checkout:
+	evidencias/registre.jsonl
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Codi de retorn: 1
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/066-evidence-stage.txt
+?? evidencias/terminal/067-evidence-commit.txt
+
+HEAD: 215e0fdc9fda482bfca97bb7f0d06d72d2f9c478
+</pre><a href="evidencias/terminal/068-develop-docs.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 071-pages-worktree</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:32:45.315128+00:00
+$ git worktree add --orphan -b gh-pages /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-pages
+Preparing worktree (new branch &#x27;gh-pages&#x27;)
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5
+</pre><a href="evidencias/terminal/071-pages-worktree.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 072-develop-worktree</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:32:45.383648+00:00
+$ git worktree add /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-develop develop
+Preparing worktree (checking out &#x27;develop&#x27;)
+HEAD is now at 80e5ffb merge(hotfix): [usuari1] integrar millores en develop
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/071-pages-worktree.txt
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5
+</pre><a href="evidencias/terminal/072-develop-worktree.txt">Obri el registre complet</a></details><details><summary>Ordre i eixida registrada 073-sync-docs-correct</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:32:45.483947+00:00
+$ git -C /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-develop merge --no-ff main -m &#x27;merge(docs): [usuari1] sincronitzar proves i evidències&#x27;
+Merge made by the &#x27;ort&#x27; strategy.
+ README.md                                         |  14 +-
+ evidencias/aplicacion/03-home.png                 | Bin 0 -&gt; 88831 bytes
+ evidencias/aplicacion/05-contingut.png            | Bin 0 -&gt; 83868 bytes
+ evidencias/aplicacion/08-atributs.png             | Bin 0 -&gt; 92181 bytes
+ evidencias/aplicacion/11-estils.png               | Bin 0 -&gt; 72568 bytes
+ evidencias/aplicacion/18-hotfix.png               | Bin 0 -&gt; 94480 bytes
+ evidencias/aplicacion/qa.json                     |  90 +++++++++++
+ evidencias/git/plantilla-h5bp.html                |  33 ++++
+ evidencias/github/01-repositori.png               | Bin 0 -&gt; 121147 bytes
+ evidencias/github/21-project-proces.png           | Bin 0 -&gt; 92740 bytes
+ evidencias/github/21-project-proces.txt           | 187 ++++++++++++++++++++++
+ evidencias/github/22-acces-professor.png          | Bin 0 -&gt; 82612 bytes
+ evidencias/github/22-acces-professor.txt          | 116 ++++++++++++++
+ evidencias/github/issue-1.txt                     |  10 ++
+ evidencias/github/issue-2.txt                     |  10 ++
+ evidencias/github/issue-3.txt                     |  10 ++
+ evidencias/github/issue-4.txt                     |  10 ++
+ evidencias/github/issue-5.txt                     |  10 ++
+ evidencias/github/issue-6.txt                     |  10 ++
+ evidencias/github/issue-7.txt                     |   9 ++
+ evidencias/github/issue-8.txt                     |   9 ++
+ evidencias/github/issues.json                     |  66 ++++++++
+ evidencias/github/project.json                    |   1 +
+ evidencias/registre.jsonl                         |  70 ++++++++
+ evidencias/terminal/001-init.txt                  |  12 ++
+ evidencias/terminal/002-tools.txt                 |  13 ++
+ evidencias/terminal/003-create-repository.txt     |  13 ++
+ evidencias/terminal/004-bootstrap-commit.txt      |  14 ++
+ evidencias/terminal/005-main-commit.txt           |  13 ++
+ evidencias/terminal/006-develop.txt               |  10 ++
+ evidencias/terminal/007-before-home.txt           |  10 ++
+ evidencias/terminal/008-home-files.txt            |  22 +++
+ evidencias/terminal/009-home-stage.txt            |  15 ++
+ evidencias/terminal/010-home-commit.txt           |  17 ++
+ evidencias/terminal/011-content-branch.txt        |  10 ++
+ evidencias/terminal/012-first-push.txt            |  12 ++
+ evidencias/terminal/013-content-check.txt         |  15 ++
+ evidencias/terminal/014-content-stage.txt         |  11 ++
+ evidencias/terminal/015-content-commit.txt        |  11 ++
+ evidencias/terminal/016-before-content-merge.txt  |  12 ++
+ evidencias/terminal/017-content-switch.txt        |  10 ++
+ evidencias/terminal/018-content-merge.txt         |  13 ++
+ evidencias/terminal/019-attrs-branch.txt          |  10 ++
+ evidencias/terminal/020-attrs-check.txt           |  15 ++
+ evidencias/terminal/021-attrs-stage.txt           |  11 ++
+ evidencias/terminal/022-attrs-commit.txt          |  11 ++
+ evidencias/terminal/023-before-attrs-merge.txt    |  16 ++
+ evidencias/terminal/024-attrs-switch.txt          |  10 ++
+ evidencias/terminal/025-attrs-merge.txt           |  13 ++
+ evidencias/terminal/026-css-branch.txt            |  10 ++
+ evidencias/terminal/027-css-check.txt             |  15 ++
+ evidencias/terminal/028-css-stage.txt             |  11 ++
+ evidencias/terminal/029-css-commit.txt            |  11 ++
+ evidencias/terminal/030-before-css-merge.txt      |  20 +++
+ evidencias/terminal/031-css-switch.txt            |  10 ++
+ evidencias/terminal/032-css-merge.txt             |  13 ++
+ evidencias/terminal/033-release-branch.txt        |  10 ++
+ evidencias/terminal/034-release-check.txt         |  16 ++
+ evidencias/terminal/035-release-stage.txt         |  12 ++
+ evidencias/terminal/036-release-commit.txt        |  12 ++
+ evidencias/terminal/037-release-graph.txt         |  24 +++
+ evidencias/terminal/038-main-switch.txt           |  10 ++
+ evidencias/terminal/039-release-main.txt          |  25 +++
+ evidencias/terminal/040-tag.txt                   |   9 ++
+ evidencias/terminal/041-develop-switch.txt        |  10 ++
+ evidencias/terminal/042-release-develop.txt       |  15 ++
+ evidencias/terminal/043-hotfix-main.txt           |  10 ++
+ evidencias/terminal/044-hotfix-branch.txt         |  10 ++
+ evidencias/terminal/045-hotfix-check.txt          |  16 ++
+ evidencias/terminal/046-hotfix-stage.txt          |  12 ++
+ evidencias/terminal/047-hotfix-commit.txt         |  11 ++
+ evidencias/terminal/048-hotfix-diff.txt           |  65 ++++++++
+ evidencias/terminal/049-hotfix-switch.txt         |  11 ++
+ evidencias/terminal/050-hotfix-main.txt           |  15 ++
+ evidencias/terminal/051-hotfix-tag.txt            |  10 ++
+ evidencias/terminal/052-hotfix-develop-switch.txt |  11 ++
+ evidencias/terminal/053-hotfix-develop.txt        |  15 ++
+ evidencias/terminal/054-final-graph.txt           |  41 +++++
+ evidencias/terminal/055-main-final.txt            |  11 ++
+ evidencias/terminal/056-push-flow.txt             |  18 +++
+ evidencias/terminal/057-push-tags.txt             |  13 ++
+ evidencias/terminal/058-release-github.txt        |  11 ++
+ evidencias/terminal/059-hotfix-release.txt        |  11 ++
+ evidencias/terminal/060-close-structure.txt       |  11 ++
+ evidencias/terminal/061-close-content.txt         |  11 ++
+ evidencias/terminal/062-close-attributes.txt      |  11 ++
+ evidencias/terminal/063-close-css.txt             |  11 ++
+ evidencias/terminal/064-close-release.txt         |  11 ++
+ evidencias/terminal/065-close-hotfix.txt          |  11 ++
+ evidencias/terminal/066-evidence-stage.txt        |  99 ++++++++++++
+ evidencias/terminal/067-evidence-commit.txt       | 102 ++++++++++++
+ evidencias/terminal/068-develop-docs.txt          |  15 ++
+ evidencias/terminal/069-sync-docs.txt             |  13 ++
+ evidencias/terminal/070-return-main.txt           |  15 ++
+ scripts/record.py                                 |  11 ++
+ tests/dom.cjs                                     |  38 +++++
+ 96 files changed, 1855 insertions(+), 2 deletions(-)
+ create mode 100644 evidencias/aplicacion/03-home.png
+ create mode 100644 evidencias/aplicacion/05-contingut.png
+ create mode 100644 evidencias/aplicacion/08-atributs.png
+ create mode 100644 evidencias/aplicacion/11-estils.png
+ create mode 100644 evidencias/aplicacion/18-hotfix.png
+ create mode 100644 evidencias/aplicacion/qa.json
+ create mode 100644 evidencias/git/plantilla-h5bp.html
+ create mode 100644 evidencias/github/01-repositori.png
+ create mode 100644 evidencias/github/21-project-proces.png
+ create mode 100644 evidencias/github/21-project-proces.txt
+ create mode 100644 evidencias/github/22-acces-professor.png
+ create mode 100644 evidencias/github/22-acces-professor.txt
+ create mode 100644 evidencias/github/issue-1.txt
+ create mode 100644 evidencias/github/issue-2.txt
+ create mode 100644 evidencias/github/issue-3.txt
+ create mode 100644 evidencias/github/issue-4.txt
+ create mode 100644 evidencias/github/issue-5.txt
+ create mode 100644 evidencias/github/issue-6.txt
+ create mode 100644 evidencias/github/issue-7.txt
+ create mode 100644 evidencias/github/issue-8.txt
+ create mode 100644 evidencias/github/issues.json
+ create mode 100644 evidencias/github/project.json
+ create mode 100644 evidencias/registre.jsonl
+ create mode 100644 evidencias/terminal/001-init.txt
+ create mode 100644 evidencias/terminal/002-tools.txt
+ create mode 100644 evidencias/terminal/003-create-repository.txt
+ create mode 100644 evidencias/terminal/004-bootstrap-commit.txt
+ create mode 100644 evidencias/terminal/005-main-commit.txt
+ create mode 100644 evidencias/terminal/006-develop.txt
+ create mode 100644 evidencias/terminal/007-before-home.txt
+ create mode 100644 evidencias/terminal/008-home-files.txt
+ create mode 100644 evidencias/terminal/009-home-stage.txt
+ create mode 100644 evidencias/terminal/010-home-commit.txt
+ create mode 100644 evidencias/terminal/011-content-branch.txt
+ create mode 100644 evidencias/terminal/012-first-push.txt
+ create mode 100644 evidencias/terminal/013-content-check.txt
+ create mode 100644 evidencias/terminal/014-content-stage.txt
+ create mode 100644 evidencias/terminal/015-content-commit.txt
+ create mode 100644 evidencias/terminal/016-before-content-merge.txt
+ create mode 100644 evidencias/terminal/017-content-switch.txt
+ create mode 100644 evidencias/terminal/018-content-merge.txt
+ create mode 100644 evidencias/terminal/019-attrs-branch.txt
+ create mode 100644 evidencias/terminal/020-attrs-check.txt
+ create mode 100644 evidencias/terminal/021-attrs-stage.txt
+ create mode 100644 evidencias/terminal/022-attrs-commit.txt
+ create mode 100644 evidencias/terminal/023-before-attrs-merge.txt
+ create mode 100644 evidencias/terminal/024-attrs-switch.txt
+ create mode 100644 evidencias/terminal/025-attrs-merge.txt
+ create mode 100644 evidencias/terminal/026-css-branch.txt
+ create mode 100644 evidencias/terminal/027-css-check.txt
+ create mode 100644 evidencias/terminal/028-css-stage.txt
+ create mode 100644 evidencias/terminal/029-css-commit.txt
+ create mode 100644 evidencias/terminal/030-before-css-merge.txt
+ create mode 100644 evidencias/terminal/031-css-switch.txt
+ create mode 100644 evidencias/terminal/032-css-merge.txt
+ create mode 100644 evidencias/terminal/033-release-branch.txt
+ create mode 100644 evidencias/terminal/034-release-check.txt
+ create mode 100644 evidencias/terminal/035-release-stage.txt
+ create mode 100644 evidencias/terminal/036-release-commit.txt
+ create mode 100644 evidencias/terminal/037-release-graph.txt
+ create mode 100644 evidencias/terminal/038-main-switch.txt
+ create mode 100644 evidencias/terminal/039-release-main.txt
+ create mode 100644 evidencias/terminal/040-tag.txt
+ create mode 100644 evidencias/terminal/041-develop-switch.txt
+ create mode 100644 evidencias/terminal/042-release-develop.txt
+ create mode 100644 evidencias/terminal/043-hotfix-main.txt
+ create mode 100644 evidencias/terminal/044-hotfix-branch.txt
+ create mode 100644 evidencias/terminal/045-hotfix-check.txt
+ create mode 100644 evidencias/terminal/046-hotfix-stage.txt
+ create mode 100644 evidencias/terminal/047-hotfix-commit.txt
+ create mode 100644 evidencias/terminal/048-hotfix-diff.txt
+ create mode 100644 evidencias/terminal/049-hotfix-switch.txt
+ create mode 100644 evidencias/terminal/050-hotfix-main.txt
+ create mode 100644 evidencias/terminal/051-hotfix-tag.txt
+ create mode 100644 evidencias/terminal/052-hotfix-develop-switch.txt
+ create mode 100644 evidencias/terminal/053-hotfix-develop.txt
+ create mode 100644 evidencias/terminal/054-final-graph.txt
+ create mode 100644 evidencias/terminal/055-main-final.txt
+ create mode 100644 evidencias/terminal/056-push-flow.txt
+ create mode 100644 evidencias/terminal/057-push-tags.txt
+ create mode 100644 evidencias/terminal/058-release-github.txt
+ create mode 100644 evidencias/terminal/059-hotfix-release.txt
+ create mode 100644 evidencias/terminal/060-close-structure.txt
+ create mode 100644 evidencias/terminal/061-close-content.txt
+ create mode 100644 evidencias/terminal/062-close-attributes.txt
+ create mode 100644 evidencias/terminal/063-close-css.txt
+ create mode 100644 evidencias/terminal/064-close-release.txt
+ create mode 100644 evidencias/terminal/065-close-hotfix.txt
+ create mode 100644 evidencias/terminal/066-evidence-stage.txt
+ create mode 100644 evidencias/terminal/067-evidence-commit.txt
+ create mode 100644 evidencias/terminal/068-develop-docs.txt
+ create mode 100644 evidencias/terminal/069-sync-docs.txt
+ create mode 100644 evidencias/terminal/070-return-main.txt
+ create mode 100644 scripts/record.py
+ create mode 100644 tests/dom.cjs
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/071-pages-worktree.txt
+?? evidencias/terminal/072-develop-worktree.txt
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5
+</pre><a href="evidencias/terminal/073-sync-docs-correct.txt">Obri el registre complet</a></details></section><section id="s17"><h2>17. Resultat de l aplicació</h2><p>15 comprovacions locals aprovades: contingut literal segur, HTML fix, lectura i escriptura d atributs, disabled, color, mida, classe, restabliment i hotfix. Sense errors JavaScript ni de consola; sense desbordament horitzontal a 390, 768 i 1280 px. L informe JSON conserva també la primera resposta 404 de Pages abans de publicar-la.</p><figure><a href="evidencias/aplicacion/03-home.png"><img src="evidencias/aplicacion/03-home.png" alt="Captura real: Resultat de l aplicació" loading="lazy"></a><figcaption>Captura de navegador real. Resultat de l aplicació.</figcaption></figure></section><section id="s18"><h2>18. Conclusions i enllaços</h2><p>La valoració final ha de contrastar els objectius amb les evidències recollides: funcionalitats del DOM, branques i fusions, etiquetes, tasques, permisos i publicació. El registre de comandaments i resultats permet distingir una operació completada d&#x27;un intent fallit. La invitació del professor al Project només es considerarà acceptada si GitHub ho acredita. Les comprovacions locals i les comprovacions de publicació s&#x27;han de presentar per separat, de manera que qualsevol limitació quede identificada sense atribuir-li un resultat que no s&#x27;ha verificat. Documentació publicada des de l arrel de gh-pages. L aplicació es copia en app/ per conservar la memòria com a portada. PDF i DOCX es generen des del mateix document i s inclouen en entrega/.</p><details><summary>Ordre i eixida registrada 071-pages-worktree</summary><p>Registre autèntic; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:32:45.315128+00:00
+$ git worktree add --orphan -b gh-pages /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-pages
+Preparing worktree (new branch &#x27;gh-pages&#x27;)
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5
+</pre><a href="evidencias/terminal/071-pages-worktree.txt">Obri el registre complet</a></details></section><section><h2>Publicació i lliurament</h2><p><a href="app/">Obri l aplicació interactiva</a> · <a href="https://github.com/LucaMZM/javascript-dom-gitflow">Repositori públic</a> · <a href="https://github.com/users/LucaMZM/projects/1">GitHub Project</a></p><p><a href="entrega/Practica1_GitFlow_LucaMZM.pdf">Descarrega la memòria PDF</a> · <a href="entrega/Practica1_GitFlow_LucaMZM.docx">Descarrega el DOCX editable</a></p><h3>Fonts i recursos</h3><p><a href="https://git-scm.com/book/en/v2">Pro Git</a> · <a href="https://github.com/h5bp/html5-boilerplate/tree/v9.0.1">HTML5 Boilerplate v9.0.1</a></p></section><section><h2>Registre cronològic complet</h2><p>Les ordres executades es poden auditar amb els seus resultats, incloses incidències i recuperacions.</p><ul><li><a href="evidencias/terminal/001-init.txt">001-init</a></li><li><a href="evidencias/terminal/002-tools.txt">002-tools</a></li><li><a href="evidencias/terminal/003-create-repository.txt">003-create-repository</a></li><li><a href="evidencias/terminal/004-bootstrap-commit.txt">004-bootstrap-commit</a></li><li><a href="evidencias/terminal/005-main-commit.txt">005-main-commit</a></li><li><a href="evidencias/terminal/006-develop.txt">006-develop</a></li><li><a href="evidencias/terminal/007-before-home.txt">007-before-home</a></li><li><a href="evidencias/terminal/008-home-files.txt">008-home-files</a></li><li><a href="evidencias/terminal/009-home-stage.txt">009-home-stage</a></li><li><a href="evidencias/terminal/010-home-commit.txt">010-home-commit</a></li><li><a href="evidencias/terminal/011-content-branch.txt">011-content-branch</a></li><li><a href="evidencias/terminal/012-first-push.txt">012-first-push</a></li><li><a href="evidencias/terminal/013-content-check.txt">013-content-check</a></li><li><a href="evidencias/terminal/014-content-stage.txt">014-content-stage</a></li><li><a href="evidencias/terminal/015-content-commit.txt">015-content-commit</a></li><li><a href="evidencias/terminal/016-before-content-merge.txt">016-before-content-merge</a></li><li><a href="evidencias/terminal/017-content-switch.txt">017-content-switch</a></li><li><a href="evidencias/terminal/018-content-merge.txt">018-content-merge</a></li><li><a href="evidencias/terminal/019-attrs-branch.txt">019-attrs-branch</a></li><li><a href="evidencias/terminal/020-attrs-check.txt">020-attrs-check</a></li><li><a href="evidencias/terminal/021-attrs-stage.txt">021-attrs-stage</a></li><li><a href="evidencias/terminal/022-attrs-commit.txt">022-attrs-commit</a></li><li><a href="evidencias/terminal/023-before-attrs-merge.txt">023-before-attrs-merge</a></li><li><a href="evidencias/terminal/024-attrs-switch.txt">024-attrs-switch</a></li><li><a href="evidencias/terminal/025-attrs-merge.txt">025-attrs-merge</a></li><li><a href="evidencias/terminal/026-css-branch.txt">026-css-branch</a></li><li><a href="evidencias/terminal/027-css-check.txt">027-css-check</a></li><li><a href="evidencias/terminal/028-css-stage.txt">028-css-stage</a></li><li><a href="evidencias/terminal/029-css-commit.txt">029-css-commit</a></li><li><a href="evidencias/terminal/030-before-css-merge.txt">030-before-css-merge</a></li><li><a href="evidencias/terminal/031-css-switch.txt">031-css-switch</a></li><li><a href="evidencias/terminal/032-css-merge.txt">032-css-merge</a></li><li><a href="evidencias/terminal/033-release-branch.txt">033-release-branch</a></li><li><a href="evidencias/terminal/034-release-check.txt">034-release-check</a></li><li><a href="evidencias/terminal/035-release-stage.txt">035-release-stage</a></li><li><a href="evidencias/terminal/036-release-commit.txt">036-release-commit</a></li><li><a href="evidencias/terminal/037-release-graph.txt">037-release-graph</a></li><li><a href="evidencias/terminal/038-main-switch.txt">038-main-switch</a></li><li><a href="evidencias/terminal/039-release-main.txt">039-release-main</a></li><li><a href="evidencias/terminal/040-tag.txt">040-tag</a></li><li><a href="evidencias/terminal/041-develop-switch.txt">041-develop-switch</a></li><li><a href="evidencias/terminal/042-release-develop.txt">042-release-develop</a></li><li><a href="evidencias/terminal/043-hotfix-main.txt">043-hotfix-main</a></li><li><a href="evidencias/terminal/044-hotfix-branch.txt">044-hotfix-branch</a></li><li><a href="evidencias/terminal/045-hotfix-check.txt">045-hotfix-check</a></li><li><a href="evidencias/terminal/046-hotfix-stage.txt">046-hotfix-stage</a></li><li><a href="evidencias/terminal/047-hotfix-commit.txt">047-hotfix-commit</a></li><li><a href="evidencias/terminal/048-hotfix-diff.txt">048-hotfix-diff</a></li><li><a href="evidencias/terminal/049-hotfix-switch.txt">049-hotfix-switch</a></li><li><a href="evidencias/terminal/050-hotfix-main.txt">050-hotfix-main</a></li><li><a href="evidencias/terminal/051-hotfix-tag.txt">051-hotfix-tag</a></li><li><a href="evidencias/terminal/052-hotfix-develop-switch.txt">052-hotfix-develop-switch</a></li><li><a href="evidencias/terminal/053-hotfix-develop.txt">053-hotfix-develop</a></li><li><a href="evidencias/terminal/054-final-graph.txt">054-final-graph</a></li><li><a href="evidencias/terminal/055-main-final.txt">055-main-final</a></li><li><a href="evidencias/terminal/056-push-flow.txt">056-push-flow</a></li><li><a href="evidencias/terminal/057-push-tags.txt">057-push-tags</a></li><li><a href="evidencias/terminal/058-release-github.txt">058-release-github</a></li><li><a href="evidencias/terminal/059-hotfix-release.txt">059-hotfix-release</a></li><li><a href="evidencias/terminal/060-close-structure.txt">060-close-structure</a></li><li><a href="evidencias/terminal/061-close-content.txt">061-close-content</a></li><li><a href="evidencias/terminal/062-close-attributes.txt">062-close-attributes</a></li><li><a href="evidencias/terminal/063-close-css.txt">063-close-css</a></li><li><a href="evidencias/terminal/064-close-release.txt">064-close-release</a></li><li><a href="evidencias/terminal/065-close-hotfix.txt">065-close-hotfix</a></li><li><a href="evidencias/terminal/066-evidence-stage.txt">066-evidence-stage</a></li><li><a href="evidencias/terminal/067-evidence-commit.txt">067-evidence-commit</a></li><li><a href="evidencias/terminal/068-develop-docs.txt">068-develop-docs</a></li><li><a href="evidencias/terminal/069-sync-docs.txt">069-sync-docs</a></li><li><a href="evidencias/terminal/070-return-main.txt">070-return-main</a></li><li><a href="evidencias/terminal/071-pages-worktree.txt">071-pages-worktree</a></li><li><a href="evidencias/terminal/072-develop-worktree.txt">072-develop-worktree</a></li><li><a href="evidencias/terminal/073-sync-docs-correct.txt">073-sync-docs-correct</a></li></ul></section></main></div><footer>Professor revisor: enminqui2 · Pràctica acadèmica</footer></body></html>

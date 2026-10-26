@@ -1,0 +1,12 @@
+Data UTC: 2026-10-26T11:25:38.095260+00:00
+$ git add package.json index.html favicon.svg
+
+Codi de retorn: 0
+$ git status --short --branch
+## release/v1.0
+A  favicon.svg
+M  index.html
+M  package.json
+?? evidencias/
+
+HEAD: 8201996d3e4fac123ca35981c22f6a85cbddc805

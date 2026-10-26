@@ -1,0 +1,10 @@
+Data UTC: 2026-10-26T11:24:53.759559+00:00
+$ git switch -c feature/atributsHTML
+Switched to a new branch 'feature/atributsHTML'
+
+Codi de retorn: 0
+$ git status --short --branch
+## feature/atributsHTML
+?? evidencias/
+
+HEAD: 70ce7aac4da5f88ea0b487b09522b443587ed5ee

@@ -1,0 +1,9 @@
+$ gh issue create --repo LucaMZM/javascript-dom-gitflow --title 'Documentació acadèmica' --body-file /tmp/gitflow-issue.md --assignee LucaMZM
+https://github.com/LucaMZM/javascript-dom-gitflow/issues/7
+
+Memòria en valencià, captures reals, PDF i DOCX equivalents. Accés de revisió del professor enminqui2.
+
+Responsable simulat: `usuari1` (autoria real LucaMZM).
+Branca: `gh-pages`.
+
+Criteri d acceptació: verificar funcionalitat, evidència i documentació de la fase.

@@ -1,0 +1,10 @@
+$ gh issue create --repo LucaMZM/javascript-dom-gitflow --title 'Release v1.0' --body-file /tmp/gitflow-issue.md --assignee LucaMZM
+https://github.com/LucaMZM/javascript-dom-gitflow/issues/5
+
+Preparació, fusió en main i develop, etiqueta i GitHub Release.
+
+Responsable simulat: `usuari1` (autoria real LucaMZM).
+Branca: `release/v1.0`.
+Commit: https://github.com/LucaMZM/javascript-dom-gitflow/commit/20f32a0
+
+Criteri d acceptació: verificar funcionalitat, evidència i documentació de la fase.

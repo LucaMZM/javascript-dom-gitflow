@@ -1,0 +1,10 @@
+Data UTC: 2026-10-26T11:23:22.907247+00:00
+$ git switch -c develop
+Switched to a new branch 'develop'
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+
+HEAD: 5a3c16a128bdec2581d556847d29563295eeb698
