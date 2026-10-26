@@ -63,3 +63,8 @@
 {"id": "063-close-css", "command": ["gh", "issue", "close", "4", "--repo", "LucaMZM/javascript-dom-gitflow", "--reason", "completed"], "returncode": 0, "file": "evidencias/terminal/063-close-css.txt"}
 {"id": "064-close-release", "command": ["gh", "issue", "close", "5", "--repo", "LucaMZM/javascript-dom-gitflow", "--reason", "completed"], "returncode": 0, "file": "evidencias/terminal/064-close-release.txt"}
 {"id": "065-close-hotfix", "command": ["gh", "issue", "close", "6", "--repo", "LucaMZM/javascript-dom-gitflow", "--reason", "completed"], "returncode": 0, "file": "evidencias/terminal/065-close-hotfix.txt"}
+{"id": "066-evidence-stage", "command": ["git", "add", "README.md", "tests", "scripts", "evidencias"], "returncode": 0, "file": "evidencias/terminal/066-evidence-stage.txt"}
+{"id": "067-evidence-commit", "command": ["git", "commit", "-m", "docs(evidencies): [usuari1] conservar registres reals i proves del DOM"], "returncode": 0, "file": "evidencias/terminal/067-evidence-commit.txt"}
+{"id": "068-develop-docs", "command": ["git", "switch", "develop"], "returncode": 1, "file": "evidencias/terminal/068-develop-docs.txt"}
+{"id": "069-sync-docs", "command": ["git", "merge", "--no-ff", "main", "-m", "merge(docs): [usuari1] sincronitzar proves i evid\u00e8ncies"], "returncode": 0, "file": "evidencias/terminal/069-sync-docs.txt"}
+{"id": "070-return-main", "command": ["git", "switch", "main"], "returncode": 0, "file": "evidencias/terminal/070-return-main.txt"}

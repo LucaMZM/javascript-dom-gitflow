@@ -1,0 +1,15 @@
+Data UTC: 2026-10-26T11:32:21.223329+00:00
+$ git switch develop
+error: Your local changes to the following files would be overwritten by checkout:
+	evidencias/registre.jsonl
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Codi de retorn: 1
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/066-evidence-stage.txt
+?? evidencias/terminal/067-evidence-commit.txt
+
+HEAD: 215e0fdc9fda482bfca97bb7f0d06d72d2f9c478
