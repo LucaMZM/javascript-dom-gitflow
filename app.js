@@ -4,7 +4,9 @@
 const select = (selector) => document.querySelector(selector);
 select('#apply-text').addEventListener('click', () => {
   // textContent evita interpretar HTML escrit per l'usuari.
-  select('#text-result').textContent = select('#new-text').value;
+  const text = select('#new-text').value;
+  select('#text-result').textContent = text;
+  select('#text-count').textContent = Array.from(text).length + ' caràcters aplicats';
 });
 select('#apply-html').addEventListener('click', () => {
   // Només s'interpreta una plantilla fixa de confiança.
@@ -43,4 +45,12 @@ select('#reset-style').addEventListener('click', () => {
   select('#size-change').value = '20';
   select('#size-result').textContent = '20 px';
   select('#class-change').setAttribute('aria-pressed', 'false');
+});
+
+// Hotfix: repetir l'experiment sense recarregar la pàgina.
+select('#reset-content').addEventListener('click', () => {
+  select('#new-text').value = 'Hola, JavaScript!';
+  select('#text-result').textContent = 'Este text canviarà.';
+  select('#html-result').textContent = 'Encara no hi ha format.';
+  select('#text-count').textContent = '0 caràcters aplicats';
 });
