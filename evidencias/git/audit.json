@@ -1,0 +1,256 @@
+{
+  "timestamp": "2026-10-26T11:37:46.584471+00:00",
+  "checks": [
+    {
+      "name": "feature/contingutHTML parent inicial",
+      "actual": "3c786f42665e6cff7769dff05ccbd953dc4d0e2c",
+      "expected": "3c786f42665e6cff7769dff05ccbd953dc4d0e2c",
+      "pass": true
+    },
+    {
+      "name": "70ce7aa té dos pares",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "70ce7aa primer pare develop previ",
+      "actual": "3c786f42665e6cff7769dff05ccbd953dc4d0e2c",
+      "expected": "3c786f42665e6cff7769dff05ccbd953dc4d0e2c",
+      "pass": true
+    },
+    {
+      "name": "70ce7aa segon pare feature",
+      "actual": "3fd18e5092d54ca47487cc9a40b53fa459125ca3",
+      "expected": "3fd18e5092d54ca47487cc9a40b53fa459125ca3",
+      "pass": true
+    },
+    {
+      "name": "feature/atributsHTML parent inicial",
+      "actual": "70ce7aac4da5f88ea0b487b09522b443587ed5ee",
+      "expected": "70ce7aac4da5f88ea0b487b09522b443587ed5ee",
+      "pass": true
+    },
+    {
+      "name": "d4b7b6f té dos pares",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "d4b7b6f primer pare develop previ",
+      "actual": "70ce7aac4da5f88ea0b487b09522b443587ed5ee",
+      "expected": "70ce7aac4da5f88ea0b487b09522b443587ed5ee",
+      "pass": true
+    },
+    {
+      "name": "d4b7b6f segon pare feature",
+      "actual": "22bf60102f9590b736c69a30648cb65f84e17c10",
+      "expected": "22bf60102f9590b736c69a30648cb65f84e17c10",
+      "pass": true
+    },
+    {
+      "name": "feature/estilsCSS parent inicial",
+      "actual": "d4b7b6ffbd94a84ef15f2d2629d0fdb0c0baacd5",
+      "expected": "d4b7b6ffbd94a84ef15f2d2629d0fdb0c0baacd5",
+      "pass": true
+    },
+    {
+      "name": "8201996 té dos pares",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "8201996 primer pare develop previ",
+      "actual": "d4b7b6ffbd94a84ef15f2d2629d0fdb0c0baacd5",
+      "expected": "d4b7b6ffbd94a84ef15f2d2629d0fdb0c0baacd5",
+      "pass": true
+    },
+    {
+      "name": "8201996 segon pare feature",
+      "actual": "5238368ff49e33ef20c94e8d7b3271e2e557124e",
+      "expected": "5238368ff49e33ef20c94e8d7b3271e2e557124e",
+      "pass": true
+    },
+    {
+      "name": "release/v1.0 ancestre main",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "hotfix/milloresV_1_0 ancestre main",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "release/v1.0 ancestre develop",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "hotfix/milloresV_1_0 ancestre develop",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "hotfix naix de v1.0",
+      "actual": "3c277c4ae97dc6fa146a7110fd2501794b6852c0",
+      "expected": "3c277c4ae97dc6fa146a7110fd2501794b6852c0",
+      "pass": true
+    },
+    {
+      "name": "3c277c4 merge té dos pares",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "6d9b2ba merge té dos pares",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "d0c5a2c merge té dos pares",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "80e5ffb merge té dos pares",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "name": "v1.0 és etiqueta anotada",
+      "actual": "tag",
+      "expected": "tag",
+      "pass": true
+    },
+    {
+      "name": "v1.0.1 és etiqueta anotada",
+      "actual": "tag",
+      "expected": "tag",
+      "pass": true
+    },
+    {
+      "name": "v1.0 i v1.0.1 diferents",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "app.js idèntic main i develop",
+      "actual": "1f6a70024afce4dd0038f5f8176d34de6037f796",
+      "expected": "1f6a70024afce4dd0038f5f8176d34de6037f796",
+      "pass": true
+    },
+    {
+      "name": "index.html idèntic main i develop",
+      "actual": "4cd95e02aa2fb8c7e78c793ef1a5bff887888e57",
+      "expected": "4cd95e02aa2fb8c7e78c793ef1a5bff887888e57",
+      "pass": true
+    },
+    {
+      "name": "style.css idèntic main i develop",
+      "actual": "da359a7cae8ce583ccdade94a97fef854068e789",
+      "expected": "da359a7cae8ce583ccdade94a97fef854068e789",
+      "pass": true
+    },
+    {
+      "name": "package.json idèntic main i develop",
+      "actual": "228df211173a53e94f26d28c1837498e012b779e",
+      "expected": "228df211173a53e94f26d28c1837498e012b779e",
+      "pass": true
+    },
+    {
+      "name": "huit branques de seguiment remot",
+      "actual": [
+        "origin/develop",
+        "origin/feature/atributsHTML",
+        "origin/feature/contingutHTML",
+        "origin/feature/estilsCSS",
+        "origin/gh-pages",
+        "origin/hotfix/milloresV_1_0",
+        "origin/main",
+        "origin/release/v1.0"
+      ],
+      "expected": [
+        "origin/develop",
+        "origin/feature/atributsHTML",
+        "origin/feature/contingutHTML",
+        "origin/feature/estilsCSS",
+        "origin/gh-pages",
+        "origin/hotfix/milloresV_1_0",
+        "origin/main",
+        "origin/release/v1.0"
+      ],
+      "pass": true
+    },
+    {
+      "name": "huit branques publicades",
+      "actual": [
+        "refs/heads/develop",
+        "refs/heads/feature/atributsHTML",
+        "refs/heads/feature/contingutHTML",
+        "refs/heads/feature/estilsCSS",
+        "refs/heads/gh-pages",
+        "refs/heads/hotfix/milloresV_1_0",
+        "refs/heads/main",
+        "refs/heads/release/v1.0"
+      ],
+      "expected": [
+        "refs/heads/develop",
+        "refs/heads/feature/atributsHTML",
+        "refs/heads/feature/contingutHTML",
+        "refs/heads/feature/estilsCSS",
+        "refs/heads/gh-pages",
+        "refs/heads/hotfix/milloresV_1_0",
+        "refs/heads/main",
+        "refs/heads/release/v1.0"
+      ],
+      "pass": true
+    }
+  ],
+  "localRefs": [
+    "55248abd4ad9010315153fe2ac8c3657f9992d40 refs/heads/develop",
+    "22bf60102f9590b736c69a30648cb65f84e17c10 refs/heads/feature/atributsHTML",
+    "3fd18e5092d54ca47487cc9a40b53fa459125ca3 refs/heads/feature/contingutHTML",
+    "5238368ff49e33ef20c94e8d7b3271e2e557124e refs/heads/feature/estilsCSS",
+    "d89aa29067d19f9eb414c0393d634b2517f41831 refs/heads/gh-pages",
+    "51485c8df1d333f2d9be474d88403067acdfd8f4 refs/heads/hotfix/milloresV_1_0",
+    "40d3cd653bd3f151c3de38d9619be119407dd4b5 refs/heads/main",
+    "20f32a051dc3ecdbb946a789f3cfc75dd6e73259 refs/heads/release/v1.0",
+    "80e5ffbe85a85d8612009378d650d01953c2d733 refs/remotes/origin/develop",
+    "22bf60102f9590b736c69a30648cb65f84e17c10 refs/remotes/origin/feature/atributsHTML",
+    "3fd18e5092d54ca47487cc9a40b53fa459125ca3 refs/remotes/origin/feature/contingutHTML",
+    "5238368ff49e33ef20c94e8d7b3271e2e557124e refs/remotes/origin/feature/estilsCSS",
+    "d89aa29067d19f9eb414c0393d634b2517f41831 refs/remotes/origin/gh-pages",
+    "51485c8df1d333f2d9be474d88403067acdfd8f4 refs/remotes/origin/hotfix/milloresV_1_0",
+    "d0c5a2c057e82b03b7e5cec169aab86a4c0eb839 refs/remotes/origin/main",
+    "20f32a051dc3ecdbb946a789f3cfc75dd6e73259 refs/remotes/origin/release/v1.0",
+    "ed8e6a484dba29d697b0da6268cceea272ef2948 refs/tags/v1.0",
+    "cca842e9b68657bb560fc9c8bebc15bf6cc82005 refs/tags/v1.0.1"
+  ],
+  "remoteHeads": [
+    "80e5ffbe85a85d8612009378d650d01953c2d733\trefs/heads/develop",
+    "22bf60102f9590b736c69a30648cb65f84e17c10\trefs/heads/feature/atributsHTML",
+    "3fd18e5092d54ca47487cc9a40b53fa459125ca3\trefs/heads/feature/contingutHTML",
+    "5238368ff49e33ef20c94e8d7b3271e2e557124e\trefs/heads/feature/estilsCSS",
+    "d89aa29067d19f9eb414c0393d634b2517f41831\trefs/heads/gh-pages",
+    "51485c8df1d333f2d9be474d88403067acdfd8f4\trefs/heads/hotfix/milloresV_1_0",
+    "d0c5a2c057e82b03b7e5cec169aab86a4c0eb839\trefs/heads/main",
+    "20f32a051dc3ecdbb946a789f3cfc75dd6e73259\trefs/heads/release/v1.0"
+  ],
+  "notes": [
+    "L’auditoria consulta Git sense modificar branques ni commits.",
+    "Els commits documentals locals poden estar pendents del pròxim push."
+  ],
+  "passed": true
+}

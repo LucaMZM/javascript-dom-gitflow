@@ -53,7 +53,7 @@
     "role": "usuari1",
     "branch": "gh-pages",
     "sha": null,
-    "complete": false
+    "complete": true
   },
   {
     "title": "Publicació GitHub Pages",
@@ -61,6 +61,6 @@
     "role": "usuari1",
     "branch": "gh-pages",
     "sha": null,
-    "complete": false
+    "complete": true
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "dateUTC": "2026-10-26T11:36:12.668191+00:00",
+  "links": [
+    {
+      "url": "https://github.com/LucaMZM/javascript-dom-gitflow",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>"
+    },
+    {
+      "url": "https://lucamzm.github.io/javascript-dom-gitflow/",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>"
+    },
+    {
+      "url": "https://lucamzm.github.io/javascript-dom-gitflow/app/",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>"
+    }
+  ]
+}

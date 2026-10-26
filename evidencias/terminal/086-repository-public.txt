@@ -1,0 +1,42 @@
+Data UTC: 2026-10-26T11:40:21.528038+00:00
+$ gh api repos/LucaMZM/javascript-dom-gitflow --jq '{full_name,html_url,private,default_branch}'
+{"default_branch":"main","full_name":"LucaMZM/javascript-dom-gitflow","html_url":"https://github.com/LucaMZM/javascript-dom-gitflow","private":false}
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/github/21-project-proces.png
+ M evidencias/registre.jsonl
+ M tests/dom.cjs
+?? docs/
+?? entrega/
+?? evidencias/aplicacion/26-app-publicada.png
+?? evidencias/aplicacion/26-contingut-publicat.png
+?? evidencias/aplicacion/26-mobil.png
+?? evidencias/aplicacion/qa-final.json
+?? evidencias/aplicacion/qa-publicada.json
+?? evidencias/git/13-historial-registrat.png
+?? evidencias/git/audit.json
+?? evidencias/git/historial.html
+?? evidencias/github/16-release-v1.png
+?? evidencias/github/20-branques.png
+?? evidencias/pages/
+?? evidencias/terminal/071-pages-worktree.txt
+?? evidencias/terminal/072-develop-worktree.txt
+?? evidencias/terminal/073-sync-docs-correct.txt
+?? evidencias/terminal/074-pages-stage.txt
+?? evidencias/terminal/075-pages-commit.txt
+?? evidencias/terminal/076-push-pages.txt
+?? evidencias/terminal/077-pages-config.txt
+?? evidencias/terminal/078-pages-settings.txt
+?? evidencias/terminal/079-graph-final.txt
+?? evidencias/terminal/080-pages-build.txt
+?? evidencias/terminal/081-remote-branches.txt
+?? evidencias/terminal/082-http-verification.txt
+?? evidencias/terminal/083-http-curl-verification.txt
+?? evidencias/terminal/084-pages-built.txt
+?? evidencias/terminal/085-environment.txt
+?? scripts/build_report.py
+?? tests/gitflow.py
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5
