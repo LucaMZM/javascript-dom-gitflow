@@ -1,0 +1,27 @@
+{
+  "pages": 21,
+  "docxParagraphs": 233,
+  "images": 13,
+  "pdfHyperlinks": 89,
+  "changedPagesFromVisualReview": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    18
+  ],
+  "visualReview": "21 pàgines revisades individualment; pàgines idèntiques conservades després de comparar SHA-256 dels PNG. Sense retalls ni solapaments.",
+  "equivalentContent": "PDF exportat directament del DOCX final amb LibreOffice empaquetat.",
+  "figureCount": 13,
+  "indexVerified": true
+}

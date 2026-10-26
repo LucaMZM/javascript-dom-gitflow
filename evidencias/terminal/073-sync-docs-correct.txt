@@ -1,0 +1,204 @@
+Data UTC: 2026-10-26T11:32:45.483947+00:00
+$ git -C /Users/lucamazmi/Desktop/ming/javascript-dom-gitflow-develop merge --no-ff main -m 'merge(docs): [usuari1] sincronitzar proves i evidències'
+Merge made by the 'ort' strategy.
+ README.md                                         |  14 +-
+ evidencias/aplicacion/03-home.png                 | Bin 0 -> 88831 bytes
+ evidencias/aplicacion/05-contingut.png            | Bin 0 -> 83868 bytes
+ evidencias/aplicacion/08-atributs.png             | Bin 0 -> 92181 bytes
+ evidencias/aplicacion/11-estils.png               | Bin 0 -> 72568 bytes
+ evidencias/aplicacion/18-hotfix.png               | Bin 0 -> 94480 bytes
+ evidencias/aplicacion/qa.json                     |  90 +++++++++++
+ evidencias/git/plantilla-h5bp.html                |  33 ++++
+ evidencias/github/01-repositori.png               | Bin 0 -> 121147 bytes
+ evidencias/github/21-project-proces.png           | Bin 0 -> 92740 bytes
+ evidencias/github/21-project-proces.txt           | 187 ++++++++++++++++++++++
+ evidencias/github/22-acces-professor.png          | Bin 0 -> 82612 bytes
+ evidencias/github/22-acces-professor.txt          | 116 ++++++++++++++
+ evidencias/github/issue-1.txt                     |  10 ++
+ evidencias/github/issue-2.txt                     |  10 ++
+ evidencias/github/issue-3.txt                     |  10 ++
+ evidencias/github/issue-4.txt                     |  10 ++
+ evidencias/github/issue-5.txt                     |  10 ++
+ evidencias/github/issue-6.txt                     |  10 ++
+ evidencias/github/issue-7.txt                     |   9 ++
+ evidencias/github/issue-8.txt                     |   9 ++
+ evidencias/github/issues.json                     |  66 ++++++++
+ evidencias/github/project.json                    |   1 +
+ evidencias/registre.jsonl                         |  70 ++++++++
+ evidencias/terminal/001-init.txt                  |  12 ++
+ evidencias/terminal/002-tools.txt                 |  13 ++
+ evidencias/terminal/003-create-repository.txt     |  13 ++
+ evidencias/terminal/004-bootstrap-commit.txt      |  14 ++
+ evidencias/terminal/005-main-commit.txt           |  13 ++
+ evidencias/terminal/006-develop.txt               |  10 ++
+ evidencias/terminal/007-before-home.txt           |  10 ++
+ evidencias/terminal/008-home-files.txt            |  22 +++
+ evidencias/terminal/009-home-stage.txt            |  15 ++
+ evidencias/terminal/010-home-commit.txt           |  17 ++
+ evidencias/terminal/011-content-branch.txt        |  10 ++
+ evidencias/terminal/012-first-push.txt            |  12 ++
+ evidencias/terminal/013-content-check.txt         |  15 ++
+ evidencias/terminal/014-content-stage.txt         |  11 ++
+ evidencias/terminal/015-content-commit.txt        |  11 ++
+ evidencias/terminal/016-before-content-merge.txt  |  12 ++
+ evidencias/terminal/017-content-switch.txt        |  10 ++
+ evidencias/terminal/018-content-merge.txt         |  13 ++
+ evidencias/terminal/019-attrs-branch.txt          |  10 ++
+ evidencias/terminal/020-attrs-check.txt           |  15 ++
+ evidencias/terminal/021-attrs-stage.txt           |  11 ++
+ evidencias/terminal/022-attrs-commit.txt          |  11 ++
+ evidencias/terminal/023-before-attrs-merge.txt    |  16 ++
+ evidencias/terminal/024-attrs-switch.txt          |  10 ++
+ evidencias/terminal/025-attrs-merge.txt           |  13 ++
+ evidencias/terminal/026-css-branch.txt            |  10 ++
+ evidencias/terminal/027-css-check.txt             |  15 ++
+ evidencias/terminal/028-css-stage.txt             |  11 ++
+ evidencias/terminal/029-css-commit.txt            |  11 ++
+ evidencias/terminal/030-before-css-merge.txt      |  20 +++
+ evidencias/terminal/031-css-switch.txt            |  10 ++
+ evidencias/terminal/032-css-merge.txt             |  13 ++
+ evidencias/terminal/033-release-branch.txt        |  10 ++
+ evidencias/terminal/034-release-check.txt         |  16 ++
+ evidencias/terminal/035-release-stage.txt         |  12 ++
+ evidencias/terminal/036-release-commit.txt        |  12 ++
+ evidencias/terminal/037-release-graph.txt         |  24 +++
+ evidencias/terminal/038-main-switch.txt           |  10 ++
+ evidencias/terminal/039-release-main.txt          |  25 +++
+ evidencias/terminal/040-tag.txt                   |   9 ++
+ evidencias/terminal/041-develop-switch.txt        |  10 ++
+ evidencias/terminal/042-release-develop.txt       |  15 ++
+ evidencias/terminal/043-hotfix-main.txt           |  10 ++
+ evidencias/terminal/044-hotfix-branch.txt         |  10 ++
+ evidencias/terminal/045-hotfix-check.txt          |  16 ++
+ evidencias/terminal/046-hotfix-stage.txt          |  12 ++
+ evidencias/terminal/047-hotfix-commit.txt         |  11 ++
+ evidencias/terminal/048-hotfix-diff.txt           |  65 ++++++++
+ evidencias/terminal/049-hotfix-switch.txt         |  11 ++
+ evidencias/terminal/050-hotfix-main.txt           |  15 ++
+ evidencias/terminal/051-hotfix-tag.txt            |  10 ++
+ evidencias/terminal/052-hotfix-develop-switch.txt |  11 ++
+ evidencias/terminal/053-hotfix-develop.txt        |  15 ++
+ evidencias/terminal/054-final-graph.txt           |  41 +++++
+ evidencias/terminal/055-main-final.txt            |  11 ++
+ evidencias/terminal/056-push-flow.txt             |  18 +++
+ evidencias/terminal/057-push-tags.txt             |  13 ++
+ evidencias/terminal/058-release-github.txt        |  11 ++
+ evidencias/terminal/059-hotfix-release.txt        |  11 ++
+ evidencias/terminal/060-close-structure.txt       |  11 ++
+ evidencias/terminal/061-close-content.txt         |  11 ++
+ evidencias/terminal/062-close-attributes.txt      |  11 ++
+ evidencias/terminal/063-close-css.txt             |  11 ++
+ evidencias/terminal/064-close-release.txt         |  11 ++
+ evidencias/terminal/065-close-hotfix.txt          |  11 ++
+ evidencias/terminal/066-evidence-stage.txt        |  99 ++++++++++++
+ evidencias/terminal/067-evidence-commit.txt       | 102 ++++++++++++
+ evidencias/terminal/068-develop-docs.txt          |  15 ++
+ evidencias/terminal/069-sync-docs.txt             |  13 ++
+ evidencias/terminal/070-return-main.txt           |  15 ++
+ scripts/record.py                                 |  11 ++
+ tests/dom.cjs                                     |  38 +++++
+ 96 files changed, 1855 insertions(+), 2 deletions(-)
+ create mode 100644 evidencias/aplicacion/03-home.png
+ create mode 100644 evidencias/aplicacion/05-contingut.png
+ create mode 100644 evidencias/aplicacion/08-atributs.png
+ create mode 100644 evidencias/aplicacion/11-estils.png
+ create mode 100644 evidencias/aplicacion/18-hotfix.png
+ create mode 100644 evidencias/aplicacion/qa.json
+ create mode 100644 evidencias/git/plantilla-h5bp.html
+ create mode 100644 evidencias/github/01-repositori.png
+ create mode 100644 evidencias/github/21-project-proces.png
+ create mode 100644 evidencias/github/21-project-proces.txt
+ create mode 100644 evidencias/github/22-acces-professor.png
+ create mode 100644 evidencias/github/22-acces-professor.txt
+ create mode 100644 evidencias/github/issue-1.txt
+ create mode 100644 evidencias/github/issue-2.txt
+ create mode 100644 evidencias/github/issue-3.txt
+ create mode 100644 evidencias/github/issue-4.txt
+ create mode 100644 evidencias/github/issue-5.txt
+ create mode 100644 evidencias/github/issue-6.txt
+ create mode 100644 evidencias/github/issue-7.txt
+ create mode 100644 evidencias/github/issue-8.txt
+ create mode 100644 evidencias/github/issues.json
+ create mode 100644 evidencias/github/project.json
+ create mode 100644 evidencias/registre.jsonl
+ create mode 100644 evidencias/terminal/001-init.txt
+ create mode 100644 evidencias/terminal/002-tools.txt
+ create mode 100644 evidencias/terminal/003-create-repository.txt
+ create mode 100644 evidencias/terminal/004-bootstrap-commit.txt
+ create mode 100644 evidencias/terminal/005-main-commit.txt
+ create mode 100644 evidencias/terminal/006-develop.txt
+ create mode 100644 evidencias/terminal/007-before-home.txt
+ create mode 100644 evidencias/terminal/008-home-files.txt
+ create mode 100644 evidencias/terminal/009-home-stage.txt
+ create mode 100644 evidencias/terminal/010-home-commit.txt
+ create mode 100644 evidencias/terminal/011-content-branch.txt
+ create mode 100644 evidencias/terminal/012-first-push.txt
+ create mode 100644 evidencias/terminal/013-content-check.txt
+ create mode 100644 evidencias/terminal/014-content-stage.txt
+ create mode 100644 evidencias/terminal/015-content-commit.txt
+ create mode 100644 evidencias/terminal/016-before-content-merge.txt
+ create mode 100644 evidencias/terminal/017-content-switch.txt
+ create mode 100644 evidencias/terminal/018-content-merge.txt
+ create mode 100644 evidencias/terminal/019-attrs-branch.txt
+ create mode 100644 evidencias/terminal/020-attrs-check.txt
+ create mode 100644 evidencias/terminal/021-attrs-stage.txt
+ create mode 100644 evidencias/terminal/022-attrs-commit.txt
+ create mode 100644 evidencias/terminal/023-before-attrs-merge.txt
+ create mode 100644 evidencias/terminal/024-attrs-switch.txt
+ create mode 100644 evidencias/terminal/025-attrs-merge.txt
+ create mode 100644 evidencias/terminal/026-css-branch.txt
+ create mode 100644 evidencias/terminal/027-css-check.txt
+ create mode 100644 evidencias/terminal/028-css-stage.txt
+ create mode 100644 evidencias/terminal/029-css-commit.txt
+ create mode 100644 evidencias/terminal/030-before-css-merge.txt
+ create mode 100644 evidencias/terminal/031-css-switch.txt
+ create mode 100644 evidencias/terminal/032-css-merge.txt
+ create mode 100644 evidencias/terminal/033-release-branch.txt
+ create mode 100644 evidencias/terminal/034-release-check.txt
+ create mode 100644 evidencias/terminal/035-release-stage.txt
+ create mode 100644 evidencias/terminal/036-release-commit.txt
+ create mode 100644 evidencias/terminal/037-release-graph.txt
+ create mode 100644 evidencias/terminal/038-main-switch.txt
+ create mode 100644 evidencias/terminal/039-release-main.txt
+ create mode 100644 evidencias/terminal/040-tag.txt
+ create mode 100644 evidencias/terminal/041-develop-switch.txt
+ create mode 100644 evidencias/terminal/042-release-develop.txt
+ create mode 100644 evidencias/terminal/043-hotfix-main.txt
+ create mode 100644 evidencias/terminal/044-hotfix-branch.txt
+ create mode 100644 evidencias/terminal/045-hotfix-check.txt
+ create mode 100644 evidencias/terminal/046-hotfix-stage.txt
+ create mode 100644 evidencias/terminal/047-hotfix-commit.txt
+ create mode 100644 evidencias/terminal/048-hotfix-diff.txt
+ create mode 100644 evidencias/terminal/049-hotfix-switch.txt
+ create mode 100644 evidencias/terminal/050-hotfix-main.txt
+ create mode 100644 evidencias/terminal/051-hotfix-tag.txt
+ create mode 100644 evidencias/terminal/052-hotfix-develop-switch.txt
+ create mode 100644 evidencias/terminal/053-hotfix-develop.txt
+ create mode 100644 evidencias/terminal/054-final-graph.txt
+ create mode 100644 evidencias/terminal/055-main-final.txt
+ create mode 100644 evidencias/terminal/056-push-flow.txt
+ create mode 100644 evidencias/terminal/057-push-tags.txt
+ create mode 100644 evidencias/terminal/058-release-github.txt
+ create mode 100644 evidencias/terminal/059-hotfix-release.txt
+ create mode 100644 evidencias/terminal/060-close-structure.txt
+ create mode 100644 evidencias/terminal/061-close-content.txt
+ create mode 100644 evidencias/terminal/062-close-attributes.txt
+ create mode 100644 evidencias/terminal/063-close-css.txt
+ create mode 100644 evidencias/terminal/064-close-release.txt
+ create mode 100644 evidencias/terminal/065-close-hotfix.txt
+ create mode 100644 evidencias/terminal/066-evidence-stage.txt
+ create mode 100644 evidencias/terminal/067-evidence-commit.txt
+ create mode 100644 evidencias/terminal/068-develop-docs.txt
+ create mode 100644 evidencias/terminal/069-sync-docs.txt
+ create mode 100644 evidencias/terminal/070-return-main.txt
+ create mode 100644 scripts/record.py
+ create mode 100644 tests/dom.cjs
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/registre.jsonl
+?? evidencias/terminal/071-pages-worktree.txt
+?? evidencias/terminal/072-develop-worktree.txt
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5

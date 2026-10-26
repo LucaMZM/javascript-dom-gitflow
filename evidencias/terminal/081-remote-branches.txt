@@ -1,0 +1,30 @@
+Data UTC: 2026-10-26T11:35:02.573526+00:00
+$ gh api repos/LucaMZM/javascript-dom-gitflow/branches --paginate --jq '.[].name'
+develop
+feature/atributsHTML
+feature/contingutHTML
+feature/estilsCSS
+gh-pages
+hotfix/milloresV_1_0
+main
+release/v1.0
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+ M evidencias/github/21-project-proces.png
+ M evidencias/registre.jsonl
+?? evidencias/git/historial.html
+?? evidencias/github/16-release-v1.png
+?? evidencias/terminal/071-pages-worktree.txt
+?? evidencias/terminal/072-develop-worktree.txt
+?? evidencias/terminal/073-sync-docs-correct.txt
+?? evidencias/terminal/074-pages-stage.txt
+?? evidencias/terminal/075-pages-commit.txt
+?? evidencias/terminal/076-push-pages.txt
+?? evidencias/terminal/077-pages-config.txt
+?? evidencias/terminal/078-pages-settings.txt
+?? evidencias/terminal/079-graph-final.txt
+?? evidencias/terminal/080-pages-build.txt
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5

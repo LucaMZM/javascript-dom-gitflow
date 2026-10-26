@@ -1,0 +1,165 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "LucaMZM":
+        - /url: /LucaMZM
+        - generic: LucaMZM
+      - link "Projects":
+        - /url: /users/LucaMZM/projects
+        - generic: Projects
+      - link "Pràctica 1 — Git Flow":
+        - /url: /users/LucaMZM/projects/1
+        - generic: Pràctica 1 — Git Flow
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues (g then i)":
+    - /url: /issues
+  - link "All pull requests (g then p)":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "User avatar"
+- button "Dismiss this message":
+- button "Enable 2FA"
+- paragraph:
+  - text: GitHub users are
+  - link "now required":
+    - /url: https://github.blog/2023-03-09-raising-the-bar-for-software-security-github-2fa-begins-march-13/
+  - text: to enable two-factor authentication as an additional security measure. Your activity on GitHub includes you in this requirement. You will need to enable two-factor authentication on your account before December 01, 2026, or be restricted from account actions.
+- main:
+  - navigation "Project":
+    - heading "Pràctica 1 — Git Flow" [level=1]
+    - button "Edit project name":
+    - button "Add status update":
+      - generic: Add status update
+    - link "Insights":
+      - /url: /users/LucaMZM/projects/1/insights
+      - generic: Insights
+    - link "Workflows (7 enabled)":
+      - /url: /users/LucaMZM/projects/1/workflows
+      - generic: Workflows
+      - generic: "7"
+      - generic: (7)
+    - button "Project details":
+    - button "View more options":
+  - navigation "Select view":
+    - tablist:
+      - tab "View 1" [selected]:
+        - generic: View 1
+      - tab "New view":
+        - generic: New view
+  - button "View options for View 1":
+  - tabpanel:
+    - region "View filters":
+      - form "Filter":
+        - generic: Filter
+        - img "Search"
+        - combobox "Filter"
+      - button "View":
+        - generic: View
+    - heading "Todo" [level=2]:
+      - generic: Todo
+    - generic: "0"
+    - generic: (0)
+    - 'button "Actions for column: Todo"':
+    - button "Add item to Todo":
+    - generic: This item hasn't been started
+    - button "Add item":
+      - generic: Add item
+    - heading "In Progress" [level=2]:
+      - generic: In Progress
+    - generic: "0"
+    - generic: (0)
+    - 'button "Actions for column: In Progress"':
+    - button "Add item to In Progress":
+    - generic: This is actively being worked on
+    - button "Add item":
+      - generic: Add item
+    - heading "Done" [level=2]:
+      - generic: Done
+    - generic: "8"
+    - generic: (8)
+    - 'button "Actions for column: Done"':
+    - button "Add item to Done":
+    - generic: This has been completed
+    - 'button "Estructura inicial Closed as completed issue javascript-dom-gitflow #1"':
+      - img "Closed as completed issue"
+      - generic: "javascript-dom-gitflow #1"
+      - button "More actions":
+      - 'figure "Assignees: LucaMZM"':
+        - generic: "Assignees: LucaMZM"
+        - button "LucaMZM":
+          - img "LucaMZM"
+      - button "Estructura inicial":
+        - heading "Estructura inicial" [level=3]
+      - list "Fields"
+      - generic: Click a value to filter the view
+    - 'button "Feature de contingut HTML Closed as completed issue javascript-dom-gitflow #2"':
+      - img "Closed as completed issue"
+      - generic: "javascript-dom-gitflow #2"
+      - button "More actions":
+      - 'figure "Assignees: LucaMZM"':
+        - generic: "Assignees: LucaMZM"
+        - button "LucaMZM":
+          - img "LucaMZM"
+      - button "Feature de contingut HTML":
+        - heading "Feature de contingut HTML" [level=3]
+      - list "Fields"
+      - generic: Click a value to filter the view
+    - 'button "Feature d atributs HTML Closed as completed issue javascript-dom-gitflow #3"':
+      - img "Closed as completed issue"
+      - generic: "javascript-dom-gitflow #3"
+      - button "More actions":
+      - 'figure "Assignees: LucaMZM"':
+        - generic: "Assignees: LucaMZM"
+        - button "LucaMZM":
+          - img "LucaMZM"
+      - button "Feature d atributs HTML":
+        - heading "Feature d atributs HTML" [level=3]
+      - list "Fields"
+      - generic: Click a value to filter the view
+    - 'button "Feature d estils CSS Closed as completed issue javascript-dom-gitflow #4"':
+      - img "Closed as completed issue"
+      - generic: "javascript-dom-gitflow #4"
+      - button "More actions":
+      - 'figure "Assignees: LucaMZM"':
+        - generic: "Assignees: LucaMZM"
+        - button "LucaMZM":
+          - img "LucaMZM"
+      - button "Feature d estils CSS":
+        - heading "Feature d estils CSS" [level=3]
+      - list "Fields"
+      - generic: Click a value to filter the view
+    - 'button "Release v1.0 Closed as completed issue javascript-dom-gitflow #5"':
+      - img "Closed as completed issue"
+      - generic: "javascript-dom-gitflow #5"
+      - button "More actions":
+      - 'figure "Assignees: LucaMZM"':
+        - generic: "Assignees: LucaMZM"
+        - button "LucaMZM":
+          - img "LucaMZM"
+      - button "Release v1.0":
+        - heading "Release v1.0" [level=3]
+      - list "Fields"
+      - generic: Click a value to filter the view
+    - button "Hotfix de contingut LucaMZM/javascript-dom-gitflow#6" [disabled]
+    - button "Documentació acadèmica LucaMZM/javascript-dom-gitflow#7" [disabled]
+    - button "Publicació GitHub Pages LucaMZM/javascript-dom-gitflow#8" [disabled]
+    - button "Add item":
+      - generic: Add item
+    - button "Add a new column to the board":
+- status

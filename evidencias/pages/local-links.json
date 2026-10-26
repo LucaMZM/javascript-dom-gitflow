@@ -1,0 +1,1001 @@
+{
+  "checked": 199,
+  "allPassed": true,
+  "checks": [
+    {
+      "page": "index.html",
+      "target": "docs.css",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "app/favicon.svg",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#memoria",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "app/",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s1",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s2",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s3",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s4",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s5",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s6",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s7",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s8",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s9",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s10",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s11",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s12",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s13",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s14",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s15",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s16",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s17",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "#s18",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/github/01-repositori.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/github/01-repositori.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/001-init.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/002-tools.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/003-create-repository.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/005-main-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/006-develop.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/007-before-home.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/012-first-push.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/03-home.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/03-home.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/008-home-files.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/010-home-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/05-contingut.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/05-contingut.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/011-content-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/013-content-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/015-content-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/016-before-content-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/018-content-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/08-atributs.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/08-atributs.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/019-attrs-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/020-attrs-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/022-attrs-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/023-before-attrs-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/025-attrs-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/11-estils.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/11-estils.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/026-css-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/027-css-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/029-css-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/030-before-css-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/032-css-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/018-content-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/025-attrs-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/032-css-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/054-final-graph.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/github/16-release-v1.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/github/16-release-v1.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/033-release-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/034-release-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/036-release-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/039-release-main.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/040-tag.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/042-release-develop.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/058-release-github.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/18-hotfix.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/18-hotfix.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/044-hotfix-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/045-hotfix-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/047-hotfix-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/048-hotfix-diff.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/050-hotfix-main.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/051-hotfix-tag.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/053-hotfix-develop.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/059-hotfix-release.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/github/21-project-proces.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/github/21-project-proces.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/github/22-acces-professor.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/github/22-acces-professor.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/054-final-graph.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/068-develop-docs.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/071-pages-worktree.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/072-develop-worktree.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/073-sync-docs-correct.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/03-home.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/aplicacion/03-home.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/pages/25-documentacio.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/pages/25-documentacio.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/071-pages-worktree.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/078-pages-settings.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/083-http-curl-verification.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/pages/24-configuracio.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "app/",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "entrega/Practica1_GitFlow_LucaMZM.pdf",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "entrega/Practica1_GitFlow_LucaMZM.docx",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/github/21-project-final.png",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/001-init.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/002-tools.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/003-create-repository.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/004-bootstrap-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/005-main-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/006-develop.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/007-before-home.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/008-home-files.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/009-home-stage.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/010-home-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/011-content-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/012-first-push.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/013-content-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/014-content-stage.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/015-content-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/016-before-content-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/017-content-switch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/018-content-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/019-attrs-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/020-attrs-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/021-attrs-stage.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/022-attrs-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/023-before-attrs-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/024-attrs-switch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/025-attrs-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/026-css-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/027-css-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/028-css-stage.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/029-css-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/030-before-css-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/031-css-switch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/032-css-merge.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/033-release-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/034-release-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/035-release-stage.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/036-release-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/037-release-graph.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/038-main-switch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/039-release-main.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/040-tag.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/041-develop-switch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/042-release-develop.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/043-hotfix-main.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/044-hotfix-branch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/045-hotfix-check.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/046-hotfix-stage.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/047-hotfix-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/048-hotfix-diff.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/049-hotfix-switch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/050-hotfix-main.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/051-hotfix-tag.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/052-hotfix-develop-switch.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/053-hotfix-develop.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/054-final-graph.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/055-main-final.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/056-push-flow.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/057-push-tags.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/058-release-github.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/059-hotfix-release.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/060-close-structure.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/061-close-content.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/062-close-attributes.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/063-close-css.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/064-close-release.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/065-close-hotfix.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/066-evidence-stage.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/067-evidence-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/068-develop-docs.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/069-sync-docs.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/070-return-main.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/071-pages-worktree.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/072-develop-worktree.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/073-sync-docs-correct.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/074-pages-stage.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/075-pages-commit.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/076-push-pages.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/077-pages-config.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/078-pages-settings.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/079-graph-final.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/080-pages-build.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/081-remote-branches.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/082-http-verification.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/083-http-curl-verification.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/084-pages-built.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/085-environment.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/086-repository-public.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/087-close-pages.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/088-close-docs.txt",
+      "ok": true
+    },
+    {
+      "page": "index.html",
+      "target": "evidencias/terminal/089-issues-final.txt",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "favicon.svg",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "boilerplate.css",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "style.css",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "app.js",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "#principal",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "#home",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "#contingut",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "#atributs",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "#estils",
+      "ok": true
+    },
+    {
+      "page": "app/index.html",
+      "target": "#contingut",
+      "ok": true
+    }
+  ]
+}

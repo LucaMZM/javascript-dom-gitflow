@@ -1,0 +1,64 @@
+Data UTC: 2026-10-26T11:44:14.956957+00:00
+$ git add .
+
+Codi de retorn: 0
+$ git status --short --branch
+## main
+M  .gitignore
+A  docs/page_numbers.json
+A  docs/report_final_model.json
+A  docs/report_model.json
+A  docs/theory.json
+A  entrega/ENLACES.txt
+A  entrega/Practica1_GitFlow_LucaMZM.docx
+A  entrega/Practica1_GitFlow_LucaMZM.pdf
+A  evidencias/aplicacion/26-app-publicada.png
+A  evidencias/aplicacion/26-contingut-publicat.png
+A  evidencias/aplicacion/26-mobil.png
+A  evidencias/aplicacion/qa-final.json
+A  evidencias/aplicacion/qa-publicada.json
+A  evidencias/git/13-historial-registrat.png
+A  evidencias/git/audit.json
+A  evidencias/git/historial.html
+A  evidencias/github/16-release-v1.png
+A  evidencias/github/20-branques.png
+A  evidencias/github/21-project-final.png
+A  evidencias/github/21-project-final.txt
+M  evidencias/github/21-project-proces.png
+A  evidencias/github/21-project-vinculat.png
+A  evidencias/github/22-acces-professor-vista-inicial.png
+M  evidencias/github/22-acces-professor.png
+M  evidencias/github/issues.json
+M  evidencias/github/project.json
+A  evidencias/pages/24-configuracio.png
+A  evidencias/pages/25-documentacio.png
+A  evidencias/pages/document-check.json
+A  evidencias/pages/local-links.json
+A  evidencias/pages/verification-python-ssl.json
+A  evidencias/pages/verification.json
+M  evidencias/registre.jsonl
+A  evidencias/terminal/071-pages-worktree.txt
+A  evidencias/terminal/072-develop-worktree.txt
+A  evidencias/terminal/073-sync-docs-correct.txt
+A  evidencias/terminal/074-pages-stage.txt
+A  evidencias/terminal/075-pages-commit.txt
+A  evidencias/terminal/076-push-pages.txt
+A  evidencias/terminal/077-pages-config.txt
+A  evidencias/terminal/078-pages-settings.txt
+A  evidencias/terminal/079-graph-final.txt
+A  evidencias/terminal/080-pages-build.txt
+A  evidencias/terminal/081-remote-branches.txt
+A  evidencias/terminal/082-http-verification.txt
+A  evidencias/terminal/083-http-curl-verification.txt
+A  evidencias/terminal/084-pages-built.txt
+A  evidencias/terminal/085-environment.txt
+A  evidencias/terminal/086-repository-public.txt
+A  evidencias/terminal/087-close-pages.txt
+A  evidencias/terminal/088-close-docs.txt
+A  evidencias/terminal/089-issues-final.txt
+A  scripts/build_pages.py
+A  scripts/build_report.py
+M  tests/dom.cjs
+A  tests/gitflow.py
+
+HEAD: 40d3cd653bd3f151c3de38d9619be119407dd4b5

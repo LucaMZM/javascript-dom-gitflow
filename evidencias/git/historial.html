@@ -1,0 +1,42 @@
+<!doctype html><html lang="ca"><meta charset="utf-8"><title>Historial Git registrat</title><style>body{font-family:system-ui;padding:24px;background:white;color:#10253e}pre{font:14px/1.6 Menlo,monospace;white-space:pre-wrap}</style><h1>Historial Git Flow</h1><p>Eixida real registrada durant la pràctica. Esta és una vista de navegador del registre; no és una captura de terminal.</p><pre>Data UTC: 2026-10-26T11:27:21.685228+00:00
+$ git log --graph --all --decorate --oneline
+*   80e5ffb (HEAD -&gt; develop) merge(hotfix): [usuari1] integrar millores en develop
+|\  
+* \   6d9b2ba merge(release): [usuari1] retornar v1.0 a develop
+|\ \  
+| | | *   d0c5a2c (tag: v1.0.1, main) merge(hotfix): [usuari1] integrar millores de contingut en main
+| | | |\  
+| | | |/  
+| | |/|   
+| | * | 51485c8 (hotfix/milloresV_1_0) fix(html): [usuari1] restablir contingut i comptar caràcters
+| | |/  
+| | *   3c277c4 (tag: v1.0) merge(release): [usuari1] publicar versió 1.0
+| | |\  
+| | |/  
+| |/|   
+| * | 20f32a0 (release/v1.0) chore(release): [usuari1] preparar v1.0 i afegir favicon local
+|/ /  
+* |   8201996 merge(css): [usuari3] integrar estils CSS
+|\ \  
+| * | 5238368 (feature/estilsCSS) feat(css): [usuari3] implementar canvis d estil
+|/ /  
+* |   d4b7b6f merge(attributes): [usuari2] integrar atributs HTML
+|\ \  
+| * | 22bf601 (feature/atributsHTML) feat(attributes): [usuari2] implementar atributs HTML
+|/ /  
+* |   70ce7aa merge(html): [usuari2] integrar contingut HTML
+|\ \  
+| * | 3fd18e5 (feature/contingutHTML) feat(html): [usuari2] afegir exemples de contingut
+|/ /  
+* / 3c786f4 (origin/develop) feat(home): [usuari1] crear estructura inicial amb HTML5 Boilerplate
+|/  
+* 5a3c16a (origin/main) chore(repo): [usuari1] iniciar pràctica i registrar criteris
+
+Codi de retorn: 0
+$ git status --short --branch
+## develop
+?? evidencias/
+?? tests/
+
+HEAD: 80e5ffbe85a85d8612009378d650d01953c2d733
+</pre></html>

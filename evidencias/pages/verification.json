@@ -1,0 +1,23 @@
+{
+  "dateUTC": "2026-10-26T11:36:22.061001+00:00",
+  "links": [
+    {
+      "url": "https://github.com/LucaMZM/javascript-dom-gitflow",
+      "returncode": 0,
+      "response": "200\thttps://github.com/LucaMZM/javascript-dom-gitflow",
+      "error": ""
+    },
+    {
+      "url": "https://lucamzm.github.io/javascript-dom-gitflow/",
+      "returncode": 0,
+      "response": "200\thttps://lucamzm.github.io/javascript-dom-gitflow/",
+      "error": ""
+    },
+    {
+      "url": "https://lucamzm.github.io/javascript-dom-gitflow/app/",
+      "returncode": 0,
+      "response": "200\thttps://lucamzm.github.io/javascript-dom-gitflow/app/",
+      "error": ""
+    }
+  ]
+}

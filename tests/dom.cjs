@@ -1,6 +1,6 @@
 const fs = require('fs');
 const {chromium} = require('playwright');
-const destination = require('path').resolve(__dirname, '../evidencias/aplicacion/qa.json');
+const destination = process.env.QA_OUTPUT || require('path').resolve(__dirname, '../evidencias/aplicacion/qa.json');
 (async () => {
  const report = {date:new Date().toISOString(),url:process.env.QA_URL || 'http://localhost:8080',checks:[],errors:[]};
  const browser = await chromium.launch({...(process.env.CHROME_PATH ? {executablePath:process.env.CHROME_PATH} : {}),headless:true});
