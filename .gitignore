@@ -3,3 +3,15 @@ node_modules/
 .qa/
 __pycache__/
 *.pyc
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+credentials*.json
+secrets*.json
+*.sqlite
+*.db
